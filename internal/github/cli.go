@@ -55,7 +55,7 @@ func ghCommand(args []string) ([]byte, error) {
 	cmd.Env = os.Environ()
 	if PAT := os.Getenv("PERSONAL_ACCESS_TOKEN"); PAT != "" {
 		cmd.Env = append(cmd.Env, "GH_TOKEN="+PAT)
-	}
+	} // 事实上 PAT 环境变量会在 main 中被检查是否存在，这里只是双保险
 
 	var stderr bytes.Buffer
 	cmd.Stderr = &stderr
@@ -104,47 +104,6 @@ func SearchPullRequests(orgName string, limit int) ([]Item, error) {
 	return items, nil
 }
 
-func parseNDJSON[T Commit | Repo](data []byte) ([]T, error) {
-	items := make([]T, 0)
-	scanner := bufio.NewScanner(bytes.NewReader(data))
-	buf := make([]byte, 0, 64*1024)
-	scanner.Buffer(buf, 1024*1024)
-	for scanner.Scan() {
-		line := strings.TrimSpace(scanner.Text())
-		if line == "" {
-			continue
-		}
-		var item T
-		if err := json.Unmarshal([]byte(line), &item); err != nil {
-			return nil, err
-		}
-		items = append(items, item)
-	}
-	if err := scanner.Err(); err != nil {
-		return nil, err
-	}
-	return items, nil
-}
-
-func ListPublicRepos(orgName string) ([]Repo, error) {
-	args := []string{
-		"api",
-		fmt.Sprintf("/orgs/%s/repos", orgName),
-		"--paginate",
-		"-f",
-		"per_page=100",
-		"-f",
-		"type=public",
-		"--jq",
-		".[]",
-	}
-	output, err := ghCommand(args)
-	if err != nil {
-		return nil, err
-	}
-	return parseNDJSON[Repo](output)
-}
-
 func ListCommitsSince(orgName, repoName, sinceRFC3339 string) ([]Commit, error) {
 	args := []string{
 		"api",
@@ -176,4 +135,26 @@ func GetRawTag(orgName, repoName string) (string, error) {
 		return "", err
 	}
 	return string(output), nil
+}
+
+func parseNDJSON[T Commit | Repo](data []byte) ([]T, error) {
+	items := make([]T, 0)
+	scanner := bufio.NewScanner(bytes.NewReader(data))
+	buf := make([]byte, 0, 64*1024)
+	scanner.Buffer(buf, 1024*1024)
+	for scanner.Scan() {
+		line := strings.TrimSpace(scanner.Text())
+		if line == "" {
+			continue
+		}
+		var item T
+		if err := json.Unmarshal([]byte(line), &item); err != nil {
+			return nil, err
+		}
+		items = append(items, item)
+	}
+	if err := scanner.Err(); err != nil {
+		return nil, err
+	}
+	return items, nil
 }

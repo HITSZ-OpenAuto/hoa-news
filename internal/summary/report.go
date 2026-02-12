@@ -1,4 +1,4 @@
-package news
+package summary
 
 import (
 	"fmt"

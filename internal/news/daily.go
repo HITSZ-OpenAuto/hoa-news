@@ -1,4 +1,4 @@
-package report
+package news
 
 import (
 	"bytes"
@@ -27,6 +27,8 @@ func UpdateDailyReport(path string, issues []github.Item, prs []github.Item) err
 		return err
 	}
 	content := string(contentBytes)
+	// 保留原内容中 "## 待解决的 Issues" 之前的部分，即最新的 commit
+	// TODO 这部分应当交由 news 生成，而不是从 summary 生成的内容中截取
 	if idx := strings.Index(content, "## 待解决的 Issues"); idx >= 0 {
 		content = content[:idx]
 	}
