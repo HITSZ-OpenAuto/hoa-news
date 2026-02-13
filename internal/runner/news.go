@@ -23,7 +23,7 @@ func News(orgName string, publicRepos map[string]struct{}) {
 	issues = filterByPublicRepos(issues, publicRepos)
 	prs = filterByPublicRepos(prs, publicRepos)
 
-	if err := news.UpdateDailyReport("news/daily.mdx", issues, prs); err != nil {
+	if err := news.UpdateDailyReport("news/daily.mdx", orgName, publicRepos, issues, prs); err != nil {
 		fmt.Fprintf(os.Stderr, "Failed to update daily report: %v\n", err)
 		os.Exit(1)
 	}

@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"bytes"
 	"encoding/json"
+	"errors"
 	"fmt"
 	"os"
 	"os/exec"
@@ -52,6 +53,8 @@ type Commit struct {
 func ghCommand(args []string) ([]byte, error) {
 	cmd := exec.Command("gh", args...)
 
+	fmt.Println(cmd.String())
+
 	cmd.Env = os.Environ()
 	if PAT := os.Getenv("PERSONAL_ACCESS_TOKEN"); PAT != "" {
 		cmd.Env = append(cmd.Env, "GH_TOKEN="+PAT)
@@ -61,7 +64,7 @@ func ghCommand(args []string) ([]byte, error) {
 	cmd.Stderr = &stderr
 	output, err := cmd.Output()
 	if err != nil {
-		return nil, fmt.Errorf("gh command failed: %s", stderr.String())
+		return nil, errors.New(stderr.String())
 	}
 	return output, nil
 }
@@ -104,15 +107,14 @@ func SearchPullRequests(orgName string, limit int) ([]Item, error) {
 	return items, nil
 }
 
-func ListCommitsSince(orgName, repoName, sinceRFC3339 string) ([]Commit, error) {
+func ListCommitsSince(orgName, repoName, since_RFC3339 string) ([]Commit, error) {
 	args := []string{
 		"api",
 		fmt.Sprintf("/repos/%s/%s/commits", orgName, repoName),
+		"--method", "GET",
 		"--paginate",
-		"-f",
-		"per_page=100",
-		"-f",
-		"since=" + sinceRFC3339,
+		"-f", "per_page=100",
+		"-f", "since=" + since_RFC3339,
 		"--jq",
 		".[]",
 	}

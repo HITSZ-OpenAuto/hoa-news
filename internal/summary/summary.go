@@ -1,3 +1,4 @@
+// 周报总结
 package summary
 
 import (
@@ -7,6 +8,7 @@ import (
 	"strings"
 	"time"
 
+	"github.com/HITSZ-OpenAuto/hoa-news/internal/utils"
 	"gopkg.in/yaml.v3"
 )
 
@@ -51,70 +53,16 @@ func BuildMarkdown(commits []CommitEntry, repoTitles map[string]string, orgName 
 	return b.String()
 }
 
-func WriteReport(path string, content string) error {
-	return os.WriteFile(path, []byte(content), 0o644)
-}
-
-type frontMatterWeekly struct {
-	Title         string   `yaml:"title"`
-	Date          string   `yaml:"date"`
-	Authors       []author `yaml:"authors"`
-	ExcludeSearch bool     `yaml:"excludeSearch"`
-	Draft         bool     `yaml:"draft"`
-}
-
-type frontMatterDaily struct {
-	Title         string   `yaml:"title"`
-	Date          string   `yaml:"date"`
-	Authors       []author `yaml:"authors"`
-	Description   string   `yaml:"description"`
-	ExcludeSearch bool     `yaml:"excludeSearch"`
-	Draft         bool     `yaml:"draft"`
-}
-
-type author struct {
-	Name  string `yaml:"name"`
-	Link  string `yaml:"link"`
-	Image string `yaml:"image"`
-}
-
 func GenerateWeeklyFrontMatter(startDate time.Time, now time.Time) (string, error) {
-	fm := frontMatterWeekly{
-		Title: fmt.Sprintf("AUTO 周报 %s - %s", startDate.Format("2006-01-02"), now.Format("2006-01-02")),
-		Date:  time.Now().UTC().Format("2006-01-02"),
-		Authors: []author{{
-			Name:  "ChatGPT",
-			Link:  "https://github.com/openai",
-			Image: "https://github.com/openai.png",
-		}},
-		ExcludeSearch: false,
-		Draft:         false,
-	}
-	out, err := yaml.Marshal(&fm)
-	if err != nil {
-		return "", err
-	}
-	return string(out), nil
-}
-
-func GenerateDailyFrontMatter() (string, error) {
-	fm := frontMatterDaily{
-		Title: "AUTO 更新速递",
-		Date:  time.Now().UTC().Format("2006-01-02"),
-		Authors: []author{{
-			Name:  "github-actions[bot]",
-			Link:  "https://github.com/features/actions",
-			Image: "https://avatars.githubusercontent.com/in/15368",
-		}},
-		Description:   "每日更新",
-		ExcludeSearch: false,
-		Draft:         false,
-	}
-	out, err := yaml.Marshal(&fm)
-	if err != nil {
-		return "", err
-	}
-	return string(out), nil
+	title := fmt.Sprintf("AUTO 周报 %s - %s", startDate.Format("2006-01-02"), now.Format("2006-01-02"))
+	description := fmt.Sprintf("本周报涵盖 %s 至 %s 期间的更新", startDate.Format("2006-01-02"), now.Format("2006-01-02"))
+	date := time.Now().UTC().Format("2006-01-02")
+	authors := []utils.Author{{
+		Name:  "ChatGPT",
+		Link:  "https://github.com/openai",
+		Image: "https://github.com/openai.png",
+	}}
+	return utils.GenerateFrontMatter(title, date, description, authors)
 }
 
 func WriteWeeklyIndex(path string, now time.Time) error {

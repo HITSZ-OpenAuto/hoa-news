@@ -11,6 +11,7 @@ import (
 	"github.com/HITSZ-OpenAuto/hoa-news/internal/github"
 	"github.com/HITSZ-OpenAuto/hoa-news/internal/openai"
 	"github.com/HITSZ-OpenAuto/hoa-news/internal/summary"
+	"github.com/HITSZ-OpenAuto/hoa-news/internal/utils"
 )
 
 func Summary(newsType, orgName string, publicRepos map[string]struct{}) {
@@ -19,9 +20,6 @@ func Summary(newsType, orgName string, publicRepos map[string]struct{}) {
 	commits := make([]summary.CommitEntry, 0)
 	repoTitles := make(map[string]string)
 	for repo := range publicRepos {
-		if repo == "hoa-moe" || repo == ".github" {
-			continue
-		}
 		repoCommits, err := github.ListCommitsSince(orgName, repo, startTime.Format(time.RFC3339))
 		if err != nil {
 			log.Printf("Failed to fetch commits for %s: %v", repo, err)
@@ -34,7 +32,7 @@ func Summary(newsType, orgName string, publicRepos map[string]struct{}) {
 			if commit.Author != nil {
 				authorLogin = commit.Author.Login
 			}
-			if !summary.IsBot(authorName, authorLogin) {
+			if !utils.IsBot(authorName, authorLogin) {
 				containsManual = true
 			}
 			date, err := time.Parse(time.RFC3339, commit.Commit.Author.Date)
@@ -73,11 +71,8 @@ func Summary(newsType, orgName string, publicRepos map[string]struct{}) {
 		}
 		frontMatter = fm
 	} else {
-		fm, err := summary.GenerateDailyFrontMatter()
-		if err != nil {
-			log.Fatalf("Failed to generate front matter: %v", err)
-		}
-		frontMatter = fm
+		log.Println("Daily news generation via summary runner is deprecated. Use 'news' command instead.")
+		return
 	}
 
 	finalReport := fmt.Sprintf("---\n%s---\n\n", frontMatter)
@@ -97,7 +92,7 @@ func Summary(newsType, orgName string, publicRepos map[string]struct{}) {
 			log.Fatalf("Failed to create weekly directory: %v", err)
 		}
 		reportPath := filepath.Join(weeklyDir, "index.mdx")
-		if err := summary.WriteReport(reportPath, finalReport); err != nil {
+		if err := utils.WriteReport(reportPath, finalReport); err != nil {
 			log.Fatalf("Failed to write report: %v", err)
 		}
 		if err := summary.WriteWeeklyIndex(filepath.Join("news", "weekly", "_index.zh-cn.md"), time.Now().UTC().Add(8*time.Hour)); err != nil {
@@ -105,7 +100,7 @@ func Summary(newsType, orgName string, publicRepos map[string]struct{}) {
 		}
 	} else {
 		finalReport += markdownReport
-		if err := summary.WriteReport(filepath.Join("news", "daily.mdx"), finalReport); err != nil {
+		if err := utils.WriteReport(filepath.Join("news", "daily.mdx"), finalReport); err != nil {
 			log.Fatalf("Failed to write report: %v", err)
 		}
 	}
