@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/HITSZ-OpenAuto/hoa-news/internal/runner"
+	"github.com/HITSZ-OpenAuto/hoa-news/internal/report"
 )
 
 func main() {
@@ -31,15 +31,10 @@ func main() {
 
 	switch os.Args[1] {
 	case "news":
-		runner.News(orgName, publicRepos)
+		report.News(orgName, publicRepos)
 
 	case "summary":
-		newsType := os.Getenv("NEWS_TYPE")
-		if newsType == "" {
-			fmt.Fprintln(os.Stderr, "Environment variable NEWS_TYPE not found, please set it first.")
-			os.Exit(1)
-		}
-		runner.Summary(newsType, orgName, publicRepos)
+		report.Summary(orgName, publicRepos)
 
 	default:
 		fmt.Fprintf(os.Stderr, "Unknown command: %s\nUsage: %s <news|summary>\n", os.Args[1], os.Args[0])
