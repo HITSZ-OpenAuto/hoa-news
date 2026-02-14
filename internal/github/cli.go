@@ -52,9 +52,6 @@ type Commit struct {
 
 func ghCommand(args []string) ([]byte, error) {
 	cmd := exec.Command("gh", args...)
-
-	fmt.Println(cmd.String())
-
 	cmd.Env = os.Environ()
 	if PAT := os.Getenv("PERSONAL_ACCESS_TOKEN"); PAT != "" {
 		cmd.Env = append(cmd.Env, "GH_TOKEN="+PAT)

@@ -1,5 +1,5 @@
-// 更新速递，每次有新的 commit/PR/issue 时更新一次
-package news
+// 更新速递，更新最近一天的 commit/PR/issue
+package report
 
 import (
 	"fmt"
@@ -12,11 +12,27 @@ import (
 	"github.com/HITSZ-OpenAuto/hoa-news/internal/utils"
 )
 
-type commitEntry struct {
-	AuthorName string
-	Date       time.Time
-	Message    string
-	RepoName   string
+// 复用 summary.go 的 CommitEntry
+
+func News(orgName string, publicRepos map[string]struct{}) {
+	issues, err := github.SearchIssues(orgName, 100)
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Failed to get issues: %v\n", err)
+		os.Exit(1)
+	}
+	prs, err := github.SearchPullRequests(orgName, 100)
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Failed to get pull requests: %v\n", err)
+		os.Exit(1)
+	}
+
+	issues = filterByPublicRepos(issues, publicRepos)
+	prs = filterByPublicRepos(prs, publicRepos)
+
+	if err := UpdateDailyReport("news/daily.mdx", orgName, publicRepos, issues, prs); err != nil {
+		fmt.Fprintf(os.Stderr, "Failed to update daily report: %v\n", err)
+		os.Exit(1)
+	}
 }
 
 func UpdateDailyReport(path string, orgName string, publicRepos map[string]struct{}, issues []github.Item, prs []github.Item) error {
@@ -41,11 +57,11 @@ func UpdateDailyReport(path string, orgName string, publicRepos map[string]struc
 	buf.WriteString(fm)
 	buf.WriteString("---\n\n")
 
-	// Today's commits
+	// Commits
 	buf.WriteString("## 今日更新\n\n")
 
 	startTime := time.Now().Add(-24 * time.Hour)
-	commits := make([]commitEntry, 0)
+	commits := make([]CommitEntry, 0)
 
 	for repo := range publicRepos {
 		repoCommits, err := github.ListCommitsSince(orgName, repo, startTime.Format(time.RFC3339))
@@ -67,11 +83,12 @@ func UpdateDailyReport(path string, orgName string, publicRepos map[string]struc
 				continue
 			}
 			date = date.Add(8 * time.Hour) // Convert to BJT
-			commits = append(commits, commitEntry{
-				AuthorName: authorName,
-				Date:       date,
-				Message:    commit.Commit.Message,
-				RepoName:   repo,
+			commits = append(commits, CommitEntry{
+				AuthorName:  authorName,
+				AuthorLogin: authorLogin,
+				Date:        date,
+				Message:     commit.Commit.Message,
+				RepoName:    repo,
 			})
 		}
 	}
@@ -133,4 +150,17 @@ func UpdateDailyReport(path string, orgName string, publicRepos map[string]struc
 	}
 
 	return os.WriteFile(path, []byte(buf.String()), 0o644)
+}
+
+func filterByPublicRepos(items []github.Item, publicRepos map[string]struct{}) []github.Item {
+	if len(publicRepos) == 0 {
+		return items
+	}
+	filtered := make([]github.Item, 0, len(items))
+	for _, item := range items {
+		if _, ok := publicRepos[item.Repository.Name]; ok {
+			filtered = append(filtered, item)
+		}
+	}
+	return filtered
 }

@@ -91,3 +91,10 @@ func UTCToBJT(utcTimeStr string) string {
 	bjt := utcTime.Add(8 * time.Hour)
 	return bjt.Format("2006-01-02 15:04:05")
 }
+
+var weekdays = []string{"周一", "周二", "周三", "周四", "周五", "周六", "周日"}
+
+// ChineseWeekday returns Chinese weekday name
+func ChineseWeekday(t time.Time) string {
+	return weekdays[int(t.Weekday()+6)%7]
+}
