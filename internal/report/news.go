@@ -15,19 +15,23 @@ import (
 // 复用 summary.go 的 CommitEntry
 
 func News(orgName string, publicRepos map[string]struct{}) {
+
 	issues, err := github.SearchIssues(orgName, 100)
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Failed to get issues: %v\n", err)
 		os.Exit(1)
 	}
+	log.Printf("Fetched issues: %d", len(issues))
 	prs, err := github.SearchPullRequests(orgName, 100)
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Failed to get pull requests: %v\n", err)
 		os.Exit(1)
 	}
+	log.Printf("Fetched pull requests: %d", len(prs))
 
 	issues = filterByPublicRepos(issues, publicRepos)
 	prs = filterByPublicRepos(prs, publicRepos)
+	log.Printf("Filtered by public repos, issues=%d, pull requests=%d", len(issues), len(prs))
 
 	if err := UpdateDailyReport("news/daily.mdx", orgName, publicRepos, issues, prs); err != nil {
 		fmt.Fprintf(os.Stderr, "Failed to update daily report: %v\n", err)
@@ -91,7 +95,10 @@ func UpdateDailyReport(path string, orgName string, publicRepos map[string]struc
 				RepoName:    repo,
 			})
 		}
+		log.Printf("Finished fetching commits for %s", repo)
 	}
+
+	log.Printf("Commit collection complete, %d total valid commits", len(commits))
 
 	if len(commits) == 0 {
 		buf.WriteString("暂无更新\n\n")

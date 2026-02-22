@@ -104,7 +104,6 @@ func buildSummaryContext(nowUTC time.Time) SummaryContext {
 func collectWeeklyData(ctx SummaryContext, orgName string, publicRepos map[string]struct{}) WeeklyAggregate {
 	commits := make([]CommitEntry, 0)
 	repoNames := make(map[string]string)
-
 	for repo := range publicRepos {
 		repoCommits, err := github.ListCommitsSince(orgName, repo, ctx.StartTime.Format(time.RFC3339))
 		if err != nil {
@@ -142,6 +141,7 @@ func collectWeeklyData(ctx SummaryContext, orgName string, publicRepos map[strin
 				RepoName:    repo,
 			})
 		}
+		log.Printf("Finished commits process for %s", repo)
 	}
 
 	return WeeklyAggregate{
