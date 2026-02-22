@@ -66,6 +66,8 @@ func ghCommand(args []string) ([]byte, error) {
 	return output, nil
 }
 
+// SearchIssues 返回指定组织下的公开 issues。
+// 参数 limit 用于限制最多返回的结果数量。
 func SearchIssues(orgName string, limit int) ([]Item, error) {
 	args := []string{
 		"search", "issues",
@@ -85,6 +87,8 @@ func SearchIssues(orgName string, limit int) ([]Item, error) {
 	return items, nil
 }
 
+// SearchPullRequests 返回指定组织下的公开 pull requests。
+// 参数 limit 用于限制最多返回的结果数量。
 func SearchPullRequests(orgName string, limit int) ([]Item, error) {
 	args := []string{
 		"search", "prs",
@@ -104,6 +108,8 @@ func SearchPullRequests(orgName string, limit int) ([]Item, error) {
 	return items, nil
 }
 
+// ListCommitsSince 返回指定组织、指定仓库中自指定时间以来的提交列表。
+// 参数 since_RFC3339 应为 RFC3339 格式的时间字符串，例如 "2024-01-02T15:04:05Z"。
 func ListCommitsSince(orgName, repoName, since_RFC3339 string) ([]Commit, error) {
 	args := []string{
 		"api",
@@ -122,6 +128,7 @@ func ListCommitsSince(orgName, repoName, since_RFC3339 string) ([]Commit, error)
 	return parseNDJSON[Commit](output)
 }
 
+// GetRawTag 从指定组织和仓库的根目录下获取 tag.txt 文件的内容，返回字符串形式的 tag。
 func GetRawTag(orgName, repoName string) (string, error) {
 	args := []string{
 		"api",
@@ -136,6 +143,7 @@ func GetRawTag(orgName, repoName string) (string, error) {
 	return string(output), nil
 }
 
+// parseNDJSON 解析 NDJSON 格式的数据，返回一个 T 类型的切片。T 可以是 Commit 或 Repo。
 func parseNDJSON[T Commit | Repo](data []byte) ([]T, error) {
 	items := make([]T, 0)
 	scanner := bufio.NewScanner(bytes.NewReader(data))

@@ -37,7 +37,7 @@ func main() {
 		report.Summary(orgName, publicRepos)
 
 	default:
-		fmt.Fprintf(os.Stderr, "Unknown command: %s\nUsage: %s <news|summary>\n", os.Args[1], os.Args[0])
+		fmt.Fprintf(os.Stderr, "Unknown command: %s\nUsage: go run cmd/main.go <news|summary>\n", os.Args[1])
 		os.Exit(2)
 	}
 }

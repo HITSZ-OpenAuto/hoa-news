@@ -1,7 +1,6 @@
 package utils
 
 import (
-	"os"
 	"strings"
 	"testing"
 	"time"
@@ -156,62 +155,6 @@ func TestUTCToBJT(t *testing.T) {
 	}
 }
 
-func TestWriteReport(t *testing.T) {
-	tests := []struct {
-		name    string
-		content string
-	}{
-		{
-			name:    "Markdown report",
-			content: "# Test Report\n\nThis is test content.",
-		},
-		{
-			name:    "Empty content",
-			content: "",
-		},
-		{
-			name:    "Multi-line content",
-			content: "# Header\n\n## Section 1\nContent here.\n\n## Section 2\nMore content.",
-		},
-		{
-			name:    "Unicode content",
-			content: "测试报告\n\n这是中文内容。",
-		},
-	}
-
-	for _, tt := range tests {
-		t.Run(tt.name, func(t *testing.T) {
-			// Create a temporary file for testing
-			tmpFile := t.TempDir() + "/test_report.md"
-
-			err := WriteReport(tmpFile, tt.content)
-			if err != nil {
-				t.Fatalf("WriteReport() returned error: %v", err)
-			}
-
-			// Read the file back and verify content
-			readContent, err := os.ReadFile(tmpFile)
-			if err != nil {
-				t.Fatalf("Failed to read file: %v", err)
-			}
-
-			if string(readContent) != tt.content {
-				t.Errorf("WriteReport() wrote incorrect content.\nExpected: %q\nGot: %q", tt.content, string(readContent))
-			}
-
-			// Verify file permissions
-			info, err := os.Stat(tmpFile)
-			if err != nil {
-				t.Fatalf("Failed to stat file: %v", err)
-			}
-
-			expectedPerm := os.FileMode(0o644)
-			if info.Mode().Perm() != expectedPerm {
-				t.Errorf("WriteReport() set incorrect permissions. Expected: %v, Got: %v", expectedPerm, info.Mode().Perm())
-			}
-		})
-	}
-}
 
 func TestChineseWeekday(t *testing.T) {
 	tests := []struct {

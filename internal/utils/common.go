@@ -2,7 +2,6 @@
 package utils
 
 import (
-	"os"
 	"strings"
 	"time"
 
@@ -41,11 +40,6 @@ func IsBot(authorName, authorLogin string) bool {
 		}
 	}
 	return false
-}
-
-// WriteReport writes content to a file
-func WriteReport(path string, content string) error {
-	return os.WriteFile(path, []byte(content), 0o644)
 }
 
 // Author represents a document author
