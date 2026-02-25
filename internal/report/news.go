@@ -5,7 +5,9 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"sort"
 	"strings"
+	"sync"
 	"time"
 
 	"github.com/HITSZ-OpenAuto/hoa-news/internal/github"
@@ -14,8 +16,9 @@ import (
 
 // 复用 summary.go 的 CommitEntry
 
-func News(orgName string, publicRepos map[string]struct{}) {
+const newsGoroutineLimit = 10 // 并发限制，避免过多协程导致触发 GitHub 限流
 
+func News(orgName string, publicRepos map[string]struct{}) {
 	issues, err := github.SearchIssues(orgName, 100)
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Failed to get issues: %v\n", err)
@@ -65,38 +68,72 @@ func UpdateDailyReport(path string, orgName string, publicRepos map[string]struc
 	buf.WriteString("## 今日更新\n\n")
 
 	startTime := time.Now().Add(-24 * time.Hour)
-	commits := make([]CommitEntry, 0)
+
+	var (
+		mu      sync.Mutex
+		wg      sync.WaitGroup
+		commits = make([]CommitEntry, 0)
+		goLimit = make(chan struct{}, newsGoroutineLimit) // 限制并发数，避免过多请求导致失败
+	)
 
 	for repo := range publicRepos {
-		repoCommits, err := github.ListCommitsSince(orgName, repo, startTime.Format(time.RFC3339))
-		if err != nil {
-			log.Printf("Failed to fetch commits for %s: %v", repo, err)
-			continue
-		}
-		for _, commit := range repoCommits {
-			authorName := commit.Commit.Author.Name
-			authorLogin := ""
-			if commit.Author != nil {
-				authorLogin = commit.Author.Login
-			}
-			if utils.IsBot(authorName, authorLogin) {
-				continue
-			}
-			date, err := time.Parse(time.RFC3339, commit.Commit.Author.Date)
+		wg.Add(1)
+		go func(repo string) {
+			defer wg.Done()
+
+			goLimit <- struct{}{}        // 获取限流令牌
+			defer func() { <-goLimit }() // 释放令牌
+
+			repoCommits, err := github.ListCommitsSince(orgName, repo, startTime.Format(time.RFC3339))
 			if err != nil {
-				continue
+				log.Printf("Failed to fetch commits for %s: %v", repo, err)
+				return
 			}
-			date = date.Add(8 * time.Hour) // Convert to BJT
-			commits = append(commits, CommitEntry{
-				AuthorName:  authorName,
-				AuthorLogin: authorLogin,
-				Date:        date,
-				Message:     commit.Commit.Message,
-				RepoName:    repo,
-			})
-		}
-		log.Printf("Finished fetching commits for %s", repo)
+
+			localCommits := make([]CommitEntry, 0, len(repoCommits)) // 区分本地和全局，是为了减少锁的粒度，提升性能
+			for _, commit := range repoCommits {
+				authorName := commit.Commit.Author.Name
+				authorLogin := ""
+				if commit.Author != nil {
+					authorLogin = commit.Author.Login
+				}
+				if utils.IsBot(authorName, authorLogin) {
+					continue // 过滤掉 bot 提交，比如 actions 自动生成的就不需要计数
+				}
+
+				date, err := time.Parse(time.RFC3339, commit.Commit.Author.Date)
+				if err != nil {
+					continue
+				}
+				date = date.In(beijingTimeZone) // Convert to BJT
+				localCommits = append(localCommits, CommitEntry{
+					AuthorName:  authorName,
+					AuthorLogin: authorLogin,
+					Date:        date,
+					Message:     commit.Commit.Message,
+					RepoName:    repo,
+				})
+			}
+
+			if len(localCommits) == 0 {
+				log.Printf("Finished commits process for %s (no valid commits)", repo)
+				return
+			}
+
+			mu.Lock()
+			commits = append(commits, localCommits...)
+			mu.Unlock()
+
+			log.Printf("Finished commits process for %s", repo)
+		}(repo)
 	}
+
+	wg.Wait()
+
+	// 按日期降序排序保证输出稳定，最新的 commit 在前面
+	sort.Slice(commits, func(i, j int) bool {
+		return commits[i].Date.After(commits[j].Date)
+	})
 
 	log.Printf("Commit collection complete, %d total valid commits", len(commits))
 

@@ -20,6 +20,8 @@ type summaryResponse struct {
 	OutputText string `json:"output_text"`
 }
 
+// GenerateWeeklySummary 根据 rawUpdates，调用 OpenAI API 生成每周更新摘要。
+// 如果一周内仅有一个仓库更新，输出 "__NO_SUMMARY__"。
 func GenerateWeeklySummary(rawUpdates string) (string, error) {
 	apiKey := os.Getenv("OPENAI_API_KEY")
 	if apiKey == "" {

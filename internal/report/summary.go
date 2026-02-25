@@ -7,6 +7,7 @@ import (
 	"os"
 	"sort"
 	"strings"
+	"sync"
 	"time"
 
 	"github.com/HITSZ-OpenAuto/hoa-news/internal/github"
@@ -14,6 +15,8 @@ import (
 	"github.com/HITSZ-OpenAuto/hoa-news/internal/utils"
 	"gopkg.in/yaml.v3"
 )
+
+const summaryGoroutineLimit = 10 // 并发限制，避免过多协程导致触发 GitHub 限流
 
 var beijingTimeZone = time.FixedZone("CST", int((8 * time.Hour).Seconds())) // 北京时间（UTC+8）
 
@@ -56,7 +59,8 @@ func Summary(orgName string, publicRepos map[string]struct{}) {
 
 	frontMatter, err := GenerateWeeklyFrontMatter(ctx.StartTime, ctx.NowBJT)
 	if err != nil {
-		log.Fatalf("Failed to generate front matter: %v", err)
+		log.Printf("Failed to generate front matter: %v", err)
+		return
 	}
 	markdownReport := BuildMarkdown(agg.Commits, agg.RepoName, orgName)
 
@@ -70,8 +74,11 @@ func Summary(orgName string, publicRepos map[string]struct{}) {
 	}
 	finalReport.WriteString(markdownReport)
 
-	if err := writeWeeklyArtifacts(ctx, finalReport.String()); err != nil {
-		log.Fatalf("Failed to write report: %v", err)
+	if err := os.MkdirAll(ctx.WeeklyDir, 0o755); err != nil {
+		fmt.Printf("failed to create weekly directory: %v", err)
+	}
+	if err := os.WriteFile(ctx.ReportPath, []byte(finalReport.String()), 0o644); err != nil {
+		fmt.Printf("failed to write weekly report: %v", err)
 	}
 
 	if err := WriteWeeklyIndex(ctx.WeeklyIndexPath, ctx.NowBJT); err != nil {
@@ -102,48 +109,78 @@ func buildSummaryContext(nowUTC time.Time) SummaryContext {
 // collectWeeklyData 遍历所有公开仓库，拉取时间窗口内的 commit，
 // 过滤 bot 提交，并尝试获取课程名称，返回聚合结果。
 func collectWeeklyData(ctx SummaryContext, orgName string, publicRepos map[string]struct{}) WeeklyAggregate {
-	commits := make([]CommitEntry, 0)
-	repoNames := make(map[string]string)
+	var (
+		mu sync.Mutex
+		wg sync.WaitGroup
+		// 所有协程可见、共享的信息，需要保护
+		commits   = make([]CommitEntry, 0)  // 过滤 bot 后的 commit 列表，无序
+		repoNames = make(map[string]string) // repo 名 -> 课程名的映射
+		goLimit   = make(chan struct{}, summaryGoroutineLimit)
+	)
+
 	for repo := range publicRepos {
-		repoCommits, err := github.ListCommitsSince(orgName, repo, ctx.StartTime.Format(time.RFC3339))
-		if err != nil {
-			log.Printf("Failed to fetch commits for %s: %v", repo, err)
-			continue
-		}
+		wg.Add(1)
+		go func(repo string) {
+			defer wg.Done()
 
-		for _, commit := range repoCommits {
-			authorName := commit.Commit.Author.Name
-			authorLogin := ""
-			if commit.Author != nil {
-				authorLogin = commit.Author.Login
-			}
-			if utils.IsBot(authorName, authorLogin) {
-				continue
-			}
+			goLimit <- struct{}{}        // 获取限流令牌
+			defer func() { <-goLimit }() // 释放令牌
 
-			if _, exists := repoNames[repo]; !exists {
-				if name, err := fetchCourseName(orgName, repo); err == nil && name != "" {
-					repoNames[repo] = name
-				}
-			}
-
-			date, err := time.Parse(time.RFC3339, commit.Commit.Author.Date)
+			repoCommits, err := github.ListCommitsSince(orgName, repo, ctx.StartTime.Format(time.RFC3339))
 			if err != nil {
-				continue
+				log.Printf("Failed to fetch commits for %s: %v", repo, err)
+				return
 			}
-			date = date.In(beijingTimeZone)
 
-			commits = append(commits, CommitEntry{
-				AuthorName:  authorName,
-				AuthorLogin: authorLogin,
-				Date:        date,
-				Message:     commit.Commit.Message,
-				RepoName:    repo,
-			})
-		}
-		log.Printf("Finished commits process for %s", repo)
+			localCommits := make([]CommitEntry, 0, len(repoCommits)) // 区分本地和全局，是为了减少锁的粒度，提升性能
+			for _, commit := range repoCommits {
+				authorName := commit.Commit.Author.Name
+				authorLogin := ""
+				if commit.Author != nil {
+					authorLogin = commit.Author.Login
+				}
+				if utils.IsBot(authorName, authorLogin) {
+					continue // 过滤掉 bot 提交，比如 actions 自动生成的就不需要计数
+				}
+
+				date, err := time.Parse(time.RFC3339, commit.Commit.Author.Date)
+				if err != nil {
+					continue
+				}
+				date = date.In(beijingTimeZone)
+				localCommits = append(localCommits, CommitEntry{
+					AuthorName:  authorName,
+					AuthorLogin: authorLogin,
+					Date:        date,
+					Message:     commit.Commit.Message,
+					RepoName:    repo,
+				})
+			}
+
+			if len(localCommits) == 0 {
+				log.Printf("Finished commits process for %s (no valid commits)", repo)
+				return
+			} // 仅当存在有效提交时，尝试获取课程名称，减少不必要的 API 调用
+
+			var courseName string
+			if name, err := fetchCourseName(orgName, repo); err == nil && name != "" {
+				courseName = name
+			}
+
+			mu.Lock()
+			commits = append(commits, localCommits...)
+			if courseName != "" {
+				repoNames[repo] = courseName
+			}
+			mu.Unlock()
+
+			log.Printf("Finished commits process for %s", repo)
+		}(repo)
 	}
 
+	wg.Wait()
+
+	log.Printf("Commit collection complete, %d total valid commits", len(commits))
 	return WeeklyAggregate{
 		Commits:  commits,
 		RepoName: repoNames,
@@ -155,25 +192,17 @@ func collectWeeklyData(ctx SummaryContext, orgName string, publicRepos map[strin
 func generateSummarySection(markdownReport string) string {
 	summaryText, err := openai.GenerateWeeklySummary(markdownReport)
 	if err != nil {
-		log.Printf("Summary generation failed: %v, using full report instead.", err)
+		log.Printf("AI summary generation failed: %v, using original report instead.", err)
 		return ""
 	}
 
-	if summaryText == "__NO_SUMMARY__" { // 给 AI 的 prompt 里写了如果一周内仅有一个仓库更新则直接输出 __NO_SUMMARY__
+	if summaryText == "__NO_SUMMARY__" {
 		return ""
 	}
 	return summaryText
 }
 
-// writeWeeklyArtifacts 创建周报目录并写入最终报告文件。
-func writeWeeklyArtifacts(ctx SummaryContext, finalReport string) error {
-	if err := os.MkdirAll(ctx.WeeklyDir, 0o755); err != nil {
-		return fmt.Errorf("failed to create weekly directory: %w", err)
-	}
-	return os.WriteFile(ctx.ReportPath, []byte(finalReport), 0o644)
-}
-
-// WriteWeeklyIndex 更新周报索引文件的 front matter（标题、日期、描述）。
+// WriteWeeklyIndex 更新周报索引文件的标题、日期、描述。
 func WriteWeeklyIndex(path string, now time.Time) error {
 	fm := struct {
 		Title       string `yaml:"title"`
@@ -234,7 +263,6 @@ func GenerateWeeklyFrontMatter(startDate time.Time, now time.Time) (string, erro
 			Image: "https://github.com/openai.png",
 		}})
 }
-
 
 // fetchCourseName 从仓库的 tag 文件中提取课程名称。
 func fetchCourseName(orgName, repoName string) (string, error) {
