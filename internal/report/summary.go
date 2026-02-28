@@ -18,8 +18,6 @@ import (
 
 const summaryGoroutineLimit = 10 // 并发限制，避免过多协程导致触发 GitHub 限流
 
-var beijingTimeZone = time.FixedZone("CST", int((8 * time.Hour).Seconds())) // 北京时间（UTC+8）
-
 // CommitEntry 表示一条 commit 记录。
 type CommitEntry struct {
 	AuthorName  string
@@ -89,10 +87,10 @@ func Summary(orgName string, publicRepos map[string]struct{}) {
 // buildSummaryContext 根据当前 UTC 时间计算时间窗口和输出路径，
 // 返回贯穿整个流程的 SummaryContext。
 func buildSummaryContext(nowUTC time.Time) SummaryContext {
-	nowBJT := nowUTC.In(beijingTimeZone)
+	nowBJT := nowUTC.In(utils.BeijingTimeZone)
 	start := time.Date(
 		nowBJT.Year(), nowBJT.Month(), nowBJT.Day(),
-		0, 0, 0, 0, beijingTimeZone,
+		0, 0, 0, 0, utils.BeijingTimeZone,
 	).AddDate(0, 0, -7)
 
 	weeklyDir := fmt.Sprintf("news/weekly/weekly-%s", start.Format("2006-01-02"))
@@ -147,7 +145,7 @@ func collectWeeklyData(ctx SummaryContext, orgName string, publicRepos map[strin
 				if err != nil {
 					continue
 				}
-				date = date.In(beijingTimeZone)
+				date = date.In(utils.BeijingTimeZone)
 				localCommits = append(localCommits, CommitEntry{
 					AuthorName:  authorName,
 					AuthorLogin: authorLogin,

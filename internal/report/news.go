@@ -16,7 +16,7 @@ import (
 
 // 复用 summary.go 的 CommitEntry
 
-const newsGoroutineLimit = 10 // 并发限制，避免过多协程导致触发 GitHub 限流
+const newsGoroutineLimit = 10 // 并发限制，避免过多协程触发 GitHub 限流
 
 func News(orgName string, publicRepos map[string]struct{}) {
 	issues, err := github.SearchIssues(orgName, 100)
@@ -105,7 +105,7 @@ func UpdateDailyReport(path string, orgName string, publicRepos map[string]struc
 				if err != nil {
 					continue
 				}
-				date = date.In(beijingTimeZone) // Convert to BJT
+				date = date.In(utils.BeijingTimeZone) // Convert to BJT
 				localCommits = append(localCommits, CommitEntry{
 					AuthorName:  authorName,
 					AuthorLogin: authorLogin,

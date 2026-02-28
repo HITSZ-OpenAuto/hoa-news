@@ -8,16 +8,19 @@ import (
 	"gopkg.in/yaml.v3"
 )
 
-var knownBots = map[string]struct{}{
-	"GitHub Actions":      {},
-	"github-actions":      {},
-	"actions-user":        {},
-	"github-actions[bot]": {},
-	"dependabot":          {},
-	"dependabot[bot]":     {},
-	"renovate":            {},
-	"renovate[bot]":       {},
-}
+var (
+	knownBots = map[string]struct{}{
+		"GitHub Actions":      {},
+		"github-actions":      {},
+		"actions-user":        {},
+		"github-actions[bot]": {},
+		"dependabot":          {},
+		"dependabot[bot]":     {},
+		"renovate":            {},
+		"renovate[bot]":       {},
+	}
+	BeijingTimeZone = time.FixedZone("CST", int((8 * time.Hour).Seconds())) // 北京时间（UTC+8）
+)
 
 // IsBot checks if a commit author is a bot
 func IsBot(authorName, authorLogin string) bool {
