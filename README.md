@@ -17,7 +17,7 @@
 - `PERSONAL_ACCESS_TOKEN`：GitHub 个人访问令牌（PAT），需具备读取代码仓库等权限（必需）。
 - `OPENAI_API_KEY`：用于 `summary` 命令生成周报摘要的模型 API Key（可选）。
 - `OPENAI_BASE_URL`：配置模型环境的 Base URL 代理地址（可选）。
-- `repos_array`：以 JSON 数组字符串形式（如 `["repoA", "repoB"]`）指定需要追踪哪些公共仓库。如不配置，则读取所有公开仓库（可选）。
+- `repos_array`：以 JSON 数组字符串形式（如 `["repoA", "repoB"]`）指定需要追踪哪些公共仓库。如不配置，则程序不会进行扫描（必需）。
 
 2. 运行生成报告
 

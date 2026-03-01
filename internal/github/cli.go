@@ -71,6 +71,7 @@ func ghCommand(args []string) ([]byte, error) {
 func SearchIssues(orgName string, limit int) ([]Item, error) {
 	args := []string{
 		"search", "issues",
+		"is:public",
 		"--json", "title,url,repository,createdAt,author,labels",
 		"--state", "open",
 		"--owner", orgName,
@@ -92,6 +93,7 @@ func SearchIssues(orgName string, limit int) ([]Item, error) {
 func SearchPullRequests(orgName string, limit int) ([]Item, error) {
 	args := []string{
 		"search", "prs",
+		"is:public",
 		"--json", "title,url,repository,createdAt,author,labels",
 		"--state", "open",
 		"--owner", orgName,
