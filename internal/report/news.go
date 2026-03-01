@@ -18,17 +18,15 @@ import (
 
 const newsGoroutineLimit = 10 // 并发限制，避免过多协程触发 GitHub 限流
 
-func News(orgName string, publicRepos map[string]struct{}) {
+func News(orgName string, publicRepos map[string]struct{}) error {
 	issues, err := github.SearchIssues(orgName, 100)
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Failed to get issues: %v\n", err)
-		os.Exit(1)
+		return fmt.Errorf("failed to get issues: %w", err)
 	}
 	log.Printf("Fetched issues: %d", len(issues))
 	prs, err := github.SearchPullRequests(orgName, 100)
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Failed to get pull requests: %v\n", err)
-		os.Exit(1)
+		return fmt.Errorf("failed to get pull requests: %w", err)
 	}
 	log.Printf("Fetched pull requests: %d", len(prs))
 
@@ -37,9 +35,10 @@ func News(orgName string, publicRepos map[string]struct{}) {
 	log.Printf("Filtered by public repos, issues=%d, pull requests=%d", len(issues), len(prs))
 
 	if err := UpdateDailyReport("news/daily.mdx", orgName, publicRepos, issues, prs); err != nil {
-		fmt.Fprintf(os.Stderr, "Failed to update daily report: %v\n", err)
-		os.Exit(1)
+		return fmt.Errorf("failed to update daily report: %w", err)
 	}
+
+	return nil
 }
 
 func UpdateDailyReport(path string, orgName string, publicRepos map[string]struct{}, issues []github.Item, prs []github.Item) error {

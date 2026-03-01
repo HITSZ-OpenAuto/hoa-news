@@ -2,6 +2,7 @@
 package report
 
 import (
+	"errors"
 	"fmt"
 	"log"
 	"os"
@@ -17,6 +18,8 @@ import (
 )
 
 const summaryGoroutineLimit = 10 // 并发限制，避免过多协程导致触发 GitHub 限流
+
+var ErrNoWeeklyCommits = errors.New("no commits found in the given period of time")
 
 // CommitEntry 表示一条 commit 记录。
 type CommitEntry struct {
@@ -46,19 +49,17 @@ type WeeklyAggregate struct {
 
 // Summary 是周报生成的入口函数，编排流程：
 // 构建上下文 → 聚合数据 → 渲染内容 → 写入文件。
-func Summary(orgName string, publicRepos map[string]struct{}) {
+func Summary(orgName string, publicRepos map[string]struct{}) error {
 	ctx := buildSummaryContext(time.Now().UTC())
 	agg := collectWeeklyData(ctx, orgName, publicRepos)
 
 	if len(agg.Commits) == 0 {
-		log.Println("No commits found in the given period of time")
-		return
+		return ErrNoWeeklyCommits
 	}
 
 	frontMatter, err := GenerateWeeklyFrontMatter(ctx.StartTime, ctx.NowBJT)
 	if err != nil {
-		log.Printf("Failed to generate front matter: %v", err)
-		return
+		return fmt.Errorf("failed to generate front matter: %w", err)
 	}
 	markdownReport := BuildMarkdown(agg.Commits, agg.RepoName, orgName)
 
@@ -73,15 +74,17 @@ func Summary(orgName string, publicRepos map[string]struct{}) {
 	finalReport.WriteString(markdownReport)
 
 	if err := os.MkdirAll(ctx.WeeklyDir, 0o755); err != nil {
-		fmt.Printf("failed to create weekly directory: %v", err)
+		return fmt.Errorf("failed to create weekly directory %q: %w", ctx.WeeklyDir, err)
 	}
 	if err := os.WriteFile(ctx.ReportPath, []byte(finalReport.String()), 0o644); err != nil {
-		fmt.Printf("failed to write weekly report: %v", err)
+		return fmt.Errorf("failed to write weekly report %q: %w", ctx.ReportPath, err)
 	}
 
 	if err := WriteWeeklyIndex(ctx.WeeklyIndexPath, ctx.NowBJT); err != nil {
-		log.Printf("Failed to update weekly index: %v", err)
+		return fmt.Errorf("failed to update weekly index %q: %w", ctx.WeeklyIndexPath, err)
 	}
+
+	return nil
 }
 
 // buildSummaryContext 根据当前 UTC 时间计算时间窗口和输出路径，
