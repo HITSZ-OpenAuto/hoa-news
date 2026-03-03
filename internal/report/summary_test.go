@@ -211,3 +211,19 @@ func TestBuildMarkdown_Sorting(t *testing.T) {
 		t.Errorf("BuildMarkdown() commits not sorted correctly: newer commit should appear first")
 	}
 }
+
+func TestBuildMarkdown_PreserveHumanMessageStyle(t *testing.T) {
+	commits := []CommitEntry{
+		{
+			AuthorName: "Fun10165",
+			Date:       time.Date(2026, 1, 30, 10, 0, 0, 0, time.UTC),
+			Message:    "增加 25 秋考试信息 (#39)",
+			RepoName:   "GEIP1011",
+		},
+	}
+
+	result := BuildMarkdown(commits, make(map[string]string), "HITSZ-OpenAuto")
+	if !strings.Contains(result, "增加 25 秋考试信息 (#39)") {
+		t.Fatalf("BuildMarkdown() should preserve human commit message style, got:\n%s", result)
+	}
+}

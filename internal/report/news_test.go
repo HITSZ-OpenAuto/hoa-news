@@ -1,6 +1,7 @@
 package report
 
 import (
+	"os"
 	"strings"
 	"testing"
 	"time"
@@ -52,7 +53,7 @@ func TestGenerateDailyFrontMatter(t *testing.T) {
 
 func TestUpdateDailyReport_EmptyData(t *testing.T) {
 	// Test with empty issues and PRs
-	tmpFile := t.TempDir() + "/daily.mdx"
+	tmpFile := t.TempDir() + "/daily.md"
 	orgName := "test-org"
 	publicRepos := make(map[string]struct{})
 	var issues []github.Item
@@ -66,13 +67,13 @@ func TestUpdateDailyReport_EmptyData(t *testing.T) {
 
 func TestUpdateDailyReport_WithData(t *testing.T) {
 	// Test with sample issues and PRs
-	tmpFile := t.TempDir() + "/daily.mdx"
+	tmpFile := t.TempDir() + "/daily.md"
 	orgName := "test-org"
 	publicRepos := make(map[string]struct{})
 
 	issues := []github.Item{
 		{
-			Title: "Test Issue",
+			Title: "增加 25 秋考试信息 (#39)",
 			URL:   "https://github.com/test-org/repo/issues/1",
 			Repository: github.Repository{
 				Name: "test-repo",
@@ -90,8 +91,8 @@ func TestUpdateDailyReport_WithData(t *testing.T) {
 
 	prs := []github.Item{
 		{
-			Title: "Test PR",
-			URL:   "https://github.com/test-org/repo/pull/1",
+			Title: "Fix [Parser] (#10)",
+			URL:   "https://evil.com/steal",
 			Repository: github.Repository{
 				Name: "test-repo",
 			},
@@ -108,5 +109,19 @@ func TestUpdateDailyReport_WithData(t *testing.T) {
 	err := UpdateDailyReport(tmpFile, orgName, publicRepos, issues, prs)
 	if err != nil {
 		t.Fatalf("UpdateDailyReport() returned error: %v", err)
+	}
+
+	content, err := os.ReadFile(tmpFile)
+	if err != nil {
+		t.Fatalf("failed to read output file: %v", err)
+	}
+	got := string(content)
+
+	if !strings.Contains(got, "### [增加 25 秋考试信息 (#39)](https://github.com/test-org/repo/issues/1)") {
+		t.Errorf("expected issue link, got:\n%s", got)
+	}
+
+	if !strings.Contains(got, "### [Fix \\[Parser\\] (#10)](https://evil.com/steal)") {
+		t.Errorf("expected PR link to keep original URL, got:\n%s", got)
 	}
 }

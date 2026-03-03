@@ -4,8 +4,8 @@
 
 一个用于自动聚合和生成 GitHub 组织/团队动态（最新速递与周报总结）的工具代码库。通过 GitHub API 获取指定组织的 Issues、Pull Requests 和 Commits 数据，且支持大语言模型生成总结报告。项目主要包含以下两类报告生成模式：
 
-- **最新速递 (news)**：汇总最近一天的动态，直接列出 Commits / PRs / Issues 更新列表。
-- **周报总结 (summary)**：生成完整的周报，汇总一周以内各仓库和人员的贡献数据，并通过大语言模型生成总览性总结文本。
+- **最新速递 (News)**：汇总最近一天的动态，列出 Commits / PRs / Issues 更新列表。
+- **周报总结 (Summary)**：生成完整的周报，汇总一周以内各仓库贡献情况，并通过大语言模型生成总结。
 
 ## 使用方法
 
@@ -31,7 +31,7 @@ go run cmd/main.go news
 go run cmd/main.go summary
 ```
 
-执行后，生成或更新的文档（如 `news/daily.mdx`、`news/weekly/<日期>/index.mdx`）将被直接写入本地对应的目录中。
+执行后，更新内容被写入 `news/daily.md` 或 `news/weekly/<日期>/index.md`）。
 
 ## 各模块功能
 
@@ -48,11 +48,11 @@ go run cmd/main.go summary
 
 - **`internal/report/`**
   执行报告生成的核心业务逻辑：
-  - `news.go`：并行拉取最近一天的更新，通过模板生成并刷新 `daily.mdx`。
-  - `summary.go`：并行拉取过去一周的提交记录，过滤 bot 提交，调用 `openai` 进行总结生成，持久化输出至 `weekly/` 子目录下。
+  - `news.go`：并行拉取最近一天的更新，通过模板生成并刷新 `daily.md`。
+  - `summary.go`：并行拉取过去一周的提交记录，过滤 bot 提交，调用 `openai` 进行总结生成，输出至 `weekly/` 子目录下。
 
 - **`internal/utils/`**
-  工具库。包含格式化、Bot 账号屏蔽规则以及 MDX Front-Matter 数据生成等通用处理逻辑。
+  工具库。包含格式化、Bot 账号屏蔽规则、Markdown 文本净化与 Front-Matter 生成等通用处理逻辑。
 
 - **`news/`**
-  生成的 Markdown/MDX 文件数据汇总目录，存放产出的最新日报、历史周报目录结构。
+  生成的 Markdown 文件数据汇总目录，存放产出的最新日报、历史周报目录结构。

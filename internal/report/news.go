@@ -34,7 +34,7 @@ func News(orgName string, publicRepos map[string]struct{}) error {
 	prs = filterByPublicRepos(prs, publicRepos)
 	log.Printf("Filtered by public repos, issues=%d, pull requests=%d", len(issues), len(prs))
 
-	if err := UpdateDailyReport("news/daily.mdx", orgName, publicRepos, issues, prs); err != nil {
+	if err := UpdateDailyReport("news/daily.md", orgName, publicRepos, issues, prs); err != nil {
 		return fmt.Errorf("failed to update daily report: %w", err)
 	}
 
@@ -69,10 +69,11 @@ func UpdateDailyReport(path string, orgName string, publicRepos map[string]struc
 	startTime := time.Now().Add(-24 * time.Hour)
 
 	var (
-		mu      sync.Mutex
-		wg      sync.WaitGroup
-		commits = make([]CommitEntry, 0)
-		goLimit = make(chan struct{}, newsGoroutineLimit) // 限制并发数，避免过多请求导致失败
+		mu        sync.Mutex
+		wg        sync.WaitGroup
+		commits   = make([]CommitEntry, 0)
+		repoNames = make(map[string]string)                 // repo 名 -> 课程名的映射
+		goLimit   = make(chan struct{}, newsGoroutineLimit) // 限制并发数，避免过多请求导致失败
 	)
 
 	for repo := range publicRepos {
@@ -119,8 +120,16 @@ func UpdateDailyReport(path string, orgName string, publicRepos map[string]struc
 				return
 			}
 
+			var courseName string
+			if name, err := fetchCourseName(orgName, repo); err == nil && name != "" {
+				courseName = name
+			}
+
 			mu.Lock()
 			commits = append(commits, localCommits...)
+			if courseName != "" {
+				repoNames[repo] = courseName
+			}
 			mu.Unlock()
 
 			log.Printf("Finished commits process for %s", repo)
@@ -140,10 +149,16 @@ func UpdateDailyReport(path string, orgName string, publicRepos map[string]struc
 		buf.WriteString("暂无更新\n\n")
 	} else {
 		for _, commit := range commits {
-			message := strings.Split(commit.Message, "\n")[0]
+			author := utils.SanitizeInlineText(commit.AuthorName)
+			repoName := repoNames[commit.RepoName]
+			if repoName == "" {
+				repoName = commit.RepoName
+			}
+			repoName = utils.SanitizeInlineText(repoName)
+			message := utils.SanitizeInlineText(strings.Split(commit.Message, "\n")[0])
 			fmt.Fprintf(&buf,
 				"- %s 在 [%s](https://github.com/%s/%s) 中提交了信息：%s (%s)\n\n",
-				commit.AuthorName, commit.RepoName, orgName, commit.RepoName, message,
+				author, repoName, orgName, commit.RepoName, message,
 				commit.Date.Format("15:04"))
 		}
 	}
@@ -155,14 +170,14 @@ func UpdateDailyReport(path string, orgName string, publicRepos map[string]struc
 		buf.WriteString("暂无待解决的 Issues\n\n")
 	} else {
 		for _, issue := range issues {
-			fmt.Fprintf(&buf, "### [%s](%s)\n\n", issue.Title, issue.URL)
-			fmt.Fprintf(&buf, "- **仓库**: %s\n", issue.Repository.Name)
+			fmt.Fprintf(&buf, "### %s\n\n", utils.RenderSafeMarkdownLink(issue.Title, issue.URL))
+			fmt.Fprintf(&buf, "- **仓库**: %s\n", utils.SanitizeInlineText(issue.Repository.Name))
 			fmt.Fprintf(&buf, "- **创建于**: %s\n", utils.UTCToBJT(issue.CreatedAt))
-			fmt.Fprintf(&buf, "- **作者**: %s\n", issue.Author.Login)
+			fmt.Fprintf(&buf, "- **作者**: %s\n", utils.SanitizeInlineText(issue.Author.Login))
 			if len(issue.Labels) > 0 {
 				labels := make([]string, 0, len(issue.Labels))
 				for _, label := range issue.Labels {
-					labels = append(labels, label.Name)
+					labels = append(labels, utils.SanitizeInlineText(label.Name))
 				}
 				fmt.Fprintf(&buf, "- **标签**: %s\n", strings.Join(labels, ", "))
 			}
@@ -177,14 +192,14 @@ func UpdateDailyReport(path string, orgName string, publicRepos map[string]struc
 		buf.WriteString("暂无待合并的 Pull Requests\n\n")
 	} else {
 		for _, pr := range prs {
-			fmt.Fprintf(&buf, "### [%s](%s)\n\n", pr.Title, pr.URL)
-			fmt.Fprintf(&buf, "- **仓库**: %s\n", pr.Repository.Name)
+			fmt.Fprintf(&buf, "### %s\n\n", utils.RenderSafeMarkdownLink(pr.Title, pr.URL))
+			fmt.Fprintf(&buf, "- **仓库**: %s\n", utils.SanitizeInlineText(pr.Repository.Name))
 			fmt.Fprintf(&buf, "- **创建于**: %s\n", utils.UTCToBJT(pr.CreatedAt))
-			fmt.Fprintf(&buf, "- **作者**: %s\n", pr.Author.Login)
+			fmt.Fprintf(&buf, "- **作者**: %s\n", utils.SanitizeInlineText(pr.Author.Login))
 			if len(pr.Labels) > 0 {
 				labels := make([]string, 0, len(pr.Labels))
 				for _, label := range pr.Labels {
-					labels = append(labels, label.Name)
+					labels = append(labels, utils.SanitizeInlineText(label.Name))
 				}
 				fmt.Fprintf(&buf, "- **标签**: %s\n", strings.Join(labels, ", "))
 			}

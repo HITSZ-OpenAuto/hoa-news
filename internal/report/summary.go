@@ -36,7 +36,7 @@ type SummaryContext struct {
 	NowBJT          time.Time // 当前北京时间（UTC+8）
 	StartTime       time.Time // commit 查询起始时间
 	WeeklyDir       string    // 周报输出目录，如 news/weekly/weekly-2026-02-15
-	ReportPath      string    // 周报文件路径，如 ./index.mdx
+	ReportPath      string    // 周报文件路径，如 ./index.md
 	WeeklyIndexPath string    // 周报索引文件路径
 }
 
@@ -102,7 +102,7 @@ func buildSummaryContext(nowUTC time.Time) SummaryContext {
 		NowBJT:          nowBJT,
 		StartTime:       start,
 		WeeklyDir:       weeklyDir,
-		ReportPath:      weeklyDir + "/index.mdx",
+		ReportPath:      weeklyDir + "/index.md",
 		WeeklyIndexPath: "news/weekly/index.md",
 	}
 }
@@ -246,8 +246,9 @@ func BuildMarkdown(commits []CommitEntry, repoTitles map[string]string, orgName 
 		if title == "" {
 			title = commit.RepoName
 		}
-		message := strings.Split(commit.Message, "\n")[0]
-		fmt.Fprintf(&b, "- %s 在 [%s](https://github.com/%s/%s) 中提交了信息：%s\n\n", commit.AuthorName, title, orgName, commit.RepoName, message)
+		author := utils.SanitizeInlineText(commit.AuthorName)
+		message := utils.SanitizeInlineText(strings.Split(commit.Message, "\n")[0]) // commit message 可能有多行补充信息，只取第一行作为摘要
+		fmt.Fprintf(&b, "- %s 在 [%s](https://github.com/%s/%s) 中提交了信息：%s\n\n", author, title, orgName, commit.RepoName, message)
 	}
 	return b.String()
 }
