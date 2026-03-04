@@ -16,16 +16,13 @@ var (
 		"{", "&#123;",
 		"}", "&#125;",
 	)
-	//  markdownLabelReplacer 用于转义 Markdown 链接标签中的特殊字符，防止它们被误解析。
+	//  markdownLabelReplacer 用于转义 Markdown 链接标签中的部分字符，防止它们被误解析。
 	markdownLabelReplacer = strings.NewReplacer(
 		`\`, `\\`,
 		`[`, `\[`,
 		`]`, `\]`,
 		`(`, `\(`,
 		`)`, `\)`,
-		`*`, `\*`,
-		`_`, `\_`,
-		"`", "\\`",
 	)
 )
 
@@ -62,7 +59,6 @@ func SanitizeInlineText(s string) string {
 }
 
 // SanitizeLinkLabel 对链接标签进行清理，移除控制字符并转义 Markdown 特殊字符。
-// 目前转义：反斜杠、方括号、圆括号、星号、下划线和反引号。
 func SanitizeLinkLabel(s string) string {
 	safe := SanitizeInlineText(s)
 	return markdownLabelReplacer.Replace(safe)

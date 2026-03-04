@@ -204,7 +204,7 @@ func generateSummarySection(markdownReport string) string {
 	// 对 AI 生成的摘要进行清理，移除控制字符和多余空白，确保在 Markdown 中安全显示。
 	lines := strings.Split(summaryText, "\n")
 	for i, line := range lines {
-		lines[i] = utils.SanitizeInlineText(line)
+		lines[i] = utils.SanitizeLinkLabel(line)
 	}
 
 	return strings.Join(lines, "\n")
