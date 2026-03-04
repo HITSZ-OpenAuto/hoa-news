@@ -74,9 +74,12 @@ func GenerateWeeklySummary(rawUpdates string) (string, error) {
 		return "", err
 	}
 	defer resp.Body.Close()
-	if resp.StatusCode < 200 || resp.StatusCode >= 300 {
-		body, _ := io.ReadAll(resp.Body)
-		return "", fmt.Errorf("openai api error: %s", string(body))
+	if resp.StatusCode >= 400 {
+		bodyBytes, err := io.ReadAll(resp.Body)
+		if err != nil {
+			return "", fmt.Errorf("OpenAI API error: %s, failed to read response body: %v", resp.Status, err)
+		}
+		return "", fmt.Errorf("OpenAI API error: %s, response: %s", resp.Status, string(bodyBytes))
 	}
 	var out summaryResponse
 	if err := json.NewDecoder(resp.Body).Decode(&out); err != nil {
