@@ -117,11 +117,69 @@ func TestUpdateDailyReport_WithData(t *testing.T) {
 	}
 	got := string(content)
 
-	if !strings.Contains(got, "### [增加 25 秋考试信息 (#39)](https://github.com/test-org/repo/issues/1)") {
+	if !strings.Contains(got, "### [增加 25 秋考试信息 \\(#39\\)](https://github.com/test-org/repo/issues/1)") {
 		t.Errorf("expected issue link, got:\n%s", got)
 	}
 
-	if !strings.Contains(got, "### [Fix \\[Parser\\] (#10)](https://evil.com/steal)") {
+	if !strings.Contains(got, "### [Fix \\[Parser\\] \\(#10\\)](https://evil.com/steal)") {
 		t.Errorf("expected PR link to keep original URL, got:\n%s", got)
+	}
+}
+
+func TestUpdateDailyReport_EscapeMDXPayloadInTitles(t *testing.T) {
+	tmpFile := t.TempDir() + "/daily.md"
+	orgName := "test-org"
+	publicRepos := make(map[string]struct{})
+
+	issues := []github.Item{
+		{
+			Title: "<script>alert(1)</script>",
+			URL:   "https://github.com/test-org/repo/issues/2",
+			Repository: github.Repository{
+				Name: "test-repo",
+			},
+			Author: github.Author{
+				Login: "attacker",
+			},
+			CreatedAt: "2026-02-13T10:00:00Z",
+		},
+	}
+
+	prs := []github.Item{
+		{
+			Title: "{alert(1)}",
+			URL:   "https://github.com/test-org/repo/pull/2",
+			Repository: github.Repository{
+				Name: "test-repo",
+			},
+			Author: github.Author{
+				Login: "attacker",
+			},
+			CreatedAt: "2026-02-13T11:00:00Z",
+		},
+	}
+
+	if err := UpdateDailyReport(tmpFile, orgName, publicRepos, issues, prs); err != nil {
+		t.Fatalf("UpdateDailyReport() returned error: %v", err)
+	}
+
+	content, err := os.ReadFile(tmpFile)
+	if err != nil {
+		t.Fatalf("failed to read output file: %v", err)
+	}
+	got := string(content)
+
+	if strings.Contains(got, "<script>alert(1)</script>") {
+		t.Fatalf("expected issue title to be escaped, got:\n%s", got)
+	}
+	if strings.Contains(got, "{alert(1)}") {
+		t.Fatalf("expected pr title to be escaped, got:\n%s", got)
+	}
+
+	if !strings.Contains(got, "&lt;script&gt;alert\\(1\\)&lt;/script&gt;") {
+		t.Fatalf("escaped issue title not found, got:\n%s", got)
+	}
+	if !strings.Contains(got, "&#123;alert\\(1\\)&#125;") {
+		t.Fatalf("escaped pr title not found, got:\n%s", got)
 	}
 }

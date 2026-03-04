@@ -17,7 +17,7 @@ import (
 	"gopkg.in/yaml.v3"
 )
 
-const summaryGoroutineLimit = 10 // 并发限制，避免过多协程导致触发 GitHub 限流
+const summaryGoroutineLimit = 20 // 并发限制，避免过多协程导致触发 GitHub 限流
 
 var ErrNoWeeklyCommits = errors.New("no commits found in the given period of time")
 
@@ -200,7 +200,14 @@ func generateSummarySection(markdownReport string) string {
 	if summaryText == "__NO_SUMMARY__" {
 		return ""
 	}
-	return summaryText
+
+	// 对 AI 生成的摘要进行清理，移除控制字符和多余空白，确保在 Markdown 中安全显示。
+	lines := strings.Split(summaryText, "\n")
+	for i, line := range lines {
+		lines[i] = utils.SanitizeInlineText(line)
+	}
+
+	return strings.Join(lines, "\n")
 }
 
 // WriteWeeklyIndex 更新周报索引文件的标题、日期、描述。
@@ -246,6 +253,7 @@ func BuildMarkdown(commits []CommitEntry, repoTitles map[string]string, orgName 
 		if title == "" {
 			title = commit.RepoName
 		}
+		title = utils.SanitizeInlineText(title)
 		author := utils.SanitizeInlineText(commit.AuthorName)
 		message := utils.SanitizeInlineText(strings.Split(commit.Message, "\n")[0]) // commit message 可能有多行补充信息，只取第一行作为摘要
 		fmt.Fprintf(&b, "- %s 在 [%s](https://github.com/%s/%s) 中提交了信息：%s\n\n", author, title, orgName, commit.RepoName, message)

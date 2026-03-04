@@ -16,7 +16,7 @@ import (
 
 // 复用 summary.go 的 CommitEntry
 
-const newsGoroutineLimit = 10 // 并发限制，避免过多协程触发 GitHub 限流
+const newsGoroutineLimit = 20 // 并发限制，避免过多协程触发 GitHub 限流
 
 func News(orgName string, publicRepos map[string]struct{}) error {
 	issues, err := github.SearchIssues(orgName, 100)

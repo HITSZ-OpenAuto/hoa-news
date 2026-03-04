@@ -227,3 +227,39 @@ func TestBuildMarkdown_PreserveHumanMessageStyle(t *testing.T) {
 		t.Fatalf("BuildMarkdown() should preserve human commit message style, got:\n%s", result)
 	}
 }
+
+func TestBuildMarkdown_EscapeMDXPayload(t *testing.T) {
+	commits := []CommitEntry{
+		{
+			AuthorName: "<img src=x onerror=alert(1)>",
+			Date:       time.Date(2026, 2, 13, 10, 0, 0, 0, time.UTC),
+			Message:    "{alert(1)}",
+			RepoName:   "MALICIOUS_REPO",
+		},
+	}
+	repoTitles := map[string]string{
+		"MALICIOUS_REPO": "</b><script>alert(1)</script>",
+	}
+
+	result := BuildMarkdown(commits, repoTitles, "HITSZ-OpenAuto")
+
+	if strings.Contains(result, "<img src=x onerror=alert(1)>") {
+		t.Fatalf("author should be escaped, got:\n%s", result)
+	}
+	if strings.Contains(result, "{alert(1)}") {
+		t.Fatalf("message should be escaped, got:\n%s", result)
+	}
+	if strings.Contains(result, "</b><script>alert(1)</script>") {
+		t.Fatalf("repo title should be escaped, got:\n%s", result)
+	}
+
+	if !strings.Contains(result, "&lt;img src=x onerror=alert(1)&gt;") {
+		t.Fatalf("escaped author not found, got:\n%s", result)
+	}
+	if !strings.Contains(result, "&#123;alert(1)&#125;") {
+		t.Fatalf("escaped message not found, got:\n%s", result)
+	}
+	if !strings.Contains(result, "&lt;/b&gt;&lt;script&gt;alert(1)&lt;/script&gt;") {
+		t.Fatalf("escaped repo title not found, got:\n%s", result)
+	}
+}

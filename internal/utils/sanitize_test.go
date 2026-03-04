@@ -23,6 +23,21 @@ func TestSanitizeInlineText(t *testing.T) {
 			input:    "abc\x00def",
 			expected: "abcdef",
 		},
+		{
+			name:     "Escape HTML tags",
+			input:    "<a>标签</a>",
+			expected: "&lt;a&gt;标签&lt;/a&gt;",
+		},
+		{
+			name:     "Escape MDX expression braces",
+			input:    "{alert(1)}",
+			expected: "&#123;alert(1)&#125;",
+		},
+		{
+			name:     "Escape ampersand first",
+			input:    "A&B",
+			expected: "A&amp;B",
+		},
 	}
 
 	for _, tt := range tests {
@@ -37,7 +52,7 @@ func TestSanitizeInlineText(t *testing.T) {
 
 func TestSanitizeLinkLabel(t *testing.T) {
 	input := "Fix [Parser] (#10)"
-	expected := "Fix \\[Parser\\] (#10)"
+	expected := "Fix \\[Parser\\] \\(#10\\)"
 	got := SanitizeLinkLabel(input)
 	if got != expected {
 		t.Fatalf("SanitizeLinkLabel() = %q, want %q", got, expected)
@@ -91,19 +106,19 @@ func TestRenderSafeMarkdownLink(t *testing.T) {
 	label := "Fix [Parser] (#10)"
 
 	gotAllowed := RenderSafeMarkdownLink(label, "https://github.com/test/repo/pull/1")
-	wantAllowed := "[Fix \\[Parser\\] (#10)](https://github.com/test/repo/pull/1)"
+	wantAllowed := "[Fix \\[Parser\\] \\(#10\\)](https://github.com/test/repo/pull/1)"
 	if gotAllowed != wantAllowed {
 		t.Fatalf("RenderSafeMarkdownLink() allowed = %q, want %q", gotAllowed, wantAllowed)
 	}
 
 	gotAnyHost := RenderSafeMarkdownLink(label, "https://evil.com/steal")
-	wantAnyHost := "[Fix \\[Parser\\] (#10)](https://evil.com/steal)"
+	wantAnyHost := "[Fix \\[Parser\\] \\(#10\\)](https://evil.com/steal)"
 	if gotAnyHost != wantAnyHost {
 		t.Fatalf("RenderSafeMarkdownLink() any host = %q, want %q", gotAnyHost, wantAnyHost)
 	}
 
 	gotInvalid := RenderSafeMarkdownLink(label, "https://github.com/a\nb")
-	wantInvalid := "Fix \\[Parser\\] (#10)"
+	wantInvalid := "Fix \\[Parser\\] \\(#10\\)"
 	if gotInvalid != wantInvalid {
 		t.Fatalf("RenderSafeMarkdownLink() invalid = %q, want %q", gotInvalid, wantInvalid)
 	}
