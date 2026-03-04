@@ -85,7 +85,7 @@ func UTCToBJT(utcTimeStr string) string {
 	if err != nil {
 		return utcTimeStr
 	}
-	bjt := utcTime.Add(8 * time.Hour)
+	bjt := utcTime.In(BeijingTimeZone)
 	return bjt.Format("2006-01-02 15:04:05")
 }
 

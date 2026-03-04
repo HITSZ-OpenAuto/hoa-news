@@ -58,7 +58,7 @@ func main() {
 func LoadPublicRepos() (map[string]struct{}, error) {
 	reposJSON := os.Getenv("repos_array")
 	if reposJSON == "" {
-		return map[string]struct{}{}, errors.New("Environment variable repos_array not found, please set it first.")
+		return nil, errors.New("Environment variable repos_array not found, please set it first.")
 	}
 	var repos []string
 	if err := json.Unmarshal([]byte(reposJSON), &repos); err != nil {
