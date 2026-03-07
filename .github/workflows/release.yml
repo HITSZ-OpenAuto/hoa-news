@@ -60,9 +60,6 @@ jobs:
           go-version-file: go.mod
           cache: true
       
-      - name: Install dependencies
-        run: go get .
-
       - name: Build archive
         id: pack
         env:
