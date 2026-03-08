@@ -61,7 +61,7 @@ go run cmd/main.go summary
 ### Generate Summary - summary.yml
 
 - 触发方式：
-  - 定时：每天一次
+  - 定时：每周一次
   - 手动触发（可选输入 `tag`）
 - 可手动指定版本；未指定时，自动使用上游仓库的 latest release
 
