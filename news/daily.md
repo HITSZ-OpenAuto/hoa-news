@@ -1,0 +1,63 @@
+---
+title: AUTO 更新速递
+date: "2026-03-08"
+authors:
+    - name: github-actions[bot]
+      link: https://github.com/features/actions
+      image: https://avatars.githubusercontent.com/in/15368
+description: 每日更新
+excludeSearch: false
+draft: false
+---
+
+## 今日更新
+
+- Jiao Ziang 在 [大学物理](https://github.com/HITSZ-OpenAuto/PHYS1001) 中提交了信息：修改网课部分错误的合并 (17:04)
+
+## 待解决的 Issues
+
+### [Difficulty cloning this repository](https://github.com/HITSZ-OpenAuto/MATH1002/issues/13)
+
+- **仓库**: MATH1002
+- **创建于**: 2025-01-20 15:32:37
+- **作者**: MaxwellJay256
+- **标签**: help wanted
+
+## 待合并的 Pull Requests
+
+### [上传了自制的概率论模拟题和解析](https://github.com/HITSZ-OpenAuto/MATH1004/pull/41)
+
+- **仓库**: MATH1004
+- **创建于**: 2026-03-02 14:00:51
+- **作者**: wpj9362
+
+### [概率论笔记：二维随机变量的分布](https://github.com/HITSZ-OpenAuto/MATH1004/pull/40)
+
+- **仓库**: MATH1004
+- **创建于**: 2026-03-01 13:03:08
+- **作者**: Xl-ui
+
+### [完善课程信息](https://github.com/HITSZ-OpenAuto/COMP2030/pull/14)
+
+- **仓库**: COMP2030
+- **创建于**: 2026-02-06 22:50:04
+- **作者**: wpj9362
+
+### [完善了课程信息](https://github.com/HITSZ-OpenAuto/GEIP1017/pull/19)
+
+- **仓库**: GEIP1017
+- **创建于**: 2026-02-06 22:43:09
+- **作者**: wpj9362
+
+### [完善课程信息](https://github.com/HITSZ-OpenAuto/MATH1002/pull/33)
+
+- **仓库**: MATH1002
+- **创建于**: 2026-02-06 22:33:44
+- **作者**: wpj9362
+
+### [更新了体育课信息](https://github.com/HITSZ-OpenAuto/PE100X/pull/33)
+
+- **仓库**: PE100X
+- **创建于**: 2026-02-06 22:08:12
+- **作者**: wpj9362
+
