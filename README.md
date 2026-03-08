@@ -31,7 +31,39 @@ go run cmd/main.go news
 go run cmd/main.go summary
 ```
 
-执行后，更新内容被写入 `news/daily.md` 或 `news/weekly/<日期>/index.md`）。
+执行后，更新内容会写入 `news/daily.md` 或 `news/weekly/<日期>/index.md`。
+
+## CI 工作流
+
+仓库包含 3 个工作流：
+
+- `release.yml`：发布二进制产物（linux/amd64, linux/arm64）并创建 GitHub Release。
+- `news.yml`：生成并推送日报（news）。
+- `summary.yml`：生成并推送周报（summary）。
+
+### Release Build - release.yml
+
+- 触发方式：
+  - 推送 tag（匹配 `v*`）
+  - 手动触发（`workflow_dispatch`，必填 `tag`）
+- 生成 Linux 下两种架构的二进制文件并发布到 GitHub Release
+- latest 规则：
+  - 当 tag 含 `-`（如 `v1.0.0-alpha`）时视为预发布，不会标记为 latest
+  - 正式版会被标记为 latest（`make_latest: true`）
+
+### Generate News - news.yml
+
+- 触发方式：
+  - 定时：每天一次
+  - 手动触发（可选输入 `tag`）
+- 可手动指定版本；未指定时，自动使用上游仓库的 latest release
+
+### Generate Summary - summary.yml
+
+- 触发方式：
+  - 定时：每周一次
+  - 手动触发（可选输入 `tag`）
+- 可手动指定版本；未指定时，自动使用上游仓库的 latest release
 
 ## 各模块功能
 

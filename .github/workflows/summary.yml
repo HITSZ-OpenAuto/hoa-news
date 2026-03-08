@@ -1,0 +1,106 @@
+name: "Generate Summary"
+
+permissions:
+  contents: write
+
+on:
+  schedule:
+    - cron: "30 10 * * 5"
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Release tag to use (optional, e.g. v1.2.3). Leave empty to use latest release."
+        required: false
+        type: string
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
+
+jobs:
+  weekly-summary:
+    runs-on: ubuntu-latest
+    env:
+      UPSTREAM_REPO: HITSZ-OpenAuto/hoa-news
+      ORG_NAME: ${{ vars.ORG_NAME }}
+      PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      OPENAI_BASE_URL: ${{ secrets.OPENAI_BASE_URL }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+
+      - name: Fetch public repositories in the organization
+        run: curl -L -o repos_list.txt https://raw.githubusercontent.com/HITSZ-OpenAuto/repos-management/refs/heads/main/repos_list.txt
+
+      - name: Parse repo list and set as env var
+        run: |
+          repos=$(jq -R -s -c 'split("\n") | map(select(length > 0))' repos_list.txt)
+          echo "repos_array=$repos" >> "$GITHUB_ENV"
+
+      - name: Resolve arch
+        run: |
+          case "${RUNNER_ARCH}" in
+            X64) echo "GOARCH=amd64" >> "$GITHUB_ENV" ;;
+            ARM64) echo "GOARCH=arm64" >> "$GITHUB_ENV" ;;
+            *) echo "Unsupported RUNNER_ARCH=${RUNNER_ARCH}" && exit 1 ;;
+          esac
+
+      - name: Resolve tag
+        env:
+          GH_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+        run: |
+          set -euo pipefail
+          input_tag="${{ github.event.inputs.tag }}"
+          if [ -n "${input_tag}" ]; then
+            TAG="${input_tag}"
+          else
+            TAG="$(gh api "/repos/${UPSTREAM_REPO}/releases/latest" --jq '.tag_name')"
+          fi
+
+          if [ -z "${TAG}" ] || [ "${TAG}" = "null" ]; then
+            echo "::error::Failed to resolve release tag"
+            exit 1
+          fi
+
+          echo "TAG=${TAG}" >> "$GITHUB_ENV"
+          echo "Using TAG=${TAG}"
+
+      - name: Download and verify binary
+        env:
+          GH_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+        run: |
+          set -euo pipefail
+          mkdir -p dist
+          ASSET="hoa-news_${TAG}_linux_${GOARCH}.tar.gz"
+          gh release download "${TAG}" --repo "${UPSTREAM_REPO}" --pattern "${ASSET}" --dir dist
+          gh release download "${TAG}" --repo "${UPSTREAM_REPO}" --pattern "SHA256SUMS" --dir dist
+          cd dist
+          sha256sum -c SHA256SUMS --ignore-missing
+          tar -xzf "${ASSET}"
+          chmod +x "hoa-news_${TAG}_linux_${GOARCH}"
+
+      - name: Generate summary
+        run: |
+          ./dist/hoa-news_${TAG}_linux_${GOARCH} summary
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Actions"
+
+          git add news/
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "docs: update weekly summary"
+          
+          git reset --hard
+          git clean -fd
+          git pull --rebase
+          git push origin HEAD:${GITHUB_REF_NAME}
