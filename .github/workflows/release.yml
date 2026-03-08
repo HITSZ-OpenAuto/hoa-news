@@ -66,7 +66,7 @@ jobs:
         with:
           go-version-file: go.mod
           cache: true
-      
+
       - name: Build archive
         id: pack
         env:
