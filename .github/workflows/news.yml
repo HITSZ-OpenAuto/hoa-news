@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       UPSTREAM_REPO: HITSZ-OpenAuto/hoa-news
-      ORG_NAME: ${{ vars.ORG_NAME }}
+      ORG_NAME: HITSZ-OpenAuto
       repos_array: ${{ vars.REPOS_ARRAY }}
       PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
 
@@ -32,6 +32,14 @@ jobs:
         with:
           ref: ${{ github.ref_name }}
           fetch-depth: 0
+          
+      - name: Fetch public repositories in the organization
+        run: curl -L -o repos_list.txt https://raw.githubusercontent.com/HITSZ-OpenAuto/repos-management/refs/heads/main/repos_list.txt
+
+      - name: Parse repo list and set as env var
+        run: |
+          repos=$(jq -R -s -c 'split("\n") | map(select(length > 0))' repos_list.txt)
+          echo "repos_array=$repos" >> "$GITHUB_ENV"
 
       - name: Resolve arch
         run: |
