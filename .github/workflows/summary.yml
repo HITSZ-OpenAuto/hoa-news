@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       UPSTREAM_REPO: HITSZ-OpenAuto/hoa-news
-      ORG_NAME: ${{ vars.ORG_NAME }}
+      ORG_NAME: HITSZ-OpenAuto
       PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       OPENAI_BASE_URL: ${{ secrets.OPENAI_BASE_URL }}
