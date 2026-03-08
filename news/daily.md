@@ -12,7 +12,7 @@ draft: false
 
 ## 今日更新
 
-- Jiao Ziang 在 [大学物理](https://github.com/HITSZ-OpenAuto/PHYS1001) 中提交了信息：修改网课部分错误的合并 (17:04)
+暂无更新
 
 ## 待解决的 Issues
 
