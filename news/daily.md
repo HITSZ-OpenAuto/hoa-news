@@ -25,6 +25,12 @@ draft: false
 
 ## 待合并的 Pull Requests
 
+### [增加了对郑宝东老师的评价](https://github.com/HITSZ-OpenAuto/MATH1002/pull/36)
+
+- **仓库**: MATH1002
+- **创建于**: 2026-03-09 13:48:17
+- **作者**: 070622X
+
 ### [上传了自制的概率论模拟题和解析](https://github.com/HITSZ-OpenAuto/MATH1004/pull/41)
 
 - **仓库**: MATH1004
