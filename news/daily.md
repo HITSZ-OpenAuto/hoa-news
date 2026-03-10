@@ -546,6 +546,12 @@ draft: false
 
 ## 待合并的 Pull Requests
 
+### [修改错误](https://github.com/HITSZ-OpenAuto/PHYS1001/pull/41)
+
+- **仓库**: PHYS1001
+- **创建于**: 2026-03-10 15:23:19
+- **作者**: WDGaster703
+
 ### [增加了对郑宝东老师的评价](https://github.com/HITSZ-OpenAuto/MATH1002/pull/36)
 
 - **仓库**: MATH1002
