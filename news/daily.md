@@ -16,6 +16,12 @@ draft: false
 
 ## 待解决的 Issues
 
+### [超链接渲染失败](https://github.com/HITSZ-OpenAuto/AUTO3002B/issues/33)
+
+- **仓库**: AUTO3002B
+- **创建于**: 2026-03-10 12:14:18
+- **作者**: WDGaster703
+
 ### [【course-template】](https://github.com/HITSZ-OpenAuto/course-template/issues/25)
 
 - **仓库**: course-template
@@ -542,12 +548,6 @@ draft: false
 
 - **仓库**: COMP3001
 - **创建于**: 2026-03-09 23:21:56
-- **作者**: WDGaster703
-
-### [【COMP3013】](https://github.com/HITSZ-OpenAuto/COMP3013/issues/13)
-
-- **仓库**: COMP3013
-- **创建于**: 2026-03-09 23:21:52
 - **作者**: WDGaster703
 
 ## 待合并的 Pull Requests
