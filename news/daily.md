@@ -12,6 +12,8 @@ draft: false
 
 ## 今日更新
 
+- Pengjie Wang 在 [体育](https://github.com/HITSZ-OpenAuto/PE100X) 中提交了信息：更新了体育课信息 (#33) (23:31)
+
 - Alkaid 在 [代数与几何](https://github.com/HITSZ-OpenAuto/MATH1002) 中提交了信息：增加了对郑宝东老师的评价 (#36) (20:23)
 
 - Xl-ui 在 [概率论与数理统计](https://github.com/HITSZ-OpenAuto/MATH1004) 中提交了信息：概率论笔记：二维随机变量的分布 (#40) (20:18)
@@ -574,11 +576,5 @@ draft: false
 
 - **仓库**: MATH1002
 - **创建于**: 2026-02-06 22:33:44
-- **作者**: wpj9362
-
-### [更新了体育课信息](https://github.com/HITSZ-OpenAuto/PE100X/pull/33)
-
-- **仓库**: PE100X
-- **创建于**: 2026-02-06 22:08:12
 - **作者**: wpj9362
 
