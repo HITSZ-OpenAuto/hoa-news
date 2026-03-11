@@ -12,7 +12,7 @@ draft: false
 
 ## 今日更新
 
-- Pengjie Wang 在 [体育](https://github.com/HITSZ-OpenAuto/PE100X) 中提交了信息：更新了体育课信息 (#33) (23:31)
+暂无更新
 
 ## 待解决的 Issues
 
