@@ -560,6 +560,12 @@ draft: false
 
 ## 待合并的 Pull Requests
 
+### [修改排版](https://github.com/HITSZ-OpenAuto/EE1013/pull/27)
+
+- **仓库**: EE1013
+- **创建于**: 2026-03-11 15:01:22
+- **作者**: WDGaster703
+
 ### [完善课程信息](https://github.com/HITSZ-OpenAuto/COMP2030/pull/14)
 
 - **仓库**: COMP2030
