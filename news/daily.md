@@ -14,20 +14,6 @@ draft: false
 
 - Pengjie Wang 在 [体育](https://github.com/HITSZ-OpenAuto/PE100X) 中提交了信息：更新了体育课信息 (#33) (23:31)
 
-- Alkaid 在 [代数与几何](https://github.com/HITSZ-OpenAuto/MATH1002) 中提交了信息：增加了对郑宝东老师的评价 (#36) (20:23)
-
-- Xl-ui 在 [概率论与数理统计](https://github.com/HITSZ-OpenAuto/MATH1004) 中提交了信息：概率论笔记：二维随机变量的分布 (#40) (20:18)
-
-- Pengjie Wang 在 [概率论与数理统计](https://github.com/HITSZ-OpenAuto/MATH1004) 中提交了信息：上传了自制的概率论模拟题和解析 (#41) (20:17)
-
-- Jiao Ziang 在 [电气专业选修课](https://github.com/HITSZ-OpenAuto/EE30XX) 中提交了信息：删除遗留的废弃标签 (19:57)
-
-- Jiao Ziang 在 [跨专业选修课程体系](https://github.com/HITSZ-OpenAuto/CrossSpecialty) 中提交了信息：删除测试内容检查toml生成能力 (19:14)
-
-- Jiao Ziang 在 [跨专业选修课程体系](https://github.com/HITSZ-OpenAuto/CrossSpecialty) 中提交了信息：chore: update CrossSpecialty readme.toml (#29) (19:10)
-
-- W. D. Gaster 在 [大学物理](https://github.com/HITSZ-OpenAuto/PHYS1001) 中提交了信息：修改错误 (#41) (19:06)
-
 ## 待解决的 Issues
 
 ### [【course-template】](https://github.com/HITSZ-OpenAuto/course-template/issues/25)
@@ -559,6 +545,18 @@ draft: false
 - **作者**: WDGaster703
 
 ## 待合并的 Pull Requests
+
+### [修改格式](https://github.com/HITSZ-OpenAuto/AUTO2005/pull/44)
+
+- **仓库**: AUTO2005
+- **创建于**: 2026-03-11 20:42:27
+- **作者**: WDGaster703
+
+### [修改错误](https://github.com/HITSZ-OpenAuto/EE1018/pull/8)
+
+- **仓库**: EE1018
+- **创建于**: 2026-03-11 20:24:43
+- **作者**: WDGaster703
 
 ### [修改排版](https://github.com/HITSZ-OpenAuto/EE1013/pull/27)
 
