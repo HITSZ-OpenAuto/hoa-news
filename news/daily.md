@@ -12,7 +12,9 @@ draft: false
 
 ## 今日更新
 
-暂无更新
+- patrick1129star 在 [软件工程](https://github.com/HITSZ-OpenAuto/COMP3002) 中提交了信息：Merge pull request #13 from HITSZ-OpenAuto/patrick1129star-patch-1 (22:20)
+
+- patrick1129star 在 [软件工程](https://github.com/HITSZ-OpenAuto/COMP3002) 中提交了信息：改了一下软件构造的成绩组成和描述 (22:18)
 
 ## 待解决的 Issues
 
