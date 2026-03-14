@@ -12,7 +12,7 @@ import (
 
 func main() {
 	if len(os.Args) < 2 {
-		fmt.Fprintf(os.Stderr, "Usage: %s <news|summary>\n", os.Args[0])
+		fmt.Fprintf(os.Stderr, "Usage: %s <daily|weekly>\n", os.Args[0])
 		os.Exit(2)
 	}
 	orgName := os.Getenv("ORG_NAME")
@@ -33,14 +33,14 @@ func main() {
 	}
 
 	switch os.Args[1] {
-	case "news":
-		if err := report.News(orgName, publicRepos); err != nil {
+	case "daily":
+		if err := report.Daily(orgName, publicRepos); err != nil {
 			fmt.Fprintf(os.Stderr, "Failed to generate daily news: %v\n", err)
 			os.Exit(1)
 		}
 
-	case "summary":
-		if err := report.Summary(orgName, publicRepos); err != nil {
+	case "weekly":
+		if err := report.Weekly(orgName, publicRepos); err != nil {
 			if errors.Is(err, report.ErrNoWeeklyCommits) {
 				log.Printf("Summary skipped: %v", err)
 				return
@@ -50,7 +50,7 @@ func main() {
 		}
 
 	default:
-		fmt.Fprintf(os.Stderr, "Unknown command: %s\nUsage: go run cmd/main.go <news|summary>\n", os.Args[1])
+		fmt.Fprintf(os.Stderr, "Unknown command: %s\nUsage: go run cmd/main.go <daily|weekly>\n", os.Args[1])
 		os.Exit(2)
 	}
 }

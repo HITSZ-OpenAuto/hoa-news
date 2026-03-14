@@ -1,4 +1,4 @@
-name: "Generate Summary"
+name: "Generate Weekly"
 
 permissions:
   contents: write
@@ -78,7 +78,7 @@ jobs:
 
       - name: Generate summary
         run: |
-          ./dist/hoa-news_${TAG}_linux_${GOARCH} summary
+          ./dist/hoa-news_${TAG}_linux_${GOARCH} weekly
 
       - name: Commit and push changes
         run: |

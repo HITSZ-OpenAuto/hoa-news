@@ -18,7 +18,7 @@ import (
 
 const newsGoroutineLimit = 20 // 并发限制，避免过多协程触发 GitHub 限流
 
-func News(orgName string, publicRepos map[string]struct{}) error {
+func Daily(orgName string, publicRepos map[string]struct{}) error {
 	issues, err := github.SearchIssues(orgName, 100)
 	if err != nil {
 		return fmt.Errorf("failed to get issues: %w", err)

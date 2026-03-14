@@ -49,7 +49,7 @@ type WeeklyAggregate struct {
 
 // Summary 是周报生成的入口函数，编排流程：
 // 构建上下文 → 聚合数据 → 渲染内容 → 写入文件。
-func Summary(orgName string, publicRepos map[string]struct{}) error {
+func Weekly(orgName string, publicRepos map[string]struct{}) error {
 	ctx := buildSummaryContext(time.Now().UTC())
 	agg := collectWeeklyData(ctx, orgName, publicRepos)
 

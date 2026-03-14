@@ -1,4 +1,4 @@
-name: "Generate News"
+name: "Generate Daily"
 
 permissions:
   contents: write
@@ -76,7 +76,7 @@ jobs:
 
       - name: Generate news
         run: |
-          ./dist/hoa-news_${TAG}_linux_${GOARCH} news
+          ./dist/hoa-news_${TAG}_linux_${GOARCH} daily
 
       - name: Commit and push changes
         run: |

@@ -14,8 +14,8 @@
 运行：
 
 ```bash
-go run cmd/main.go news     # 生成日报 → news/daily.md
-go run cmd/main.go summary  # 生成周报 → news/weekly/<日期>/index.md
+go run cmd/main.go daily   # 生成日报 → news/daily.md
+go run cmd/main.go weekly  # 生成周报 → news/weekly/<日期>/index.md
 ```
 
 公开仓库列表从 [repos-management](https://github.com/HITSZ-OpenAuto/repos-management/blob/main/repos_list.txt) 自动获取。
