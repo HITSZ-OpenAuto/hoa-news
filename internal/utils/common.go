@@ -4,6 +4,7 @@ package utils
 import (
 	"strings"
 	"time"
+	"unicode"
 
 	"gopkg.in/yaml.v3"
 )
@@ -21,6 +22,14 @@ var (
 	}
 	BeijingTimeZone = time.FixedZone("CST", int((8 * time.Hour).Seconds())) // 北京时间（UTC+8）
 )
+
+// IsChineseCommit checks if a commit message starts with a Chinese character
+func IsChineseCommit(message string) bool {
+	for _, r := range message {
+		return unicode.Is(unicode.Han, r)
+	}
+	return false
+}
 
 // IsBot checks if a commit author is a bot
 func IsBot(authorName, authorLogin string) bool {
