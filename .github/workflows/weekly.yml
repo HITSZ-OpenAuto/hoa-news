@@ -1,11 +1,11 @@
-name: "Generate News"
+name: "Generate Summary"
 
 permissions:
   contents: write
 
 on:
   schedule:
-    - cron: "0 */3 * * *"
+    - cron: "30 10 * * 5"
   workflow_dispatch:
     inputs:
       tag:
@@ -18,28 +18,21 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  daily-news:
+  weekly-summary:
     runs-on: ubuntu-latest
     env:
       UPSTREAM_REPO: HITSZ-OpenAuto/hoa-news
       ORG_NAME: HITSZ-OpenAuto
-      repos_array: ${{ vars.REPOS_ARRAY }}
       PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      OPENAI_BASE_URL: ${{ secrets.OPENAI_BASE_URL }}
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           ref: ${{ github.ref_name }}
           fetch-depth: 0
-          
-      - name: Fetch public repositories in the organization
-        run: curl -L -o repos_list.txt https://raw.githubusercontent.com/HITSZ-OpenAuto/repos-management/refs/heads/main/repos_list.txt
-
-      - name: Parse repo list and set as env var
-        run: |
-          repos=$(jq -R -s -c 'split("\n") | map(select(length > 0))' repos_list.txt)
-          echo "repos_array=$repos" >> "$GITHUB_ENV"
 
       - name: Resolve arch
         run: |
@@ -83,22 +76,22 @@ jobs:
           tar -xzf "${ASSET}"
           chmod +x "hoa-news_${TAG}_linux_${GOARCH}"
 
-      - name: Generate news
+      - name: Generate summary
         run: |
-          ./dist/hoa-news_${TAG}_linux_${GOARCH} news
+          ./dist/hoa-news_${TAG}_linux_${GOARCH} summary
 
       - name: Commit and push changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Actions"
-          
+
           git add news/
           if git diff --cached --quiet; then
             echo "No changes to commit"
             exit 0
           fi
-          git commit -m "docs: update daily news"
-
+          git commit -m "docs: update weekly summary"
+          
           git reset --hard
           git clean -fd
           git pull --rebase

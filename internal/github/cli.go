@@ -6,6 +6,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
+	"net/http"
 	"os"
 	"os/exec"
 	"strings"
@@ -143,6 +144,29 @@ func GetRawTag(orgName, repoName string) (string, error) {
 		return "", err
 	}
 	return string(output), nil
+}
+
+const reposListURL = "https://raw.githubusercontent.com/HITSZ-OpenAuto/repos-management/refs/heads/main/repos_list.txt"
+
+// LoadPublicRepos 从远程 repos_list.txt 获取公开仓库名称集合。
+func LoadPublicRepos() (map[string]struct{}, error) {
+	resp, err := http.Get(reposListURL)
+	if err != nil {
+		return nil, err
+	}
+	defer resp.Body.Close()
+	if resp.StatusCode != http.StatusOK {
+		return nil, fmt.Errorf("unexpected status %s", resp.Status)
+	}
+	set := make(map[string]struct{})
+	scanner := bufio.NewScanner(resp.Body)
+	for scanner.Scan() {
+		line := strings.TrimSpace(scanner.Text())
+		if line != "" {
+			set[line] = struct{}{}
+		}
+	}
+	return set, scanner.Err()
 }
 
 // parseNDJSON 解析 NDJSON 格式的数据，返回一个 T 类型的切片。T 可以是 Commit 或 Repo。
