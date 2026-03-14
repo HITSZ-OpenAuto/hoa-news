@@ -26,11 +26,6 @@ func main() {
 		os.Exit(1)
 	}
 	log.Printf("Fetched %d public repos", len(publicRepos))
-	PAT := os.Getenv("PERSONAL_ACCESS_TOKEN")
-	if PAT == "" {
-		fmt.Fprintln(os.Stderr, "Environment variable PERSONAL_ACCESS_TOKEN not found, please set it first.")
-		os.Exit(1)
-	}
 
 	switch os.Args[1] {
 	case "daily":

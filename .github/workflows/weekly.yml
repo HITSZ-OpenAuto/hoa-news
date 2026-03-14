@@ -23,7 +23,7 @@ jobs:
     env:
       UPSTREAM_REPO: HITSZ-OpenAuto/hoa-news
       ORG_NAME: HITSZ-OpenAuto
-      PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+      GH_TOKEN: ${{ github.token }}
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       OPENAI_BASE_URL: ${{ secrets.OPENAI_BASE_URL }}
 
@@ -43,8 +43,6 @@ jobs:
           esac
 
       - name: Resolve tag
-        env:
-          GH_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
         run: |
           set -euo pipefail
           input_tag="${{ github.event.inputs.tag }}"
@@ -63,8 +61,6 @@ jobs:
           echo "Using TAG=${TAG}"
 
       - name: Download and verify binary
-        env:
-          GH_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
         run: |
           set -euo pipefail
           mkdir -p dist

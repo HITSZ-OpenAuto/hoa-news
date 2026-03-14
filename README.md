@@ -18,8 +18,6 @@ go run cmd/main.go daily   # 生成日报 → news/daily.md
 go run cmd/main.go weekly  # 生成周报 → news/weekly/<日期>/index.md
 ```
 
-公开仓库列表从 [repos-management](https://github.com/HITSZ-OpenAuto/repos-management/blob/main/repos_list.txt) 自动获取。
-
 ## CI 工作流
 
 - `release.yml`：推送 `v*` tag 时构建并发布 Linux 二进制（amd64/arm64）

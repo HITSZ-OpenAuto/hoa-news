@@ -54,9 +54,6 @@ type Commit struct {
 func ghCommand(args []string) ([]byte, error) {
 	cmd := exec.Command("gh", args...)
 	cmd.Env = os.Environ()
-	if PAT := os.Getenv("PERSONAL_ACCESS_TOKEN"); PAT != "" {
-		cmd.Env = append(cmd.Env, "GH_TOKEN="+PAT)
-	} // 事实上 PAT 环境变量会在 main 中被检查是否存在，这里只是双保险
 
 	var stderr bytes.Buffer
 	cmd.Stderr = &stderr
