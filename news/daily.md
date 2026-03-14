@@ -540,12 +540,6 @@ draft: false
 - **创建于**: 2026-03-09 23:22:00
 - **作者**: WDGaster703
 
-### [【COMP3001】](https://github.com/HITSZ-OpenAuto/COMP3001/issues/13)
-
-- **仓库**: COMP3001
-- **创建于**: 2026-03-09 23:21:56
-- **作者**: WDGaster703
-
 ## 待合并的 Pull Requests
 
 ### [修改格式](https://github.com/HITSZ-OpenAuto/AUTO2005/pull/44)
