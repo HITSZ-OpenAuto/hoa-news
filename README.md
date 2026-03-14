@@ -4,10 +4,14 @@
 
 ## 使用方法
 
+登录 GitHub CLI：
+
+```bash
+gh auth login
+```
+
 配置环境变量：
 
-- `ORG_NAME`：GitHub 组织名（必需）
-- `PERSONAL_ACCESS_TOKEN`：GitHub PAT（必需）
 - `OPENAI_API_KEY`：用于 `summary` 生成摘要（可选）
 - `OPENAI_BASE_URL`：OpenAI 代理地址（可选）
 
