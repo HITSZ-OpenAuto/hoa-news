@@ -30,47 +30,19 @@ jobs:
           ref: ${{ github.ref_name }}
           fetch-depth: 0
           
-      - name: Resolve arch
+      - name: Download binary
         run: |
+          TAG="${{ github.event.inputs.tag }}"
+          [ -z "$TAG" ] && TAG="$(gh api /repos/HITSZ-OpenAuto/hoa-news/releases/latest --jq '.tag_name')"
           case "${RUNNER_ARCH}" in
-            X64) echo "GOARCH=amd64" >> "$GITHUB_ENV" ;;
-            ARM64) echo "GOARCH=arm64" >> "$GITHUB_ENV" ;;
-            *) echo "Unsupported RUNNER_ARCH=${RUNNER_ARCH}" && exit 1 ;;
+            X64) ARCH=amd64 ;; ARM64) ARCH=arm64 ;; *) echo "Unsupported arch" && exit 1 ;;
           esac
-
-      - name: Resolve tag
-        run: |
-          set -euo pipefail
-          input_tag="${{ github.event.inputs.tag }}"
-          if [ -n "${input_tag}" ]; then
-            TAG="${input_tag}"
-          else
-            TAG="$(gh api "/repos/HITSZ-OpenAuto/hoa-news/releases/latest" --jq '.tag_name')"
-          fi
-
-          if [ -z "${TAG}" ] || [ "${TAG}" = "null" ]; then
-            echo "::error::Failed to resolve release tag"
-            exit 1
-          fi
-
-          echo "TAG=${TAG}" >> "$GITHUB_ENV"
-          echo "Using TAG=${TAG}"
-
-      - name: Download and verify binary
-        run: |
-          set -euo pipefail
-          mkdir -p dist
-          ASSET="hoa-news_${TAG}_linux_${GOARCH}.tar.gz"
-          gh release download "${TAG}" --repo "HITSZ-OpenAuto/hoa-news" --pattern "${ASSET}" --dir dist
-          gh release download "${TAG}" --repo "HITSZ-OpenAuto/hoa-news" --pattern "SHA256SUMS" --dir dist
-          cd dist
-          sha256sum -c SHA256SUMS --ignore-missing
-          tar -xzf "${ASSET}"
-          chmod +x "hoa-news_${TAG}_linux_${GOARCH}"
+          gh release download "${TAG}" --repo "HITSZ-OpenAuto/hoa-news" --pattern "hoa-news_${TAG}_linux_${ARCH}.tar.gz" --dir /tmp
+          tar -xzf "/tmp/hoa-news_${TAG}_linux_${ARCH}.tar.gz" -C /tmp
+          mv "/tmp/hoa-news_${TAG}_linux_${ARCH}" /usr/local/bin/hoa-news
 
       - name: Generate news
-        run: |
-          ./dist/hoa-news_${TAG}_linux_${GOARCH} daily
+        run: hoa-news daily
 
       - name: Commit and push changes
         run: |
