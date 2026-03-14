@@ -12,7 +12,9 @@ draft: false
 
 ## 最近更新
 
-- patrick1129star 在 [软件工程](https://github.com/HITSZ-OpenAuto/COMP3002) 中提交了信息：改了一下软件构造的成绩组成和描述 (22:18)
+- cecilia 在 [计算思维与实践](https://github.com/HITSZ-OpenAuto/COMP1011) 中提交了信息：尝试删除 md 中的 toml 格式，以观察整个工作流程 (21:28)
+
+- cecilia 在 [计算思维与实践](https://github.com/HITSZ-OpenAuto/COMP1011) 中提交了信息：尝试删除 md 中的 toml 格式，以观察整个工作流程 (21:22)
 
 ## 待解决的 Issues
 
