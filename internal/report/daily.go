@@ -2,7 +2,9 @@
 package report
 
 import (
+	"errors"
 	"fmt"
+	"io/fs"
 	"log"
 	"os"
 	"sort"
@@ -39,38 +41,14 @@ func Daily(orgName string, publicRepos map[string]struct{}) error {
 	newPRs := filterByCreatedAt(prs, since)
 	log.Printf("Filtered by created at, new issues=%d, new pull requests=%d", len(newIssues), len(newPRs))
 
-	if err := UpdateDailyReport("news/daily.md", orgName, publicRepos, issues, prs, len(newIssues) > 0 || len(newPRs) > 0); err != nil {
+	if err := UpdateDailyReport("news/daily.md", orgName, publicRepos, issues, prs); err != nil {
 		return fmt.Errorf("failed to update daily report: %w", err)
 	}
 
 	return nil
 }
 
-func UpdateDailyReport(path string, orgName string, publicRepos map[string]struct{}, issues []github.Item, prs []github.Item, hasNewActivity bool) error {
-	var buf strings.Builder
-
-	// Front matter
-	fm, err := utils.GenerateFrontMatter(
-		"AUTO 更新速递",
-		time.Now().UTC().Format("2006-01-02"),
-		"每日更新",
-		[]utils.Author{{
-			Name:  "github-actions[bot]",
-			Link:  "https://github.com/features/actions",
-			Image: "https://avatars.githubusercontent.com/in/15368",
-		}},
-	)
-	if err != nil {
-		return fmt.Errorf("failed to generate front matter: %w", err)
-	}
-
-	buf.WriteString("---\n")
-	buf.WriteString(fm)
-	buf.WriteString("---\n\n")
-
-	// Commits
-	buf.WriteString("## 最近更新\n\n")
-
+func UpdateDailyReport(path string, orgName string, publicRepos map[string]struct{}, issues []github.Item, prs []github.Item) error {
 	startTime := time.Now().Add(-24 * time.Hour)
 
 	var (
@@ -143,23 +121,56 @@ func UpdateDailyReport(path string, orgName string, publicRepos map[string]struc
 			log.Printf("Finished commits process for %s", repo)
 		}(repo)
 	}
-
 	wg.Wait()
-
-	// 按日期降序排序保证输出稳定，最新的 commit 在前面
-	sort.Slice(commits, func(i, j int) bool {
-		return commits[i].Date.After(commits[j].Date)
-	})
 
 	log.Printf("Commit collection complete, %d total valid commits", len(commits))
 
-	if len(commits) == 0 && !hasNewActivity {
-		log.Printf("No new commits, issues, or PRs found, skipping file write")
-		return nil
+	body := buildDailyBody(orgName, commits, repoNames, issues, prs)
+	if oldContent, err := os.ReadFile(path); err == nil {
+		if isSubstantivelyEqual(string(oldContent), body) {
+			log.Printf("Daily report body unchanged, skip rewriting %s", path)
+			return nil
+		}
+	} else if !errors.Is(err, fs.ErrNotExist) {
+		return fmt.Errorf("failed to read existing daily report %q: %w", path, err)
 	}
 
+	fm, err := utils.GenerateFrontMatter(
+		"AUTO 更新速递",
+		time.Now().UTC().Format("2006-01-02"),
+		"每日更新",
+		[]utils.Author{{
+			Name:  "github-actions[bot]",
+			Link:  "https://github.com/features/actions",
+			Image: "https://avatars.githubusercontent.com/in/15368",
+		}},
+	)
+	if err != nil {
+		return fmt.Errorf("failed to generate front matter: %w", err)
+	}
+
+	var final strings.Builder
+	final.WriteString("---\n")
+	final.WriteString(fm)
+	final.WriteString("---\n\n")
+	final.WriteString(body)
+
+	return os.WriteFile(path, []byte(final.String()), 0o644)
+}
+
+func buildDailyBody(orgName string, commits []CommitEntry, repoNames map[string]string, issues []github.Item, prs []github.Item) string {
+	// 按照确定的规则进行排序，确保对于相同的更新内容，生成的报告内容顺序一致
+	// 便于后续比对前后的内容
+	sortCommits(commits)
+	sortItems(issues)
+	sortItems(prs)
+
+	var buf strings.Builder
+
+	// Commits
+	buf.WriteString("## 最近更新\n\n")
 	if len(commits) == 0 {
-		buf.WriteString(readExistingSection(path, "## 最近更新"))
+		buf.WriteString("暂无更新\n\n")
 	} else {
 		for _, commit := range commits {
 			author := utils.SanitizeInlineText(commit.AuthorName)
@@ -171,14 +182,12 @@ func UpdateDailyReport(path string, orgName string, publicRepos map[string]struc
 			message := utils.SanitizeInlineText(strings.Split(commit.Message, "\n")[0])
 			fmt.Fprintf(&buf,
 				"- %s 在 [%s](https://github.com/%s/%s) 中提交了信息：%s (%s)\n\n",
-				author, repoName, orgName, commit.RepoName, message,
-				commit.Date.Format("15:04"))
+				author, repoName, orgName, commit.RepoName, message, commit.Date.Format("15:04"))
 		}
 	}
 
 	// Issues
 	buf.WriteString("## 待解决的 Issues\n\n")
-
 	if len(issues) == 0 {
 		buf.WriteString("暂无待解决的 Issues\n\n")
 	} else {
@@ -200,7 +209,6 @@ func UpdateDailyReport(path string, orgName string, publicRepos map[string]struc
 
 	// Pull Requests
 	buf.WriteString("## 待合并的 Pull Requests\n\n")
-
 	if len(prs) == 0 {
 		buf.WriteString("暂无待合并的 Pull Requests\n\n")
 	} else {
@@ -220,28 +228,62 @@ func UpdateDailyReport(path string, orgName string, publicRepos map[string]struc
 		}
 	}
 
-	return os.WriteFile(path, []byte(buf.String()), 0o644)
+	return buf.String()
 }
 
-// readExistingSection reads the content of a named section (e.g. "## 最近更新")
-// from an existing markdown file, returning everything up to the next "##" heading.
-// Returns empty string if the file doesn't exist or the section isn't found.
-func readExistingSection(path, heading string) string {
-	data, err := os.ReadFile(path)
+// 排序优先级：按照时间（从新到旧）、仓库名、提交信息、作者名、作者登录名排序
+func sortCommits(commits []CommitEntry) {
+	sort.Slice(commits, func(i, j int) bool {
+		if !commits[i].Date.Equal(commits[j].Date) {
+			return commits[i].Date.After(commits[j].Date)
+		}
+		if commits[i].RepoName != commits[j].RepoName {
+			return commits[i].RepoName < commits[j].RepoName
+		}
+
+		mi := strings.Split(commits[i].Message, "\n")[0]
+		mj := strings.Split(commits[j].Message, "\n")[0]
+		if mi != mj {
+			return mi < mj
+		}
+		if commits[i].AuthorName != commits[j].AuthorName {
+			return commits[i].AuthorName < commits[j].AuthorName
+		}
+		return commits[i].AuthorLogin < commits[j].AuthorLogin
+	})
+}
+
+// 对 Issues 和 Pull Requests 按照创建时间（从新到旧）、仓库名、标题、URL 进行排序。
+func sortItems(items []github.Item) {
+	sort.Slice(items, func(i, j int) bool {
+		ti, okI := parseCreatedAt(items[i].CreatedAt)
+		tj, okJ := parseCreatedAt(items[j].CreatedAt)
+		if okI && okJ && !ti.Equal(tj) {
+			return ti.After(tj)
+		} else if okI != okJ {
+			return okI
+		}
+
+		if items[i].Repository.Name != items[j].Repository.Name {
+			return items[i].Repository.Name < items[j].Repository.Name
+		}
+		if items[i].Title != items[j].Title {
+			return items[i].Title < items[j].Title
+		}
+		if items[i].URL != items[j].URL {
+			return items[i].URL < items[j].URL
+		}
+		return items[i].CreatedAt > items[j].CreatedAt
+	})
+}
+
+// 解析 RFC3339 格式的 CreatedAt 字符串字段，返回时间和解析是否成功的标志。
+func parseCreatedAt(s string) (time.Time, bool) {
+	t, err := time.Parse(time.RFC3339, s)
 	if err != nil {
-		return ""
+		return time.Time{}, false
 	}
-	content := string(data)
-	start := strings.Index(content, heading+"\n\n")
-	if start == -1 {
-		return ""
-	}
-	start += len(heading) + 2 // skip past the heading and blank line
-	end := strings.Index(content[start:], "\n## ")
-	if end == -1 {
-		return content[start:]
-	}
-	return content[start : start+end+1]
+	return t, true
 }
 
 func filterByCreatedAt(items []github.Item, since time.Time) []github.Item {
@@ -269,4 +311,61 @@ func filterByPublicRepos(items []github.Item, publicRepos map[string]struct{}) [
 		}
 	}
 	return filtered
+}
+
+// 判断日报内容是否实质相同：提取内容主体并规范化后进行字符串的相等比对，避免因为格式差异导致误判
+func isSubstantivelyEqual(oldContent, newBody string) bool {
+	return normalizeBody(extractBody(oldContent)) == normalizeBody(newBody)
+}
+
+// 提取日报内容主体：去掉可能存在的 front matter 和前后的空白，便于比对内容是否实质变化
+func extractBody(content string) string {
+	content = normalizeNewlines(content)
+	if !strings.HasPrefix(content, "---\n") {
+		return content
+	}
+
+	rest := content[len("---\n"):]
+	offset := 0
+	for {
+		lineEnd := strings.IndexByte(rest[offset:], '\n')
+		if lineEnd == -1 {
+			if rest[offset:] == "---" {
+				return ""
+			}
+			return content
+		}
+		line := rest[offset : offset+lineEnd]
+		if line == "---" {
+			return rest[offset+lineEnd+1:]
+		}
+		offset += lineEnd + 1
+		if offset >= len(rest) {
+			return content
+		}
+	}
+}
+
+// 规范化内容：统一换行符、去掉行尾空白、去掉前后多余空行，确保内容实质相同的情况下不会因为格式差异导致比对结果不同
+func normalizeBody(content string) string {
+	content = normalizeNewlines(content)
+	if content == "" {
+		return ""
+	}
+
+	lines := strings.Split(content, "\n")
+	for i := range lines {
+		lines[i] = strings.TrimRight(lines[i], " \t")
+	}
+	normalized := strings.Join(lines, "\n")
+	normalized = strings.Trim(normalized, "\n")
+	if normalized == "" {
+		return ""
+	}
+	return normalized + "\n"
+}
+
+func normalizeNewlines(content string) string {
+	content = strings.ReplaceAll(content, "\r\n", "\n")
+	return strings.ReplaceAll(content, "\r", "\n")
 }
