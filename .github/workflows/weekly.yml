@@ -21,8 +21,6 @@ jobs:
   weekly-summary:
     runs-on: ubuntu-latest
     env:
-      UPSTREAM_REPO: HITSZ-OpenAuto/hoa-news
-      ORG_NAME: HITSZ-OpenAuto
       GH_TOKEN: ${{ github.token }}
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       OPENAI_BASE_URL: ${{ secrets.OPENAI_BASE_URL }}
@@ -49,7 +47,7 @@ jobs:
           if [ -n "${input_tag}" ]; then
             TAG="${input_tag}"
           else
-            TAG="$(gh api "/repos/${UPSTREAM_REPO}/releases/latest" --jq '.tag_name')"
+            TAG="$(gh api "/repos/HITSZ-OpenAuto/hoa-news/releases/latest" --jq '.tag_name')"
           fi
 
           if [ -z "${TAG}" ] || [ "${TAG}" = "null" ]; then
@@ -65,8 +63,8 @@ jobs:
           set -euo pipefail
           mkdir -p dist
           ASSET="hoa-news_${TAG}_linux_${GOARCH}.tar.gz"
-          gh release download "${TAG}" --repo "${UPSTREAM_REPO}" --pattern "${ASSET}" --dir dist
-          gh release download "${TAG}" --repo "${UPSTREAM_REPO}" --pattern "SHA256SUMS" --dir dist
+          gh release download "${TAG}" --repo "HITSZ-OpenAuto/hoa-news" --pattern "${ASSET}" --dir dist
+          gh release download "${TAG}" --repo "HITSZ-OpenAuto/hoa-news" --pattern "SHA256SUMS" --dir dist
           cd dist
           sha256sum -c SHA256SUMS --ignore-missing
           tar -xzf "${ASSET}"

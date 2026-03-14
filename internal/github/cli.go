@@ -10,6 +10,8 @@ import (
 	"os"
 	"os/exec"
 	"strings"
+
+	"github.com/HITSZ-OpenAuto/hoa-news/internal/config"
 )
 
 type Label struct {
@@ -143,11 +145,9 @@ func GetRawTag(orgName, repoName string) (string, error) {
 	return string(output), nil
 }
 
-const reposListURL = "https://raw.githubusercontent.com/HITSZ-OpenAuto/repos-management/refs/heads/main/repos_list.txt"
-
 // LoadPublicRepos 从远程 repos_list.txt 获取公开仓库名称集合。
 func LoadPublicRepos() (map[string]struct{}, error) {
-	resp, err := http.Get(reposListURL)
+	resp, err := http.Get(config.ReposListURL)
 	if err != nil {
 		return nil, err
 	}
