@@ -36,11 +36,6 @@ func Daily(orgName string, publicRepos map[string]struct{}) error {
 	prs = filterByPublicRepos(prs, publicRepos)
 	log.Printf("Filtered by public repos, issues=%d, pull requests=%d", len(issues), len(prs))
 
-	since := time.Now().Add(-24 * time.Hour)
-	newIssues := filterByCreatedAt(issues, since)
-	newPRs := filterByCreatedAt(prs, since)
-	log.Printf("Filtered by created at, new issues=%d, new pull requests=%d", len(newIssues), len(newPRs))
-
 	if err := UpdateDailyReport("news/daily.md", orgName, publicRepos, issues, prs); err != nil {
 		return fmt.Errorf("failed to update daily report: %w", err)
 	}
@@ -286,20 +281,6 @@ func parseCreatedAt(s string) (time.Time, bool) {
 		return time.Time{}, false
 	}
 	return t, true
-}
-
-func filterByCreatedAt(items []github.Item, since time.Time) []github.Item {
-	filtered := make([]github.Item, 0, len(items))
-	for _, item := range items {
-		t, err := time.Parse(time.RFC3339, item.CreatedAt)
-		if err != nil {
-			continue
-		}
-		if t.After(since) {
-			filtered = append(filtered, item)
-		}
-	}
-	return filtered
 }
 
 func filterByPublicRepos(items []github.Item, publicRepos map[string]struct{}) []github.Item {
