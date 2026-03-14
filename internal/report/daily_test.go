@@ -448,6 +448,7 @@ func TestUpdateDailyReport_BodyChangedRewritesFile(t *testing.T) {
 		},
 	}
 
+	expectedDate := time.Now().UTC().Format("2006-01-02")
 	if err := UpdateDailyReport(tmpFile, orgName, publicRepos, issues, prs); err != nil {
 		t.Fatalf("UpdateDailyReport() returned error: %v", err)
 	}
@@ -464,7 +465,7 @@ func TestUpdateDailyReport_BodyChangedRewritesFile(t *testing.T) {
 	if strings.Contains(got, "date: \"1999-01-01\"") {
 		t.Fatalf("expected date to be refreshed after rewrite")
 	}
-	if !strings.Contains(got, time.Now().UTC().Format("2006-01-02")) {
+	if !strings.Contains(got, "date: \""+expectedDate+"\"") {
 		t.Fatalf("expected rewritten file to include today's UTC date")
 	}
 	if !strings.Contains(got, "### [new issue](https://example.com/issues/1)") {
