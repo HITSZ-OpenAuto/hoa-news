@@ -241,6 +241,7 @@ func sortCommits(commits []CommitEntry) {
 			return commits[i].RepoName < commits[j].RepoName
 		}
 
+		// TODO 可以进行信息预处理，降低排序时的计算量
 		mi := strings.Split(commits[i].Message, "\n")[0]
 		mj := strings.Split(commits[j].Message, "\n")[0]
 		if mi != mj {
@@ -256,6 +257,7 @@ func sortCommits(commits []CommitEntry) {
 // 对 Issues 和 Pull Requests 按照创建时间（从新到旧）、仓库名、标题、URL 进行排序。
 func sortItems(items []github.Item) {
 	sort.Slice(items, func(i, j int) bool {
+		// TODO 可以进行信息预处理，降低排序时的计算量
 		ti, okI := parseCreatedAt(items[i].CreatedAt)
 		tj, okJ := parseCreatedAt(items[j].CreatedAt)
 		if okI && okJ && !ti.Equal(tj) {
