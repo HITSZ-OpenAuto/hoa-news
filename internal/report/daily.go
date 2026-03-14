@@ -34,14 +34,19 @@ func Daily(orgName string, publicRepos map[string]struct{}) error {
 	prs = filterByPublicRepos(prs, publicRepos)
 	log.Printf("Filtered by public repos, issues=%d, pull requests=%d", len(issues), len(prs))
 
-	if err := UpdateDailyReport("news/daily.md", orgName, publicRepos, issues, prs); err != nil {
+	since := time.Now().Add(-24 * time.Hour)
+	newIssues := filterByCreatedAt(issues, since)
+	newPRs := filterByCreatedAt(prs, since)
+	log.Printf("Filtered by created at, new issues=%d, new pull requests=%d", len(newIssues), len(newPRs))
+
+	if err := UpdateDailyReport("news/daily.md", orgName, publicRepos, issues, prs, len(newIssues) > 0 || len(newPRs) > 0); err != nil {
 		return fmt.Errorf("failed to update daily report: %w", err)
 	}
 
 	return nil
 }
 
-func UpdateDailyReport(path string, orgName string, publicRepos map[string]struct{}, issues []github.Item, prs []github.Item) error {
+func UpdateDailyReport(path string, orgName string, publicRepos map[string]struct{}, issues []github.Item, prs []github.Item, hasNewActivity bool) error {
 	var buf strings.Builder
 
 	// Front matter
@@ -64,7 +69,7 @@ func UpdateDailyReport(path string, orgName string, publicRepos map[string]struc
 	buf.WriteString("---\n\n")
 
 	// Commits
-	buf.WriteString("## 今日更新\n\n")
+	buf.WriteString("## 最近更新\n\n")
 
 	startTime := time.Now().Add(-24 * time.Hour)
 
@@ -148,8 +153,13 @@ func UpdateDailyReport(path string, orgName string, publicRepos map[string]struc
 
 	log.Printf("Commit collection complete, %d total valid commits", len(commits))
 
+	if len(commits) == 0 && !hasNewActivity {
+		log.Printf("No new commits, issues, or PRs found, skipping file write")
+		return nil
+	}
+
 	if len(commits) == 0 {
-		buf.WriteString("暂无更新\n\n")
+		buf.WriteString(readExistingSection(path, "## 最近更新"))
 	} else {
 		for _, commit := range commits {
 			author := utils.SanitizeInlineText(commit.AuthorName)
@@ -211,6 +221,41 @@ func UpdateDailyReport(path string, orgName string, publicRepos map[string]struc
 	}
 
 	return os.WriteFile(path, []byte(buf.String()), 0o644)
+}
+
+// readExistingSection reads the content of a named section (e.g. "## 最近更新")
+// from an existing markdown file, returning everything up to the next "##" heading.
+// Returns empty string if the file doesn't exist or the section isn't found.
+func readExistingSection(path, heading string) string {
+	data, err := os.ReadFile(path)
+	if err != nil {
+		return ""
+	}
+	content := string(data)
+	start := strings.Index(content, heading+"\n\n")
+	if start == -1 {
+		return ""
+	}
+	start += len(heading) + 2 // skip past the heading and blank line
+	end := strings.Index(content[start:], "\n## ")
+	if end == -1 {
+		return content[start:]
+	}
+	return content[start : start+end+1]
+}
+
+func filterByCreatedAt(items []github.Item, since time.Time) []github.Item {
+	filtered := make([]github.Item, 0, len(items))
+	for _, item := range items {
+		t, err := time.Parse(time.RFC3339, item.CreatedAt)
+		if err != nil {
+			continue
+		}
+		if t.After(since) {
+			filtered = append(filtered, item)
+		}
+	}
+	return filtered
 }
 
 func filterByPublicRepos(items []github.Item, publicRepos map[string]struct{}) []github.Item {
