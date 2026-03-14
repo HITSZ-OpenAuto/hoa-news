@@ -17,7 +17,7 @@ import (
 	"gopkg.in/yaml.v3"
 )
 
-const summaryGoroutineLimit = 20 // 并发限制，避免过多协程导致触发 GitHub 限流
+const summaryGoroutineLimit = 80 // 并发限制，避免过多协程导致触发 GitHub 限流
 
 var ErrNoWeeklyCommits = errors.New("no commits found in the given period of time")
 
