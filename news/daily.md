@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-03-14"
+date: "2026-03-15"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -11,6 +11,12 @@ draft: false
 ---
 
 ## 最近更新
+
+- W. D. Gaster 在 [DSP的原理与应用](https://github.com/HITSZ-OpenAuto/EE3005) 中提交了信息：修改格式 (#21) (12:21)
+
+- W. D. Gaster 在 [电力电子技术](https://github.com/HITSZ-OpenAuto/EE3002) 中提交了信息：修改格式 (#14) (12:11)
+
+- W. D. Gaster 在 [电机学](https://github.com/HITSZ-OpenAuto/EE3001) 中提交了信息：修复错误 (#17) (11:22)
 
 - cecilia 在 [计算思维与实践](https://github.com/HITSZ-OpenAuto/COMP1011) 中提交了信息：尝试删除 md 中的 toml 格式，以观察整个工作流程 (21:28)
 
@@ -118,12 +124,6 @@ draft: false
 
 - **仓库**: AUTO3016
 - **创建于**: 2026-03-09 23:26:39
-- **作者**: WDGaster703
-
-### [【EE3005】](https://github.com/HITSZ-OpenAuto/EE3005/issues/20)
-
-- **仓库**: EE3005
-- **创建于**: 2026-03-09 23:26:34
 - **作者**: WDGaster703
 
 ### [【MATH1002】](https://github.com/HITSZ-OpenAuto/MATH1002/issues/37)
@@ -456,12 +456,6 @@ draft: false
 - **创建于**: 2026-03-09 23:23:00
 - **作者**: WDGaster703
 
-### [【EE3001】](https://github.com/HITSZ-OpenAuto/EE3001/issues/16)
-
-- **仓库**: EE3001
-- **创建于**: 2026-03-09 23:22:56
-- **作者**: WDGaster703
-
 ### [【EE3015】](https://github.com/HITSZ-OpenAuto/EE3015/issues/15)
 
 - **仓库**: EE3015
@@ -472,12 +466,6 @@ draft: false
 
 - **仓库**: MECH2019
 - **创建于**: 2026-03-09 23:22:48
-- **作者**: WDGaster703
-
-### [【EE3002】](https://github.com/HITSZ-OpenAuto/EE3002/issues/13)
-
-- **仓库**: EE3002
-- **创建于**: 2026-03-09 23:22:43
 - **作者**: WDGaster703
 
 ### [【MECH2022】](https://github.com/HITSZ-OpenAuto/MECH2022/issues/10)
@@ -540,7 +528,31 @@ draft: false
 - **创建于**: 2026-03-09 23:22:00
 - **作者**: WDGaster703
 
+### [【COMP3001】](https://github.com/HITSZ-OpenAuto/COMP3001/issues/13)
+
+- **仓库**: COMP3001
+- **创建于**: 2026-03-09 23:21:56
+- **作者**: WDGaster703
+
+### [【COMP3013】](https://github.com/HITSZ-OpenAuto/COMP3013/issues/13)
+
+- **仓库**: COMP3013
+- **创建于**: 2026-03-09 23:21:52
+- **作者**: WDGaster703
+
+### [【COMP3010】](https://github.com/HITSZ-OpenAuto/COMP3010/issues/12)
+
+- **仓库**: COMP3010
+- **创建于**: 2026-03-09 23:21:40
+- **作者**: WDGaster703
+
 ## 待合并的 Pull Requests
+
+### [修改格式](https://github.com/HITSZ-OpenAuto/EE3015/pull/16)
+
+- **仓库**: EE3015
+- **创建于**: 2026-03-15 12:42:51
+- **作者**: WDGaster703
 
 ### [修改格式](https://github.com/HITSZ-OpenAuto/AUTO2005/pull/44)
 
