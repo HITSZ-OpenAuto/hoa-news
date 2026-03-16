@@ -534,13 +534,13 @@ draft: false
 - **创建于**: 2026-03-09 23:21:40
 - **作者**: WDGaster703
 
-### [【COMP3060】](https://github.com/HITSZ-OpenAuto/COMP3060/issues/11)
-
-- **仓库**: COMP3060
-- **创建于**: 2026-03-09 23:21:36
-- **作者**: WDGaster703
-
 ## 待合并的 Pull Requests
+
+### [修改内容](https://github.com/HITSZ-OpenAuto/EE30XX/pull/5)
+
+- **仓库**: EE30XX
+- **创建于**: 2026-03-16 13:22:06
+- **作者**: WDGaster703
 
 ### [修改格式](https://github.com/HITSZ-OpenAuto/EE3015/pull/16)
 
