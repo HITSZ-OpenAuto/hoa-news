@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-03-15"
+date: "2026-03-16"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -12,11 +12,9 @@ draft: false
 
 ## 最近更新
 
-- W. D. Gaster 在 [DSP的原理与应用](https://github.com/HITSZ-OpenAuto/EE3005) 中提交了信息：修改格式 (#21) (12:21)
+- W. D. Gaster 在 [专业综合实践](https://github.com/HITSZ-OpenAuto/EE304X) 中提交了信息：添加内容 (#7) (13:13)
 
-- W. D. Gaster 在 [电力电子技术](https://github.com/HITSZ-OpenAuto/EE3002) 中提交了信息：修改格式 (#14) (12:11)
-
-- W. D. Gaster 在 [电机学](https://github.com/HITSZ-OpenAuto/EE3001) 中提交了信息：修复错误 (#17) (11:22)
+- W. D. Gaster 在 [电磁场](https://github.com/HITSZ-OpenAuto/EE2003) 中提交了信息：修改格式 (#16) (11:38)
 
 ## 待解决的 Issues
 
@@ -446,12 +444,6 @@ draft: false
 - **创建于**: 2026-03-09 23:23:04
 - **作者**: WDGaster703
 
-### [【EE2003】](https://github.com/HITSZ-OpenAuto/EE2003/issues/15)
-
-- **仓库**: EE2003
-- **创建于**: 2026-03-09 23:23:00
-- **作者**: WDGaster703
-
 ### [【EE3015】](https://github.com/HITSZ-OpenAuto/EE3015/issues/15)
 
 - **仓库**: EE3015
@@ -542,13 +534,13 @@ draft: false
 - **创建于**: 2026-03-09 23:21:40
 - **作者**: WDGaster703
 
-## 待合并的 Pull Requests
+### [【COMP3060】](https://github.com/HITSZ-OpenAuto/COMP3060/issues/11)
 
-### [修改格式](https://github.com/HITSZ-OpenAuto/EE2003/pull/16)
-
-- **仓库**: EE2003
-- **创建于**: 2026-03-16 00:14:58
+- **仓库**: COMP3060
+- **创建于**: 2026-03-09 23:21:36
 - **作者**: WDGaster703
+
+## 待合并的 Pull Requests
 
 ### [修改格式](https://github.com/HITSZ-OpenAuto/EE3015/pull/16)
 
