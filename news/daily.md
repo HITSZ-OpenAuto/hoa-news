@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-03-16"
+date: "2026-03-17"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -13,8 +13,6 @@ draft: false
 ## 最近更新
 
 - W. D. Gaster 在 [专业综合实践](https://github.com/HITSZ-OpenAuto/EE304X) 中提交了信息：添加内容 (#7) (13:13)
-
-- W. D. Gaster 在 [电磁场](https://github.com/HITSZ-OpenAuto/EE2003) 中提交了信息：修改格式 (#16) (11:38)
 
 ## 待解决的 Issues
 
