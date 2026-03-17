@@ -12,7 +12,7 @@ draft: false
 
 ## 最近更新
 
-- W. D. Gaster 在 [专业综合实践](https://github.com/HITSZ-OpenAuto/EE304X) 中提交了信息：添加内容 (#7) (13:13)
+- Jiao Ziang 在 [写作与沟通](https://github.com/HITSZ-OpenAuto/WRIT0001) 中提交了信息：补充王悦昶老师的评价 (14:57)
 
 ## 待解决的 Issues
 
@@ -530,6 +530,12 @@ draft: false
 
 - **仓库**: COMP3010
 - **创建于**: 2026-03-09 23:21:40
+- **作者**: WDGaster703
+
+### [【COMP3060】](https://github.com/HITSZ-OpenAuto/COMP3060/issues/11)
+
+- **仓库**: COMP3060
+- **创建于**: 2026-03-09 23:21:36
 - **作者**: WDGaster703
 
 ## 待合并的 Pull Requests
