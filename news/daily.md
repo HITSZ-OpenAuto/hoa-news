@@ -538,6 +538,12 @@ draft: false
 - **创建于**: 2026-03-09 23:21:36
 - **作者**: WDGaster703
 
+### [【COMP2029】](https://github.com/HITSZ-OpenAuto/COMP2029/issues/12)
+
+- **仓库**: COMP2029
+- **创建于**: 2026-03-09 23:21:32
+- **作者**: WDGaster703
+
 ## 待合并的 Pull Requests
 
 ### [修改内容](https://github.com/HITSZ-OpenAuto/EE30XX/pull/5)
