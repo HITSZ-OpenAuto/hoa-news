@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-03-17"
+date: "2026-03-18"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -12,7 +12,7 @@ draft: false
 
 ## 最近更新
 
-- Jiao Ziang 在 [写作与沟通](https://github.com/HITSZ-OpenAuto/WRIT0001) 中提交了信息：补充王悦昶老师的评价 (14:57)
+暂无更新
 
 ## 待解决的 Issues
 
