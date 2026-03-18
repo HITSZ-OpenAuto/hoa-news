@@ -12,7 +12,7 @@ draft: false
 
 ## 最近更新
 
-暂无更新
+- Kowyo 在 [大学物理实验](https://github.com/HITSZ-OpenAuto/PHYS1002) 中提交了信息：测试 LaTeX 显示 (20:04)
 
 ## 待解决的 Issues
 
