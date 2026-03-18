@@ -12,6 +12,8 @@ draft: false
 
 ## 最近更新
 
+- W. D. Gaster 在 [电力系统分析](https://github.com/HITSZ-OpenAuto/EE3015) 中提交了信息：修改格式 (#16) (22:19)
+
 - Kowyo 在 [大学物理实验](https://github.com/HITSZ-OpenAuto/PHYS1002) 中提交了信息：测试 LaTeX 显示 (20:04)
 
 ## 待解决的 Issues
@@ -286,12 +288,6 @@ draft: false
 - **创建于**: 2026-03-09 23:24:47
 - **作者**: WDGaster703
 
-### [【EE1014】](https://github.com/HITSZ-OpenAuto/EE1014/issues/23)
-
-- **仓库**: EE1014
-- **创建于**: 2026-03-09 23:24:42
-- **作者**: WDGaster703
-
 ### [【AUTO3001B】](https://github.com/HITSZ-OpenAuto/AUTO3001B/issues/32)
 
 - **仓库**: AUTO3001B
@@ -442,12 +438,6 @@ draft: false
 - **创建于**: 2026-03-09 23:23:04
 - **作者**: WDGaster703
 
-### [【EE3015】](https://github.com/HITSZ-OpenAuto/EE3015/issues/15)
-
-- **仓库**: EE3015
-- **创建于**: 2026-03-09 23:22:52
-- **作者**: WDGaster703
-
 ### [【MECH2019】](https://github.com/HITSZ-OpenAuto/MECH2019/issues/12)
 
 - **仓库**: MECH2019
@@ -544,18 +534,36 @@ draft: false
 - **创建于**: 2026-03-09 23:21:32
 - **作者**: WDGaster703
 
-## 待合并的 Pull Requests
+### [【COMP2010】](https://github.com/HITSZ-OpenAuto/COMP2010/issues/12)
 
-### [修改内容](https://github.com/HITSZ-OpenAuto/EE30XX/pull/5)
-
-- **仓库**: EE30XX
-- **创建于**: 2026-03-16 13:22:06
+- **仓库**: COMP2010
+- **创建于**: 2026-03-09 23:21:28
 - **作者**: WDGaster703
 
-### [修改格式](https://github.com/HITSZ-OpenAuto/EE3015/pull/16)
+### [【COMP3011】](https://github.com/HITSZ-OpenAuto/COMP3011/issues/12)
 
-- **仓库**: EE3015
-- **创建于**: 2026-03-15 12:42:51
+- **仓库**: COMP3011
+- **创建于**: 2026-03-09 23:21:22
+- **作者**: WDGaster703
+
+## 待合并的 Pull Requests
+
+### [修改课程内容排版](https://github.com/HITSZ-OpenAuto/EE2004/pull/22)
+
+- **仓库**: EE2004
+- **创建于**: 2026-03-18 23:31:06
+- **作者**: WDGaster703
+
+### [修复格式错误，将红外波实验移动到archived文件夹中](https://github.com/HITSZ-OpenAuto/PHYS1002/pull/71)
+
+- **仓库**: PHYS1002
+- **创建于**: 2026-03-18 22:01:43
+- **作者**: WDGaster703
+
+### [修复大量格式混乱和内容错误](https://github.com/HITSZ-OpenAuto/PE100X/pull/39)
+
+- **仓库**: PE100X
+- **创建于**: 2026-03-18 21:50:41
 - **作者**: WDGaster703
 
 ### [修改格式](https://github.com/HITSZ-OpenAuto/AUTO2005/pull/44)
