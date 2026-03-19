@@ -18,8 +18,6 @@ draft: false
 
 - W. D. Gaster 在 [电力系统分析](https://github.com/HITSZ-OpenAuto/EE3015) 中提交了信息：修改格式 (#16) (22:19)
 
-- Kowyo 在 [大学物理实验](https://github.com/HITSZ-OpenAuto/PHYS1002) 中提交了信息：测试 LaTeX 显示 (20:04)
-
 ## 待解决的 Issues
 
 ### [【course-template】](https://github.com/HITSZ-OpenAuto/course-template/issues/25)
