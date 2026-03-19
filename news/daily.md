@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-03-18"
+date: "2026-03-19"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -11,6 +11,10 @@ draft: false
 ---
 
 ## 最近更新
+
+- patrick1129star 在 [大数据导论](https://github.com/HITSZ-OpenAuto/COMP3009) 中提交了信息：补充了实验说明 (16:45)
+
+- patrick1129star 在 [大数据导论](https://github.com/HITSZ-OpenAuto/COMP3009) 中提交了信息：补充了一些关于实验.md (16:35)
 
 - W. D. Gaster 在 [电力系统分析](https://github.com/HITSZ-OpenAuto/EE3015) 中提交了信息：修改格式 (#16) (22:19)
 
