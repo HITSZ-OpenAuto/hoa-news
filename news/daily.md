@@ -546,6 +546,12 @@ draft: false
 
 ## 待合并的 Pull Requests
 
+### [fix\(style\): 统一 toml 格式为 sections 段](https://github.com/HITSZ-OpenAuto/COMP2050/pull/23)
+
+- **仓库**: COMP2050
+- **创建于**: 2026-03-20 22:38:21
+- **作者**: IcyDesert
+
 ### [修改课程内容排版](https://github.com/HITSZ-OpenAuto/EE2004/pull/22)
 
 - **仓库**: EE2004
