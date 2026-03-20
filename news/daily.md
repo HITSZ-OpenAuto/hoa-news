@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-03-19"
+date: "2026-03-20"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -547,6 +547,12 @@ draft: false
 - **作者**: WDGaster703
 
 ## 待合并的 Pull Requests
+
+### [docs: 追加勘误说明](https://github.com/HITSZ-OpenAuto/PHYS1002/pull/72)
+
+- **仓库**: PHYS1002
+- **创建于**: 2026-03-20 12:12:32
+- **作者**: ll3me
 
 ### [修改课程内容排版](https://github.com/HITSZ-OpenAuto/EE2004/pull/22)
 
