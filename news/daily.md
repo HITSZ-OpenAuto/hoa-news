@@ -12,7 +12,7 @@ draft: false
 
 ## 最近更新
 
-暂无更新
+- W. D. Gaster 在 [大学物理实验](https://github.com/HITSZ-OpenAuto/PHYS1002) 中提交了信息：修复格式错误，将红外波实验移动到archived文件夹中 (#71) (18:10)
 
 ## 待解决的 Issues
 
@@ -32,12 +32,6 @@ draft: false
 
 - **仓库**: AUTO2005
 - **创建于**: 2026-03-09 23:27:33
-- **作者**: WDGaster703
-
-### [【PHYS1002】](https://github.com/HITSZ-OpenAuto/PHYS1002/issues/70)
-
-- **仓库**: PHYS1002
-- **创建于**: 2026-03-09 23:27:28
 - **作者**: WDGaster703
 
 ### [【AUTO3002A】](https://github.com/HITSZ-OpenAuto/AUTO3002A/issues/52)
@@ -544,6 +538,12 @@ draft: false
 - **创建于**: 2026-03-09 23:21:22
 - **作者**: WDGaster703
 
+### [【COMP3004】](https://github.com/HITSZ-OpenAuto/COMP3004/issues/13)
+
+- **仓库**: COMP3004
+- **创建于**: 2026-03-09 23:21:18
+- **作者**: WDGaster703
+
 ## 待合并的 Pull Requests
 
 ### [fix\(style\): 统一 toml 格式为 sections 段](https://github.com/HITSZ-OpenAuto/COMP2050/pull/23)
@@ -556,12 +556,6 @@ draft: false
 
 - **仓库**: EE2004
 - **创建于**: 2026-03-18 23:31:06
-- **作者**: WDGaster703
-
-### [修复格式错误，将红外波实验移动到archived文件夹中](https://github.com/HITSZ-OpenAuto/PHYS1002/pull/71)
-
-- **仓库**: PHYS1002
-- **创建于**: 2026-03-18 22:01:43
 - **作者**: WDGaster703
 
 ### [修复大量格式混乱和内容错误](https://github.com/HITSZ-OpenAuto/PE100X/pull/39)
