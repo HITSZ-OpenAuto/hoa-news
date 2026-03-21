@@ -546,6 +546,18 @@ draft: false
 
 ## 待合并的 Pull Requests
 
+### [feat: 新增课程《改革开放与新时代》答案](https://github.com/HITSZ-OpenAuto/MOOC/pull/28)
+
+- **仓库**: MOOC
+- **创建于**: 2026-03-22 01:38:38
+- **作者**: GoldenHeng
+
+### [docs: 增加一条链接](https://github.com/HITSZ-OpenAuto/MOOC/pull/27)
+
+- **仓库**: MOOC
+- **创建于**: 2026-03-22 01:28:34
+- **作者**: GoldenHeng
+
 ### [fix\(style\): 统一 toml 格式为 sections 段](https://github.com/HITSZ-OpenAuto/COMP2050/pull/23)
 
 - **仓库**: COMP2050
