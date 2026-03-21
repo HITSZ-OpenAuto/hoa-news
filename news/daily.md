@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-03-20"
+date: "2026-03-21"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -12,7 +12,7 @@ draft: false
 
 ## 最近更新
 
-- 吹向无叶 | Leaflessward 在 [大学物理实验](https://github.com/HITSZ-OpenAuto/PHYS1002) 中提交了信息：追加勘误说明#72 (15:24)
+暂无更新
 
 ## 待解决的 Issues
 
