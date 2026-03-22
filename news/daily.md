@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-03-21"
+date: "2026-03-22"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -12,7 +12,7 @@ draft: false
 
 ## 最近更新
 
-- W. D. Gaster 在 [大学物理实验](https://github.com/HITSZ-OpenAuto/PHYS1002) 中提交了信息：修复格式错误，将红外波实验移动到archived文件夹中 (#71) (18:10)
+暂无更新
 
 ## 待解决的 Issues
 
