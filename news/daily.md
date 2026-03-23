@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-03-22"
+date: "2026-03-23"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -13,8 +13,6 @@ draft: false
 ## 最近更新
 
 - Jiao Ziang 在 [软件工程](https://github.com/HITSZ-OpenAuto/COMP3002) 中提交了信息：修复老版本教师格式问题 (00:19)
-
-- Jiao Ziang 在 [大学物理](https://github.com/HITSZ-OpenAuto/PHYS1001) 中提交了信息：修复遗留的老版本教师问题 (00:01)
 
 ## 待解决的 Issues
 
