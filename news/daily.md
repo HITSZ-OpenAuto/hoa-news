@@ -12,7 +12,7 @@ draft: false
 
 ## 最近更新
 
-- Jiao Ziang 在 [软件工程](https://github.com/HITSZ-OpenAuto/COMP3002) 中提交了信息：修复老版本教师格式问题 (00:19)
+暂无更新
 
 ## 待解决的 Issues
 
