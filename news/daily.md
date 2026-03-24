@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-03-23"
+date: "2026-03-24"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -74,12 +74,6 @@ draft: false
 
 - **仓库**: AUTO3028
 - **创建于**: 2026-03-09 23:27:01
-- **作者**: WDGaster703
-
-### [【COMP2050】](https://github.com/HITSZ-OpenAuto/COMP2050/issues/22)
-
-- **仓库**: COMP2050
-- **创建于**: 2026-03-09 23:26:58
 - **作者**: WDGaster703
 
 ### [【MATH1005】](https://github.com/HITSZ-OpenAuto/MATH1005/issues/40)
@@ -544,7 +538,19 @@ draft: false
 - **创建于**: 2026-03-09 23:21:18
 - **作者**: WDGaster703
 
+### [【COMP3040】](https://github.com/HITSZ-OpenAuto/COMP3040/issues/12)
+
+- **仓库**: COMP3040
+- **创建于**: 2026-03-09 23:21:14
+- **作者**: WDGaster703
+
 ## 待合并的 Pull Requests
+
+### [fix: 修正 toml 内容](https://github.com/HITSZ-OpenAuto/COMP2001/pull/6)
+
+- **仓库**: COMP2001
+- **创建于**: 2026-03-24 10:07:49
+- **作者**: IcyDesert
 
 ### [修复老版本教师格式错误](https://github.com/HITSZ-OpenAuto/AUTO5005/pull/21)
 
@@ -593,12 +599,6 @@ draft: false
 - **仓库**: MOOC
 - **创建于**: 2026-03-22 01:28:34
 - **作者**: GoldenHeng
-
-### [fix\(style\): 统一 toml 格式为 sections 段](https://github.com/HITSZ-OpenAuto/COMP2050/pull/23)
-
-- **仓库**: COMP2050
-- **创建于**: 2026-03-20 22:38:21
-- **作者**: IcyDesert
 
 ### [修改课程内容排版](https://github.com/HITSZ-OpenAuto/EE2004/pull/22)
 
