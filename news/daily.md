@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-03-26"
+date: "2026-03-27"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -12,9 +12,7 @@ draft: false
 
 ## 最近更新
 
-- GoldenHeng 在 [MOOC](https://github.com/HITSZ-OpenAuto/MOOC) 中提交了信息：新增课程《改革开放与新时代》答案 (#28) (01:30)
-
-- GoldenHeng 在 [MOOC](https://github.com/HITSZ-OpenAuto/MOOC) 中提交了信息：增加一条链接 (#27) (01:27)
+暂无更新
 
 ## 待解决的 Issues
 
