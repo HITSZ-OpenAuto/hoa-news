@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-03-27"
+date: "2026-03-28"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -12,7 +12,7 @@ draft: false
 
 ## 最近更新
 
-暂无更新
+- rana608 在 [大学物理实验](https://github.com/HITSZ-OpenAuto/PHYS1002) 中提交了信息：示波器实验说明部分 (#74) (12:56)
 
 ## 待解决的 Issues
 
@@ -551,6 +551,12 @@ draft: false
 - **作者**: WDGaster703
 
 ## 待合并的 Pull Requests
+
+### [更改了实验的编号](https://github.com/HITSZ-OpenAuto/PHYS1002/pull/73)
+
+- **仓库**: PHYS1002
+- **创建于**: 2026-03-28 11:15:14
+- **作者**: IceFerryLing
 
 ### [fix: 修正 toml 内容](https://github.com/HITSZ-OpenAuto/COMP2001/pull/6)
 
