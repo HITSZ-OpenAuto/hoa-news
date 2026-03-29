@@ -552,6 +552,12 @@ draft: false
 
 ## 待合并的 Pull Requests
 
+### [新增通信数字信号处理入门课程的评价](https://github.com/HITSZ-OpenAuto/ENGG1003/pull/22)
+
+- **仓库**: ENGG1003
+- **创建于**: 2026-03-29 15:33:25
+- **作者**: SpeechlessPanda
+
 ### [更改了实验的编号](https://github.com/HITSZ-OpenAuto/PHYS1002/pull/73)
 
 - **仓库**: PHYS1002
