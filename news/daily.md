@@ -12,7 +12,9 @@ draft: false
 
 ## 最近更新
 
-暂无更新
+- Mingjia Zhou 在 [工程训练（电子工艺实习）](https://github.com/HITSZ-OpenAuto/ENGG1003) 中提交了信息：新增通信数字信号处理入门课程的评价 (#22) (21:20)
+
+- baidu 在 [大学物理实验](https://github.com/HITSZ-OpenAuto/PHYS1002) 中提交了信息：更改了实验的编号 (#73) (21:19)
 
 ## 待解决的 Issues
 
@@ -552,17 +554,11 @@ draft: false
 
 ## 待合并的 Pull Requests
 
-### [新增通信数字信号处理入门课程的评价](https://github.com/HITSZ-OpenAuto/ENGG1003/pull/22)
+### [仓库内容审查与结构规范化](https://github.com/HITSZ-OpenAuto/AUTO5024/pull/25)
 
-- **仓库**: ENGG1003
-- **创建于**: 2026-03-29 15:33:25
-- **作者**: SpeechlessPanda
-
-### [更改了实验的编号](https://github.com/HITSZ-OpenAuto/PHYS1002/pull/73)
-
-- **仓库**: PHYS1002
-- **创建于**: 2026-03-28 11:15:14
-- **作者**: IceFerryLing
+- **仓库**: AUTO5024
+- **创建于**: 2026-03-29 21:46:44
+- **作者**: Co-ding-Man
 
 ### [fix: 修正 toml 内容](https://github.com/HITSZ-OpenAuto/COMP2001/pull/6)
 
