@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-03-28"
+date: "2026-03-29"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -12,7 +12,7 @@ draft: false
 
 ## 最近更新
 
-- rana608 在 [大学物理实验](https://github.com/HITSZ-OpenAuto/PHYS1002) 中提交了信息：示波器实验说明部分 (#74) (12:56)
+暂无更新
 
 ## 待解决的 Issues
 
