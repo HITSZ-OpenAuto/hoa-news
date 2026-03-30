@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-03-29"
+date: "2026-03-30"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -11,6 +11,8 @@ draft: false
 ---
 
 ## 最近更新
+
+- Hye 在 [模式识别](https://github.com/HITSZ-OpenAuto/AUTO5024) 中提交了信息：仓库内容审查与结构规范化 (#25) (18:05)
 
 - Mingjia Zhou 在 [工程训练（电子工艺实习）](https://github.com/HITSZ-OpenAuto/ENGG1003) 中提交了信息：新增通信数字信号处理入门课程的评价 (#22) (21:20)
 
@@ -553,12 +555,6 @@ draft: false
 - **作者**: WDGaster703
 
 ## 待合并的 Pull Requests
-
-### [仓库内容审查与结构规范化](https://github.com/HITSZ-OpenAuto/AUTO5024/pull/25)
-
-- **仓库**: AUTO5024
-- **创建于**: 2026-03-29 21:46:44
-- **作者**: Co-ding-Man
 
 ### [fix: 修正 toml 内容](https://github.com/HITSZ-OpenAuto/COMP2001/pull/6)
 
