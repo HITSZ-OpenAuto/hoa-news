@@ -14,10 +14,6 @@ draft: false
 
 - Hye 在 [模式识别](https://github.com/HITSZ-OpenAuto/AUTO5024) 中提交了信息：仓库内容审查与结构规范化 (#25) (18:05)
 
-- Mingjia Zhou 在 [工程训练（电子工艺实习）](https://github.com/HITSZ-OpenAuto/ENGG1003) 中提交了信息：新增通信数字信号处理入门课程的评价 (#22) (21:20)
-
-- baidu 在 [大学物理实验](https://github.com/HITSZ-OpenAuto/PHYS1002) 中提交了信息：更改了实验的编号 (#73) (21:19)
-
 ## 待解决的 Issues
 
 ### [【course-template】](https://github.com/HITSZ-OpenAuto/course-template/issues/25)
@@ -552,6 +548,12 @@ draft: false
 
 - **仓库**: COMP3007
 - **创建于**: 2026-03-09 23:21:10
+- **作者**: WDGaster703
+
+### [【COMP3044】](https://github.com/HITSZ-OpenAuto/COMP3044/issues/11)
+
+- **仓库**: COMP3044
+- **创建于**: 2026-03-09 23:21:02
 - **作者**: WDGaster703
 
 ## 待合并的 Pull Requests
