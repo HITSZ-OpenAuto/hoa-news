@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-03-30"
+date: "2026-03-31"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -12,7 +12,7 @@ draft: false
 
 ## 最近更新
 
-- Hye 在 [模式识别](https://github.com/HITSZ-OpenAuto/AUTO5024) 中提交了信息：仓库内容审查与结构规范化 (#25) (18:05)
+暂无更新
 
 ## 待解决的 Issues
 
