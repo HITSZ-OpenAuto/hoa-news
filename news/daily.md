@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-03-31"
+date: "2026-04-01"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -11,6 +11,12 @@ draft: false
 ---
 
 ## 最近更新
+
+- Pengjie Wang 在 [习近平新时代中国特色社会主义思想概论](https://github.com/HITSZ-OpenAuto/GEIP1017) 中提交了信息：完善了课程信息 (11:50)
+
+- Kowyo 在 [代数与几何](https://github.com/HITSZ-OpenAuto/MATH1002) 中提交了信息：完善课程信息 (#33) (11:46)
+
+- Pengjie Wang 在 [离散数学](https://github.com/HITSZ-OpenAuto/COMP2030) 中提交了信息：完善课程信息 (11:42)
 
 - W. D. Gaster 在 [（示例）大学物理实验](https://github.com/HITSZ-OpenAuto/Cross-ECON) 中提交了信息：添加经管类跨专业课程 (#1) (02:48)
 
@@ -631,22 +637,4 @@ draft: false
 - **仓库**: EE1013
 - **创建于**: 2026-03-11 15:01:22
 - **作者**: WDGaster703
-
-### [完善课程信息](https://github.com/HITSZ-OpenAuto/COMP2030/pull/14)
-
-- **仓库**: COMP2030
-- **创建于**: 2026-02-06 22:50:04
-- **作者**: wpj9362
-
-### [完善了课程信息](https://github.com/HITSZ-OpenAuto/GEIP1017/pull/19)
-
-- **仓库**: GEIP1017
-- **创建于**: 2026-02-06 22:43:09
-- **作者**: wpj9362
-
-### [完善课程信息](https://github.com/HITSZ-OpenAuto/MATH1002/pull/33)
-
-- **仓库**: MATH1002
-- **创建于**: 2026-02-06 22:33:44
-- **作者**: wpj9362
 
