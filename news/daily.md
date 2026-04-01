@@ -18,8 +18,6 @@ draft: false
 
 - Pengjie Wang 在 [离散数学](https://github.com/HITSZ-OpenAuto/COMP2030) 中提交了信息：完善课程信息 (11:42)
 
-- W. D. Gaster 在 [（示例）大学物理实验](https://github.com/HITSZ-OpenAuto/Cross-ECON) 中提交了信息：添加经管类跨专业课程 (#1) (02:48)
-
 ## 待解决的 Issues
 
 ### [【course-template】](https://github.com/HITSZ-OpenAuto/course-template/issues/25)
