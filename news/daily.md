@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-04-01"
+date: "2026-04-02"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -12,11 +12,7 @@ draft: false
 
 ## 最近更新
 
-- Pengjie Wang 在 [习近平新时代中国特色社会主义思想概论](https://github.com/HITSZ-OpenAuto/GEIP1017) 中提交了信息：完善了课程信息 (11:50)
-
-- Kowyo 在 [代数与几何](https://github.com/HITSZ-OpenAuto/MATH1002) 中提交了信息：完善课程信息 (#33) (11:46)
-
-- Pengjie Wang 在 [离散数学](https://github.com/HITSZ-OpenAuto/COMP2030) 中提交了信息：完善课程信息 (11:42)
+暂无更新
 
 ## 待解决的 Issues
 
