@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-04-02"
+date: "2026-04-03"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -557,6 +557,12 @@ draft: false
 - **作者**: WDGaster703
 
 ## 待合并的 Pull Requests
+
+### [添加 Fun10165 的实验报告](https://github.com/HITSZ-OpenAuto/PHYS1002/pull/75)
+
+- **仓库**: PHYS1002
+- **创建于**: 2026-04-03 16:00:03
+- **作者**: Fun10165
 
 ### [fix: 修正 toml 内容](https://github.com/HITSZ-OpenAuto/COMP2001/pull/6)
 
