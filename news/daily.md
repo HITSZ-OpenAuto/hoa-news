@@ -544,18 +544,6 @@ draft: false
 - **创建于**: 2026-03-09 23:21:14
 - **作者**: WDGaster703
 
-### [【COMP3007】](https://github.com/HITSZ-OpenAuto/COMP3007/issues/13)
-
-- **仓库**: COMP3007
-- **创建于**: 2026-03-09 23:21:10
-- **作者**: WDGaster703
-
-### [【COMP3044】](https://github.com/HITSZ-OpenAuto/COMP3044/issues/11)
-
-- **仓库**: COMP3044
-- **创建于**: 2026-03-09 23:21:02
-- **作者**: WDGaster703
-
 ## 待合并的 Pull Requests
 
 ### [添加 Fun10165 的实验报告](https://github.com/HITSZ-OpenAuto/PHYS1002/pull/75)
