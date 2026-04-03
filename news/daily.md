@@ -12,7 +12,7 @@ draft: false
 
 ## 最近更新
 
-暂无更新
+- Fun10165 在 [大学物理实验](https://github.com/HITSZ-OpenAuto/PHYS1002) 中提交了信息：添加 Fun10165 的实验报告 (#75) (22:05)
 
 ## 待解决的 Issues
 
@@ -532,25 +532,7 @@ draft: false
 - **创建于**: 2026-03-09 23:21:22
 - **作者**: WDGaster703
 
-### [【COMP3004】](https://github.com/HITSZ-OpenAuto/COMP3004/issues/13)
-
-- **仓库**: COMP3004
-- **创建于**: 2026-03-09 23:21:18
-- **作者**: WDGaster703
-
-### [【COMP3040】](https://github.com/HITSZ-OpenAuto/COMP3040/issues/12)
-
-- **仓库**: COMP3040
-- **创建于**: 2026-03-09 23:21:14
-- **作者**: WDGaster703
-
 ## 待合并的 Pull Requests
-
-### [添加 Fun10165 的实验报告](https://github.com/HITSZ-OpenAuto/PHYS1002/pull/75)
-
-- **仓库**: PHYS1002
-- **创建于**: 2026-04-03 16:00:03
-- **作者**: Fun10165
 
 ### [fix: 修正 toml 内容](https://github.com/HITSZ-OpenAuto/COMP2001/pull/6)
 
