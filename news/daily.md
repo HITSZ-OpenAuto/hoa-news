@@ -12,7 +12,9 @@ draft: false
 
 ## 最近更新
 
-- Fun10165 在 [大学物理实验](https://github.com/HITSZ-OpenAuto/PHYS1002) 中提交了信息：添加 Fun10165 的实验报告 (#75) (22:05)
+- W. D. Gaster 在 [（示例）大学物理实验](https://github.com/HITSZ-OpenAuto/Cross-Science) 中提交了信息：新仓库整理 (23:33)
+
+- W. D. Gaster 在 [（示例）大学物理实验](https://github.com/HITSZ-OpenAuto/Cross-SPST) 中提交了信息：新仓库整理 (23:27)
 
 ## 待解决的 Issues
 
@@ -526,7 +528,19 @@ draft: false
 - **创建于**: 2026-03-09 23:21:28
 - **作者**: WDGaster703
 
+### [【COMP3011】](https://github.com/HITSZ-OpenAuto/COMP3011/issues/12)
+
+- **仓库**: COMP3011
+- **创建于**: 2026-03-09 23:21:22
+- **作者**: WDGaster703
+
 ## 待合并的 Pull Requests
+
+### [Update course review](https://github.com/HITSZ-OpenAuto/COMP3059/pull/17)
+
+- **仓库**: COMP3059
+- **创建于**: 2026-04-04 21:46:57
+- **作者**: LiPu-jpg
 
 ### [fix: 修正 toml 内容](https://github.com/HITSZ-OpenAuto/COMP2001/pull/6)
 
