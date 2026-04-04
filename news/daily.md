@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-04-03"
+date: "2026-04-04"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -524,12 +524,6 @@ draft: false
 
 - **仓库**: COMP2010
 - **创建于**: 2026-03-09 23:21:28
-- **作者**: WDGaster703
-
-### [【COMP3011】](https://github.com/HITSZ-OpenAuto/COMP3011/issues/12)
-
-- **仓库**: COMP3011
-- **创建于**: 2026-03-09 23:21:22
 - **作者**: WDGaster703
 
 ## 待合并的 Pull Requests
