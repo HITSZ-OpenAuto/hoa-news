@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-04-04"
+date: "2026-04-05"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -11,6 +11,12 @@ draft: false
 ---
 
 ## 最近更新
+
+- W. D. Gaster 在 [（示例）大学物理实验](https://github.com/HITSZ-OpenAuto/Cross-Science) 中提交了信息：添加一门课程 (15:53)
+
+- W. D. Gaster 在 [（示例）大学物理实验](https://github.com/HITSZ-OpenAuto/Cross-ENER) 中提交了信息：增改课程 (15:51)
+
+- W. D. Gaster 在 [（示例）大学物理实验](https://github.com/HITSZ-OpenAuto/Cross-ENER) 中提交了信息：新仓库整理 (#1) (15:40)
 
 - W. D. Gaster 在 [（示例）大学物理实验](https://github.com/HITSZ-OpenAuto/Cross-Science) 中提交了信息：新仓库整理 (23:33)
 
@@ -535,6 +541,12 @@ draft: false
 - **作者**: WDGaster703
 
 ## 待合并的 Pull Requests
+
+### [新仓库整理](https://github.com/HITSZ-OpenAuto/Cross--CEEV/pull/1)
+
+- **仓库**: Cross--CEEV
+- **创建于**: 2026-04-05 15:52:32
+- **作者**: WDGaster703
 
 ### [Update course review](https://github.com/HITSZ-OpenAuto/COMP3059/pull/17)
 
