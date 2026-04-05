@@ -12,29 +12,25 @@ draft: false
 
 ## 最近更新
 
+- W. D. Gaster 在 [（示例）大学物理实验](https://github.com/HITSZ-OpenAuto/Cross-ENER) 中提交了信息：添加机械类跨专业课程 (22:14)
+
+- W. D. Gaster 在 [（示例）大学物理实验](https://github.com/HITSZ-OpenAuto/Cross-ARCH) 中提交了信息：新仓库整理 (22:10)
+
+- W. D. Gaster 在 [（示例）大学物理实验](https://github.com/HITSZ-OpenAuto/Cross-EIE) 中提交了信息：新仓库整理 (22:05)
+
+- W. D. Gaster 在 [（示例）大学物理实验](https://github.com/HITSZ-OpenAuto/Cross-CEEV) 中提交了信息：新仓库整理 (#1) (21:58)
+
+- W. D. Gaster 在 [深度学习体系结构](https://github.com/HITSZ-OpenAuto/COMP3043) 中提交了信息：修改为归档，从跨专业列表删除 (21:55)
+
+- W. D. Gaster 在 [写作与沟通](https://github.com/HITSZ-OpenAuto/WRIT0001) 中提交了信息：将写沟从文理通识中移至必修部分 (21:41)
+
 - W. D. Gaster 在 [（示例）大学物理实验](https://github.com/HITSZ-OpenAuto/Cross-Science) 中提交了信息：添加一门课程 (15:53)
 
 - W. D. Gaster 在 [（示例）大学物理实验](https://github.com/HITSZ-OpenAuto/Cross-ENER) 中提交了信息：增改课程 (15:51)
 
 - W. D. Gaster 在 [（示例）大学物理实验](https://github.com/HITSZ-OpenAuto/Cross-ENER) 中提交了信息：新仓库整理 (#1) (15:40)
 
-- W. D. Gaster 在 [（示例）大学物理实验](https://github.com/HITSZ-OpenAuto/Cross-Science) 中提交了信息：新仓库整理 (23:33)
-
-- W. D. Gaster 在 [（示例）大学物理实验](https://github.com/HITSZ-OpenAuto/Cross-SPST) 中提交了信息：新仓库整理 (23:27)
-
 ## 待解决的 Issues
-
-### [【course-template】](https://github.com/HITSZ-OpenAuto/course-template/issues/25)
-
-- **仓库**: course-template
-- **创建于**: 2026-03-09 23:28:04
-- **作者**: WDGaster703
-
-### [【CHEM1012】](https://github.com/HITSZ-OpenAuto/CHEM1012/issues/23)
-
-- **仓库**: CHEM1012
-- **创建于**: 2026-03-09 23:27:37
-- **作者**: WDGaster703
 
 ### [【AUTO2005】](https://github.com/HITSZ-OpenAuto/AUTO2005/issues/43)
 
@@ -160,12 +156,6 @@ draft: false
 
 - **仓库**: EMEC1002
 - **创建于**: 2026-03-09 23:26:03
-- **作者**: WDGaster703
-
-### [【ECON2005F】](https://github.com/HITSZ-OpenAuto/ECON2005F/issues/25)
-
-- **仓库**: ECON2005F
-- **创建于**: 2026-03-09 23:25:59
 - **作者**: WDGaster703
 
 ### [【EE1012B】](https://github.com/HITSZ-OpenAuto/EE1012B/issues/22)
@@ -342,12 +332,6 @@ draft: false
 - **创建于**: 2026-03-09 23:24:04
 - **作者**: WDGaster703
 
-### [【WOCD1008】](https://github.com/HITSZ-OpenAuto/WOCD1008/issues/16)
-
-- **仓库**: WOCD1008
-- **创建于**: 2026-03-09 23:24:00
-- **作者**: WDGaster703
-
 ### [【AUTO3019】](https://github.com/HITSZ-OpenAuto/AUTO3019/issues/18)
 
 - **仓库**: AUTO3019
@@ -396,22 +380,10 @@ draft: false
 - **创建于**: 2026-03-09 23:23:27
 - **作者**: WDGaster703
 
-### [【SPST1004】](https://github.com/HITSZ-OpenAuto/SPST1004/issues/17)
-
-- **仓库**: SPST1004
-- **创建于**: 2026-03-09 23:23:23
-- **作者**: WDGaster703
-
 ### [【CrossSpecialty】](https://github.com/HITSZ-OpenAuto/CrossSpecialty/issues/28)
 
 - **仓库**: CrossSpecialty
 - **创建于**: 2026-03-09 23:23:19
-- **作者**: WDGaster703
-
-### [【SEIN1040】](https://github.com/HITSZ-OpenAuto/SEIN1040/issues/15)
-
-- **仓库**: SEIN1040
-- **创建于**: 2026-03-09 23:23:15
 - **作者**: WDGaster703
 
 ### [【GEIP1015】](https://github.com/HITSZ-OpenAuto/GEIP1015/issues/18)
@@ -540,12 +512,48 @@ draft: false
 - **创建于**: 2026-03-09 23:21:22
 - **作者**: WDGaster703
 
+### [【COMP3004】](https://github.com/HITSZ-OpenAuto/COMP3004/issues/13)
+
+- **仓库**: COMP3004
+- **创建于**: 2026-03-09 23:21:18
+- **作者**: WDGaster703
+
+### [【COMP3040】](https://github.com/HITSZ-OpenAuto/COMP3040/issues/12)
+
+- **仓库**: COMP3040
+- **创建于**: 2026-03-09 23:21:14
+- **作者**: WDGaster703
+
+### [【COMP3007】](https://github.com/HITSZ-OpenAuto/COMP3007/issues/13)
+
+- **仓库**: COMP3007
+- **创建于**: 2026-03-09 23:21:10
+- **作者**: WDGaster703
+
+### [【COMP3044】](https://github.com/HITSZ-OpenAuto/COMP3044/issues/11)
+
+- **仓库**: COMP3044
+- **创建于**: 2026-03-09 23:21:02
+- **作者**: WDGaster703
+
+### [【COMP3009】](https://github.com/HITSZ-OpenAuto/COMP3009/issues/12)
+
+- **仓库**: COMP3009
+- **创建于**: 2026-03-09 23:20:58
+- **作者**: WDGaster703
+
+### [【COMP3002】](https://github.com/HITSZ-OpenAuto/COMP3002/issues/12)
+
+- **仓库**: COMP3002
+- **创建于**: 2026-03-09 23:20:54
+- **作者**: WDGaster703
+
 ## 待合并的 Pull Requests
 
-### [新仓库整理](https://github.com/HITSZ-OpenAuto/Cross--CEEV/pull/1)
+### [将日语和中国科技史话仓库合并](https://github.com/HITSZ-OpenAuto/GeneralKnowledge/pull/27)
 
-- **仓库**: Cross--CEEV
-- **创建于**: 2026-04-05 15:52:32
+- **仓库**: GeneralKnowledge
+- **创建于**: 2026-04-05 21:48:22
 - **作者**: WDGaster703
 
 ### [Update course review](https://github.com/HITSZ-OpenAuto/COMP3059/pull/17)
