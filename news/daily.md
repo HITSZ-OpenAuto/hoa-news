@@ -24,10 +24,6 @@ draft: false
 
 - W. D. Gaster 在 [写作与沟通](https://github.com/HITSZ-OpenAuto/WRIT0001) 中提交了信息：将写沟从文理通识中移至必修部分 (21:41)
 
-- W. D. Gaster 在 [（示例）大学物理实验](https://github.com/HITSZ-OpenAuto/Cross-Science) 中提交了信息：添加一门课程 (15:53)
-
-- W. D. Gaster 在 [（示例）大学物理实验](https://github.com/HITSZ-OpenAuto/Cross-ENER) 中提交了信息：增改课程 (15:51)
-
 ## 待解决的 Issues
 
 ### [【AUTO2005】](https://github.com/HITSZ-OpenAuto/AUTO2005/issues/43)
