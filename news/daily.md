@@ -12,17 +12,7 @@ draft: false
 
 ## 最近更新
 
-- W. D. Gaster 在 [（示例）大学物理实验](https://github.com/HITSZ-OpenAuto/Cross-ENER) 中提交了信息：添加机械类跨专业课程 (22:14)
-
-- W. D. Gaster 在 [（示例）大学物理实验](https://github.com/HITSZ-OpenAuto/Cross-ARCH) 中提交了信息：新仓库整理 (22:10)
-
-- W. D. Gaster 在 [（示例）大学物理实验](https://github.com/HITSZ-OpenAuto/Cross-EIE) 中提交了信息：新仓库整理 (22:05)
-
-- W. D. Gaster 在 [（示例）大学物理实验](https://github.com/HITSZ-OpenAuto/Cross-CEEV) 中提交了信息：新仓库整理 (#1) (21:58)
-
-- W. D. Gaster 在 [深度学习体系结构](https://github.com/HITSZ-OpenAuto/COMP3043) 中提交了信息：修改为归档，从跨专业列表删除 (21:55)
-
-- W. D. Gaster 在 [写作与沟通](https://github.com/HITSZ-OpenAuto/WRIT0001) 中提交了信息：将写沟从文理通识中移至必修部分 (21:41)
+暂无更新
 
 ## 待解决的 Issues
 
