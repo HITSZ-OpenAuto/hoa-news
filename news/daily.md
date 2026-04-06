@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-04-05"
+date: "2026-04-06"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -27,8 +27,6 @@ draft: false
 - W. D. Gaster 在 [（示例）大学物理实验](https://github.com/HITSZ-OpenAuto/Cross-Science) 中提交了信息：添加一门课程 (15:53)
 
 - W. D. Gaster 在 [（示例）大学物理实验](https://github.com/HITSZ-OpenAuto/Cross-ENER) 中提交了信息：增改课程 (15:51)
-
-- W. D. Gaster 在 [（示例）大学物理实验](https://github.com/HITSZ-OpenAuto/Cross-ENER) 中提交了信息：新仓库整理 (#1) (15:40)
 
 ## 待解决的 Issues
 
