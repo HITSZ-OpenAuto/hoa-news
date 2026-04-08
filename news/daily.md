@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-04-06"
+date: "2026-04-08"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -12,7 +12,7 @@ draft: false
 
 ## 最近更新
 
-暂无更新
+- Jiao Ziang 在 [凸优化与最优控制](https://github.com/HITSZ-OpenAuto/AUTO5023) 中提交了信息：修复老版本错误教师格式 (#26) (01:41)
 
 ## 待解决的 Issues
 
@@ -562,12 +562,6 @@ draft: false
 
 - **仓库**: AUTO3002B
 - **创建于**: 2026-03-23 00:15:46
-- **作者**: LiPu-jpg
-
-### [修复老版本错误教师格式](https://github.com/HITSZ-OpenAuto/AUTO5023/pull/26)
-
-- **仓库**: AUTO5023
-- **创建于**: 2026-03-23 00:13:46
 - **作者**: LiPu-jpg
 
 ### [修复老版本教师格式遗留问题](https://github.com/HITSZ-OpenAuto/MATH1015A/pull/32)
