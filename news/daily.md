@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-04-08"
+date: "2026-04-09"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -11,6 +11,8 @@ draft: false
 ---
 
 ## 最近更新
+
+- baidu 在 [大学物理实验](https://github.com/HITSZ-OpenAuto/PHYS1002) 中提交了信息：提交了部分实验报告和实验说明 (#76) (15:42)
 
 - Jiao Ziang 在 [凸优化与最优控制](https://github.com/HITSZ-OpenAuto/AUTO5023) 中提交了信息：修复老版本错误教师格式 (#26) (01:41)
 
