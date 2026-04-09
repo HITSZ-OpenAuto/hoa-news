@@ -12,17 +12,19 @@ draft: false
 
 ## 最近更新
 
+- W. D. Gaster 在 [信号分析与处理](https://github.com/HITSZ-OpenAuto/AUTO2005) 中提交了信息：修改格式 (#44) (20:42)
+
+- W. D. Gaster 在 [文理通识课程体系](https://github.com/HITSZ-OpenAuto/GeneralKnowledge) 中提交了信息：将日语和中国科技史话仓库合并 (#27) (20:41)
+
+- Jiao Ziang 在 [凸优化与最优控制](https://github.com/HITSZ-OpenAuto/AUTO5023) 中提交了信息：修复错误格式 (20:38)
+
+- Jiao Ziang 在 [凸优化与最优控制](https://github.com/HITSZ-OpenAuto/AUTO5023) 中提交了信息：删除重复字段 (#27) (20:05)
+
 - baidu 在 [大学物理实验](https://github.com/HITSZ-OpenAuto/PHYS1002) 中提交了信息：提交了部分实验报告和实验说明 (#76) (15:42)
 
 - Jiao Ziang 在 [凸优化与最优控制](https://github.com/HITSZ-OpenAuto/AUTO5023) 中提交了信息：修复老版本错误教师格式 (#26) (01:41)
 
 ## 待解决的 Issues
-
-### [【AUTO2005】](https://github.com/HITSZ-OpenAuto/AUTO2005/issues/43)
-
-- **仓库**: AUTO2005
-- **创建于**: 2026-03-09 23:27:33
-- **作者**: WDGaster703
 
 ### [【AUTO3002A】](https://github.com/HITSZ-OpenAuto/AUTO3002A/issues/52)
 
@@ -534,25 +536,19 @@ draft: false
 - **创建于**: 2026-03-09 23:20:54
 - **作者**: WDGaster703
 
-## 待合并的 Pull Requests
+### [【COMP3053】](https://github.com/HITSZ-OpenAuto/COMP3053/issues/11)
 
-### [将日语和中国科技史话仓库合并](https://github.com/HITSZ-OpenAuto/GeneralKnowledge/pull/27)
-
-- **仓库**: GeneralKnowledge
-- **创建于**: 2026-04-05 21:48:22
+- **仓库**: COMP3053
+- **创建于**: 2026-03-09 23:20:50
 - **作者**: WDGaster703
+
+## 待合并的 Pull Requests
 
 ### [Update course review](https://github.com/HITSZ-OpenAuto/COMP3059/pull/17)
 
 - **仓库**: COMP3059
 - **创建于**: 2026-04-04 21:46:57
 - **作者**: LiPu-jpg
-
-### [fix: 修正 toml 内容](https://github.com/HITSZ-OpenAuto/COMP2001/pull/6)
-
-- **仓库**: COMP2001
-- **创建于**: 2026-03-24 10:07:49
-- **作者**: IcyDesert
 
 ### [修复老版本教师格式错误](https://github.com/HITSZ-OpenAuto/AUTO5005/pull/21)
 
@@ -594,12 +590,6 @@ draft: false
 
 - **仓库**: PE100X
 - **创建于**: 2026-03-18 21:50:41
-- **作者**: WDGaster703
-
-### [修改格式](https://github.com/HITSZ-OpenAuto/AUTO2005/pull/44)
-
-- **仓库**: AUTO2005
-- **创建于**: 2026-03-11 20:42:27
 - **作者**: WDGaster703
 
 ### [修改错误](https://github.com/HITSZ-OpenAuto/EE1018/pull/8)
