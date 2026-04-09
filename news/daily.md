@@ -544,6 +544,12 @@ draft: false
 
 ## 待合并的 Pull Requests
 
+### [示波器实验README补充](https://github.com/HITSZ-OpenAuto/PHYS1002/pull/77)
+
+- **仓库**: PHYS1002
+- **创建于**: 2026-04-09 23:16:06
+- **作者**: Venokos
+
 ### [Update course review](https://github.com/HITSZ-OpenAuto/COMP3059/pull/17)
 
 - **仓库**: COMP3059
