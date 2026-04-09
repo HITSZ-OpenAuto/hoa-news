@@ -22,8 +22,6 @@ draft: false
 
 - baidu 在 [大学物理实验](https://github.com/HITSZ-OpenAuto/PHYS1002) 中提交了信息：提交了部分实验报告和实验说明 (#76) (15:42)
 
-- Jiao Ziang 在 [凸优化与最优控制](https://github.com/HITSZ-OpenAuto/AUTO5023) 中提交了信息：修复老版本错误教师格式 (#26) (01:41)
-
 ## 待解决的 Issues
 
 ### [【AUTO3002A】](https://github.com/HITSZ-OpenAuto/AUTO3002A/issues/52)
