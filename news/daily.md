@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-04-10"
+date: "2026-04-13"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -12,7 +12,7 @@ draft: false
 
 ## 最近更新
 
-暂无更新
+- Venokos 在 [大学物理实验](https://github.com/HITSZ-OpenAuto/PHYS1002) 中提交了信息：为示波器实验增加一些建议 (#77) (19:57)
 
 ## 待解决的 Issues
 
@@ -526,19 +526,7 @@ draft: false
 - **创建于**: 2026-03-09 23:20:54
 - **作者**: WDGaster703
 
-### [【COMP3053】](https://github.com/HITSZ-OpenAuto/COMP3053/issues/11)
-
-- **仓库**: COMP3053
-- **创建于**: 2026-03-09 23:20:50
-- **作者**: WDGaster703
-
 ## 待合并的 Pull Requests
-
-### [示波器实验README补充](https://github.com/HITSZ-OpenAuto/PHYS1002/pull/77)
-
-- **仓库**: PHYS1002
-- **创建于**: 2026-04-09 23:16:06
-- **作者**: Venokos
 
 ### [Update course review](https://github.com/HITSZ-OpenAuto/COMP3059/pull/17)
 
