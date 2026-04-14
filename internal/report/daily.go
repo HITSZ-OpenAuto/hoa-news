@@ -21,12 +21,12 @@ import (
 const newsGoroutineLimit = 80 // 并发限制，避免过多协程触发 GitHub 限流
 
 func Daily(orgName string, publicRepos map[string]struct{}) error {
-	issues, err := github.SearchIssues(orgName, 100)
+	issues, err := github.SearchIssues(orgName, 150)
 	if err != nil {
 		return fmt.Errorf("failed to get issues: %w", err)
 	}
 	log.Printf("Fetched issues: %d", len(issues))
-	prs, err := github.SearchPullRequests(orgName, 100)
+	prs, err := github.SearchPullRequests(orgName, 150)
 	if err != nil {
 		return fmt.Errorf("failed to get pull requests: %w", err)
 	}
