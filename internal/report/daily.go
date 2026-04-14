@@ -36,6 +36,9 @@ func Daily(orgName string, publicRepos map[string]struct{}) error {
 	prs = filterByPublicRepos(prs, publicRepos)
 	log.Printf("Filtered by public repos, issues=%d, pull requests=%d", len(issues), len(prs))
 
+	issues = filterBracketedIssues(issues)
+	log.Printf("Filtered bracketed issues, issues=%d", len(issues))
+
 	if err := UpdateDailyReport("news/daily.md", orgName, publicRepos, issues, prs); err != nil {
 		return fmt.Errorf("failed to update daily report: %w", err)
 	}
@@ -290,6 +293,18 @@ func parseCreatedAt(s string) (time.Time, bool) {
 		return time.Time{}, false
 	}
 	return t, true
+}
+
+// filterBracketedIssues 过滤掉标题完全被 【】 包裹的 issue（例如 【AUTO3000】），这类 issue 通常是自动生成的占位符。
+func filterBracketedIssues(issues []github.Item) []github.Item {
+	filtered := make([]github.Item, 0, len(issues))
+	for _, issue := range issues {
+		if strings.HasPrefix(issue.Title, "【") && strings.HasSuffix(issue.Title, "】") {
+			continue
+		}
+		filtered = append(filtered, issue)
+	}
+	return filtered
 }
 
 func filterByPublicRepos(items []github.Item, publicRepos map[string]struct{}) []github.Item {
