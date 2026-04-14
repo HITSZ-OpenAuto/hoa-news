@@ -27,6 +27,12 @@ draft: false
 
 ## 待合并的 Pull Requests
 
+### [更新26级史纲分数占比和考试信息](https://github.com/HITSZ-OpenAuto/GEIP1016/pull/28)
+
+- **仓库**: GEIP1016
+- **创建于**: 2026-04-14 17:39:24
+- **作者**: ll3me
+
 ### [Update course review](https://github.com/HITSZ-OpenAuto/COMP3059/pull/17)
 
 - **仓库**: COMP3059
