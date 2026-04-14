@@ -130,11 +130,11 @@ func ListCommitsSince(orgName, repoName, since_RFC3339 string) ([]Commit, error)
 	return parseNDJSON[Commit](output)
 }
 
-// GetRawTag 从指定组织和仓库的根目录下获取 tag.txt 文件的内容，返回字符串形式的 tag。
-func GetRawTag(orgName, repoName string) (string, error) {
+// GetRawReadmeToml 从指定组织和仓库的根目录下获取 readme.toml 文件的内容。
+func GetRawReadmeToml(orgName, repoName string) (string, error) {
 	args := []string{
 		"api",
-		fmt.Sprintf("/repos/%s/%s/contents/tag.txt", orgName, repoName),
+		fmt.Sprintf("/repos/%s/%s/contents/readme.toml", orgName, repoName),
 		"-H",
 		"Accept: application/vnd.github.raw",
 	}

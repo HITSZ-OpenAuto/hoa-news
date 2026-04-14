@@ -277,15 +277,21 @@ func GenerateWeeklyFrontMatter(startDate time.Time, now time.Time) (string, erro
 		}})
 }
 
-// fetchCourseName 从仓库的 tag 文件中提取课程名称。
+// fetchCourseName 从仓库的 readme.toml 文件中提取课程名称。
 func fetchCourseName(orgName, repoName string) (string, error) {
-	text, err := github.GetRawTag(orgName, repoName)
+	text, err := github.GetRawReadmeToml(orgName, repoName)
 	if err != nil {
 		return "", err
 	}
-	_, after, found := strings.Cut(text, "name:")
-	if !found {
-		return "", fmt.Errorf("name not found")
+	for _, line := range strings.Split(text, "\n") {
+		key, val, found := strings.Cut(line, "=")
+		if !found || strings.TrimSpace(key) != "course_name" {
+			continue
+		}
+		val = strings.TrimSpace(val)
+		if len(val) >= 2 && val[0] == '"' && val[len(val)-1] == '"' {
+			return val[1 : len(val)-1], nil
+		}
 	}
-	return strings.TrimSpace(after), nil
+	return "", fmt.Errorf("course_name not found in readme.toml")
 }
