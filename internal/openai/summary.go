@@ -32,6 +32,10 @@ func GenerateWeeklySummary(rawUpdates string) (string, error) {
 		baseURL = "https://api.openai.com/v1"
 	}
 	baseURL = strings.TrimRight(baseURL, "/")
+	model := os.Getenv("OPENAI_MODEL")
+	if model == "" {
+		model = "gpt-5-mini"
+	}
 
 	prompt := fmt.Sprintf(`你将收到一周内学生们在各个课程仓库中的更新记录。  
 请根据这些原始更新，生成一个简洁清晰的「每周更新摘要」，要求如下：  
@@ -54,7 +58,7 @@ func GenerateWeeklySummary(rawUpdates string) (string, error) {
 请生成总结。`, rawUpdates)
 
 	reqBody, err := json.Marshal(summaryRequest{
-		Model: "gpt-5-mini",
+		Model: model,
 		Input: prompt,
 	})
 	if err != nil {
