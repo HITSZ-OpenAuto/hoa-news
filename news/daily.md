@@ -18,7 +18,12 @@ draft: false
 
 ## 待解决的 Issues
 
-暂无待解决的 Issues
+### [Difficulty cloning this repository](https://github.com/HITSZ-OpenAuto/MATH1002/issues/13)
+
+- **仓库**: MATH1002
+- **创建于**: 2025-01-20 15:32:37
+- **作者**: MaxwellJay256
+- **标签**: help wanted
 
 ## 待合并的 Pull Requests
 
