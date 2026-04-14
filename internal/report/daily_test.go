@@ -355,8 +355,8 @@ func TestIsSubstantivelyEqual(t *testing.T) {
 			"title: AUTO 更新速递\n" +
 			"date: \"1999-01-01\"\n" +
 			"---\n\n" +
-			"## 今日更新\n\n暂无更新\n\n"
-		newBody := "## 今日更新\n\n暂无更新\n\n"
+			"## 更新内容\n\n暂无更新\n\n"
+		newBody := "## 更新内容\n\n暂无更新\n\n"
 		if !isSubstantivelyEqual(oldContent, newBody) {
 			t.Fatalf("expected date-only changes to be substantively equal")
 		}
@@ -367,8 +367,8 @@ func TestIsSubstantivelyEqual(t *testing.T) {
 			"title: AUTO 更新速递\r\n" +
 			"date: \"1999-01-01\"\r\n" +
 			"---\r\n\r\n" +
-			"## 今日更新  \r\n\r\n暂无更新\t\r\n"
-		newBody := "## 今日更新\n\n暂无更新\n"
+			"## 更新内容  \r\n\r\n暂无更新\t\r\n"
+		newBody := "## 更新内容\n\n暂无更新\n"
 		if !isSubstantivelyEqual(oldContent, newBody) {
 			t.Fatalf("expected newline/trailing-space differences to be substantively equal")
 		}
@@ -379,16 +379,16 @@ func TestIsSubstantivelyEqual(t *testing.T) {
 			"title: AUTO 更新速递\n" +
 			"date: \"1999-01-01\"\n" +
 			"---\n\n" +
-			"## 今日更新\n\nalpha\n"
-		newBody := "## 今日更新\n\nbeta\n"
+			"## 更新内容\n\nalpha\n"
+		newBody := "## 更新内容\n\nbeta\n"
 		if isSubstantivelyEqual(oldContent, newBody) {
 			t.Fatalf("expected changed body to be not equal")
 		}
 	})
 
 	t.Run("NoFrontMatter", func(t *testing.T) {
-		oldContent := "## 今日更新\n\n暂无更新\n"
-		newBody := "## 今日更新\n\n暂无更新\n"
+		oldContent := "## 更新内容\n\n暂无更新\n"
+		newBody := "## 更新内容\n\n暂无更新\n"
 		if !isSubstantivelyEqual(oldContent, newBody) {
 			t.Fatalf("expected same body without front matter to be equal")
 		}

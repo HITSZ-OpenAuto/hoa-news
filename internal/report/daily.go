@@ -121,13 +121,22 @@ func UpdateDailyReport(path string, orgName string, publicRepos map[string]struc
 	log.Printf("Commit collection complete, %d total valid commits", len(commits))
 
 	body := buildDailyBody(orgName, commits, repoNames, issues, prs)
-	if oldContent, err := os.ReadFile(path); err == nil {
+
+	oldContent, readErr := os.ReadFile(path)
+	if readErr == nil {
+		// If no commits today, preserve old commits section instead of showing 暂无更新
+		if len(commits) == 0 {
+			oldBody := extractBody(string(oldContent))
+			if oldSection := extractSection(oldBody, "## 最近更新"); oldSection != "" {
+				body = strings.Replace(body, "## 最近更新\n\n暂无更新\n\n", "## 最近更新\n\n"+oldSection, 1)
+			}
+		}
 		if isSubstantivelyEqual(string(oldContent), body) {
 			log.Printf("Daily report body unchanged, skip rewriting %s", path)
 			return nil
 		}
-	} else if !errors.Is(err, fs.ErrNotExist) {
-		return fmt.Errorf("failed to read existing daily report %q: %w", path, err)
+	} else if !errors.Is(readErr, fs.ErrNotExist) {
+		return fmt.Errorf("failed to read existing daily report %q: %w", path, readErr)
 	}
 
 	fm, err := utils.GenerateFrontMatter(
@@ -351,4 +360,20 @@ func normalizeBody(content string) string {
 func normalizeNewlines(content string) string {
 	content = strings.ReplaceAll(content, "\r\n", "\n")
 	return strings.ReplaceAll(content, "\r", "\n")
+}
+
+// extractSection extracts the content of a section from a body, given its header (e.g. "## 最近更新").
+// Returns the content after the header up to the next "## " section, or empty string if not found.
+func extractSection(body, header string) string {
+	target := header + "\n\n"
+	idx := strings.Index(body, target)
+	if idx == -1 {
+		return ""
+	}
+	rest := body[idx+len(target):]
+	nextHeader := strings.Index(rest, "\n## ")
+	if nextHeader == -1 {
+		return rest
+	}
+	return rest[:nextHeader+1]
 }
