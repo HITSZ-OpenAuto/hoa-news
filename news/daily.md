@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-04-14"
+date: "2026-04-15"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -11,6 +11,8 @@ draft: false
 ---
 
 ## 最近更新
+
+- Kowyo 在 [电路与电子学I](https://github.com/HITSZ-OpenAuto/EE1018) 中提交了信息：更正课程链接格式 (11:17)
 
 - Jiao Ziang 在 [微积分A](https://github.com/HITSZ-OpenAuto/MATH1015A) 中提交了信息：修复老版本教师格式遗留问题 (#32) (16:05)
 
