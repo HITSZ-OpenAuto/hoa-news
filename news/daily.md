@@ -14,8 +14,6 @@ draft: false
 
 - Kowyo 在 [电路与电子学I](https://github.com/HITSZ-OpenAuto/EE1018) 中提交了信息：更正课程链接格式 (11:17)
 
-- Jiao Ziang 在 [微积分A](https://github.com/HITSZ-OpenAuto/MATH1015A) 中提交了信息：修复老版本教师格式遗留问题 (#32) (16:05)
-
 ## 待解决的 Issues
 
 ### [Difficulty cloning this repository](https://github.com/HITSZ-OpenAuto/MATH1002/issues/13)
