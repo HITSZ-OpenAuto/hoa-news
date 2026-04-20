@@ -12,7 +12,7 @@ draft: false
 
 ## 最近更新
 
-- Kowyo 在 [电路与电子学I](https://github.com/HITSZ-OpenAuto/EE1018) 中提交了信息：更正课程链接格式 (11:17)
+- NaiYoung007 在 [大学物理实验](https://github.com/HITSZ-OpenAuto/PHYS1002) 中提交了信息：添加了几份大雾实验报告 (#78) (02:46)
 
 ## 待解决的 Issues
 
@@ -24,12 +24,6 @@ draft: false
 - **标签**: help wanted
 
 ## 待合并的 Pull Requests
-
-### [添加了几份大雾实验报告](https://github.com/HITSZ-OpenAuto/PHYS1002/pull/78)
-
-- **仓库**: PHYS1002
-- **创建于**: 2026-04-20 11:35:25
-- **作者**: NaiYoung007
 
 ### [更新了对于双选阶段的具体描述以及考查方式的替代方案](https://github.com/HITSZ-OpenAuto/COMP2029/pull/16)
 
