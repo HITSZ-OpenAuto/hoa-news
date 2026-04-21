@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-04-20"
+date: "2026-04-21"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -24,6 +24,12 @@ draft: false
 - **标签**: help wanted
 
 ## 待合并的 Pull Requests
+
+### [新增《当代中国外交（外交学院）》单元测试答案](https://github.com/HITSZ-OpenAuto/MOOC/pull/29)
+
+- **仓库**: MOOC
+- **创建于**: 2026-04-21 23:40:33
+- **作者**: Yushang-Lu
 
 ### [更新了对于双选阶段的具体描述以及考查方式的替代方案](https://github.com/HITSZ-OpenAuto/COMP2029/pull/16)
 
