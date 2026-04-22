@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-04-21"
+date: "2026-04-22"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -15,6 +15,12 @@ draft: false
 - Yushang Lu 在 [文理通识 - MOOC](https://github.com/HITSZ-OpenAuto/MOOC) 中提交了信息：新增《当代中国外交（外交学院）》单元测试答案 (#29) (00:22)
 
 ## 待解决的 Issues
+
+### [仓库链接问题没有完全修复](https://github.com/HITSZ-OpenAuto/EE1018/issues/9)
+
+- **仓库**: EE1018
+- **创建于**: 2026-04-22 23:03:09
+- **作者**: IceFerryLing
 
 ### [Difficulty cloning this repository](https://github.com/HITSZ-OpenAuto/MATH1002/issues/13)
 
