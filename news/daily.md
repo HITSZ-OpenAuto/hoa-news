@@ -25,6 +25,12 @@ draft: false
 
 ## 待合并的 Pull Requests
 
+### [增加2026春季学期考试信息](https://github.com/HITSZ-OpenAuto/GEIP1016/pull/29)
+
+- **仓库**: GEIP1016
+- **创建于**: 2026-04-23 14:34:11
+- **作者**: ZhuHuan521
+
 ### [更新了对于双选阶段的具体描述以及考查方式的替代方案](https://github.com/HITSZ-OpenAuto/COMP2029/pull/16)
 
 - **仓库**: COMP2029
