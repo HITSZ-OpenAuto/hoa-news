@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-04-23"
+date: "2026-04-26"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -24,6 +24,12 @@ draft: false
 - **标签**: help wanted
 
 ## 待合并的 Pull Requests
+
+### [上传2026春季期中的回忆版试卷pdf](https://github.com/HITSZ-OpenAuto/PHYS1001/pull/44)
+
+- **仓库**: PHYS1001
+- **创建于**: 2026-04-26 20:50:33
+- **作者**: ll3me
 
 ### [增加2026春季学期考试信息](https://github.com/HITSZ-OpenAuto/GEIP1016/pull/29)
 
