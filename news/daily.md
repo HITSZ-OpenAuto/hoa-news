@@ -25,7 +25,7 @@ draft: false
 
 ## 待合并的 Pull Requests
 
-### [上传2026春季期中的回忆版试卷pdf](https://github.com/HITSZ-OpenAuto/PHYS1001/pull/44)
+### [上传2026春季期中的回忆版试卷及答案 pdf 文件](https://github.com/HITSZ-OpenAuto/PHYS1001/pull/44)
 
 - **仓库**: PHYS1001
 - **创建于**: 2026-04-26 20:50:33
