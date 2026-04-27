@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-04-26"
+date: "2026-04-27"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -12,7 +12,7 @@ draft: false
 
 ## 最近更新
 
-- Yushang Lu 在 [文理通识 - MOOC](https://github.com/HITSZ-OpenAuto/MOOC) 中提交了信息：新增《当代中国外交（外交学院）》单元测试答案 (#29) (00:22)
+- ZhuHuan521 在 [中国近现代史纲要](https://github.com/HITSZ-OpenAuto/GEIP1016) 中提交了信息：增加2026春季学期考试信息 (#29) (13:47)
 
 ## 待解决的 Issues
 
@@ -30,12 +30,6 @@ draft: false
 - **仓库**: PHYS1001
 - **创建于**: 2026-04-26 20:50:33
 - **作者**: ll3me
-
-### [增加2026春季学期考试信息](https://github.com/HITSZ-OpenAuto/GEIP1016/pull/29)
-
-- **仓库**: GEIP1016
-- **创建于**: 2026-04-23 14:34:11
-- **作者**: ZhuHuan521
 
 ### [更新了对于双选阶段的具体描述以及考查方式的替代方案](https://github.com/HITSZ-OpenAuto/COMP2029/pull/16)
 
