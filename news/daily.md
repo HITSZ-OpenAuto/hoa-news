@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-04-27"
+date: "2026-04-28"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -11,6 +11,8 @@ draft: false
 ---
 
 ## 最近更新
+
+- 吹向无叶 | Leaflessward 在 [大学物理](https://github.com/HITSZ-OpenAuto/PHYS1001) 中提交了信息：上传2026春季期中的回忆版试卷pdf (#44) (10:25)
 
 - ZhuHuan521 在 [中国近现代史纲要](https://github.com/HITSZ-OpenAuto/GEIP1016) 中提交了信息：增加2026春季学期考试信息 (#29) (13:47)
 
@@ -24,12 +26,6 @@ draft: false
 - **标签**: help wanted
 
 ## 待合并的 Pull Requests
-
-### [上传2026春季期中的回忆版试卷及答案 pdf 文件](https://github.com/HITSZ-OpenAuto/PHYS1001/pull/44)
-
-- **仓库**: PHYS1001
-- **创建于**: 2026-04-26 20:50:33
-- **作者**: ll3me
 
 ### [更新了对于双选阶段的具体描述以及考查方式的替代方案](https://github.com/HITSZ-OpenAuto/COMP2029/pull/16)
 
