@@ -14,8 +14,6 @@ draft: false
 
 - 吹向无叶 | Leaflessward 在 [大学物理](https://github.com/HITSZ-OpenAuto/PHYS1001) 中提交了信息：上传2026春季期中的回忆版试卷pdf (#44) (10:25)
 
-- ZhuHuan521 在 [中国近现代史纲要](https://github.com/HITSZ-OpenAuto/GEIP1016) 中提交了信息：增加2026春季学期考试信息 (#29) (13:47)
-
 ## 待解决的 Issues
 
 ### [Difficulty cloning this repository](https://github.com/HITSZ-OpenAuto/MATH1002/issues/13)
