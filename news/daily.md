@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-04-28"
+date: "2026-05-01"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -24,6 +24,12 @@ draft: false
 - **标签**: help wanted
 
 ## 待合并的 Pull Requests
+
+### [feat\(template\): add readme.toml&amp;update README.md](https://github.com/HITSZ-OpenAuto/course-template/pull/26)
+
+- **仓库**: course-template
+- **创建于**: 2026-05-01 10:52:13
+- **作者**: IcyDesert
 
 ### [更新了对于双选阶段的具体描述以及考查方式的替代方案](https://github.com/HITSZ-OpenAuto/COMP2029/pull/16)
 
