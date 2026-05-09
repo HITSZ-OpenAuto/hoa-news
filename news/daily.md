@@ -14,16 +14,6 @@ draft: false
 
 - aguo2196 在 [面向领域的计算机系统设计与开发实践](https://github.com/HITSZ-OpenAuto/COMP2029) 中提交了信息：更新了对于双选阶段的具体描述以及考查方式的替代方案 (#16) (16:56)
 
-- W. D. Gaster 在 [电路与电子学I](https://github.com/HITSZ-OpenAuto/EE1018) 中提交了信息：修改大纲表格排版 (23:19)
-
-- W. D. Gaster 在 [电路与电子学](https://github.com/HITSZ-OpenAuto/EE1013) 中提交了信息：修改排版 (#27) (23:17)
-
-- W. D. Gaster 在 [高等电路与电子分析](https://github.com/HITSZ-OpenAuto/EE2004) 中提交了信息：修改错误 (#22) (23:13)
-
-- W. D. Gaster 在 [电路与电子学I](https://github.com/HITSZ-OpenAuto/EE1018) 中提交了信息：修改错误 (#8) (23:13)
-
-- W. D. Gaster 在 [体育](https://github.com/HITSZ-OpenAuto/PE100X) 中提交了信息：修复大量格式混乱和内容错误 (#39) (21:28)
-
 ## 待解决的 Issues
 
 ### [Difficulty cloning this repository](https://github.com/HITSZ-OpenAuto/MATH1002/issues/13)
