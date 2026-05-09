@@ -24,14 +24,6 @@ draft: false
 
 - W. D. Gaster 在 [体育](https://github.com/HITSZ-OpenAuto/PE100X) 中提交了信息：修复大量格式混乱和内容错误 (#39) (21:28)
 
-- Jiao Ziang 在 [非线性与自适应控制](https://github.com/HITSZ-OpenAuto/AUTO5005) 中提交了信息：修复老版本教师格式错误 (21:23)
-
-- Jiao Ziang 在 [自动控制实践 B](https://github.com/HITSZ-OpenAuto/AUTO3002B) 中提交了信息：修复老版本遗留的教师格式问题 (21:23)
-
-- Jiao Ziang 在 [最优估计](https://github.com/HITSZ-OpenAuto/AUTO5013) 中提交了信息：修复老版本遗留的教师格式错误 (21:23)
-
-- Jiao Ziang 在 [马克思主义基本原理](https://github.com/HITSZ-OpenAuto/GEIP1011) 中提交了信息：修复错误的教师格式 (#42) (21:22)
-
 ## 待解决的 Issues
 
 ### [Difficulty cloning this repository](https://github.com/HITSZ-OpenAuto/MATH1002/issues/13)
@@ -42,6 +34,18 @@ draft: false
 - **标签**: help wanted
 
 ## 待合并的 Pull Requests
+
+### [修改排版问题](https://github.com/HITSZ-OpenAuto/ENGG1002/pull/19)
+
+- **仓库**: ENGG1002
+- **创建于**: 2026-05-09 20:18:35
+- **作者**: WDGaster703
+
+### [修改排版问题](https://github.com/HITSZ-OpenAuto/ENGG1003/pull/23)
+
+- **仓库**: ENGG1003
+- **创建于**: 2026-05-09 20:07:51
+- **作者**: WDGaster703
 
 ### [Update course review](https://github.com/HITSZ-OpenAuto/COMP3059/pull/17)
 
