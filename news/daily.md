@@ -12,6 +12,8 @@ draft: false
 
 ## 最近更新
 
+- W. D. Gaster 在 [电路与电子学I](https://github.com/HITSZ-OpenAuto/EE1018) 中提交了信息：修改教师格式错误 (#10) (17:00)
+
 - Jiao Ziang 在 [电路与电子学](https://github.com/HITSZ-OpenAuto/EE1013) 中提交了信息：修改错误格式 (11:49)
 
 - Jiao Ziang 在 [高等电路与电子分析](https://github.com/HITSZ-OpenAuto/EE2004) 中提交了信息：修复格式错误 (11:46)
