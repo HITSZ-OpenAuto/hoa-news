@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-05-10"
+date: "2026-05-12"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -12,7 +12,9 @@ draft: false
 
 ## 最近更新
 
-- W. D. Gaster 在 [工程训练（电子工艺实习）](https://github.com/HITSZ-OpenAuto/ENGG1003) 中提交了信息：修改排版问题 (#23) (22:42)
+- Jiao Ziang 在 [电路与电子学](https://github.com/HITSZ-OpenAuto/EE1013) 中提交了信息：修改错误格式 (11:49)
+
+- Jiao Ziang 在 [高等电路与电子分析](https://github.com/HITSZ-OpenAuto/EE2004) 中提交了信息：修复格式错误 (11:46)
 
 ## 待解决的 Issues
 
