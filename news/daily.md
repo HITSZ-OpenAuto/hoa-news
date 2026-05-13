@@ -18,8 +18,6 @@ draft: false
 
 - FangShuohan 在 [电路与电子学I](https://github.com/HITSZ-OpenAuto/EE1018) 中提交了信息：增加孙丽教师的信息及评价 (#11) (14:00)
 
-- W. D. Gaster 在 [电路与电子学I](https://github.com/HITSZ-OpenAuto/EE1018) 中提交了信息：修改教师格式错误 (#10) (17:00)
-
 ## 待解决的 Issues
 
 ### [Difficulty cloning this repository](https://github.com/HITSZ-OpenAuto/MATH1002/issues/13)
@@ -30,6 +28,12 @@ draft: false
 - **标签**: help wanted
 
 ## 待合并的 Pull Requests
+
+### [fix: prevent workflow self-cancellation via concurrency queuing](https://github.com/HITSZ-OpenAuto/EE1013/pull/29)
+
+- **仓库**: EE1013
+- **创建于**: 2026-05-13 16:54:23
+- **作者**: Copilot
 
 ### [修改排版问题](https://github.com/HITSZ-OpenAuto/ENGG1002/pull/19)
 
