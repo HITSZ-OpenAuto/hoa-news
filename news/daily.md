@@ -29,6 +29,12 @@ draft: false
 
 ## 待合并的 Pull Requests
 
+### [增加了文理通识-数据科学工具及领域利用的课程评价](https://github.com/HITSZ-OpenAuto/GeneralKnowledge/pull/28)
+
+- **仓库**: GeneralKnowledge
+- **创建于**: 2026-05-13 21:22:29
+- **作者**: tingshi-yuli
+
 ### [fix: prevent workflow self-cancellation via concurrency queuing](https://github.com/HITSZ-OpenAuto/EE1013/pull/29)
 
 - **仓库**: EE1013
