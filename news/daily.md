@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-05-13"
+date: "2026-05-14"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -28,6 +28,12 @@ draft: false
 - **标签**: help wanted
 
 ## 待合并的 Pull Requests
+
+### [添加了一份Exp16准稳态法测不良导体的比热容和导热系数的MATLAB画图程序](https://github.com/HITSZ-OpenAuto/PHYS1002/pull/79)
+
+- **仓库**: PHYS1002
+- **创建于**: 2026-05-14 13:58:24
+- **作者**: 61mo
 
 ### [增加了文理通识-数据科学工具及领域利用的课程评价](https://github.com/HITSZ-OpenAuto/GeneralKnowledge/pull/28)
 
