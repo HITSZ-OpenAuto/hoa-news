@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-05-14"
+date: "2026-05-15"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -40,12 +40,6 @@ draft: false
 - **仓库**: GeneralKnowledge
 - **创建于**: 2026-05-13 21:22:29
 - **作者**: tingshi-yuli
-
-### [fix: prevent workflow self-cancellation via concurrency queuing](https://github.com/HITSZ-OpenAuto/EE1013/pull/29)
-
-- **仓库**: EE1013
-- **创建于**: 2026-05-13 16:54:23
-- **作者**: Copilot
 
 ### [修改排版问题](https://github.com/HITSZ-OpenAuto/ENGG1002/pull/19)
 
