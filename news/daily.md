@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-05-15"
+date: "2026-05-19"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -12,11 +12,7 @@ draft: false
 
 ## 最近更新
 
-- W. D. Gaster 在 [电路与电子学I](https://github.com/HITSZ-OpenAuto/EE1018) 中提交了信息：修改错误 (#12) (16:37)
-
-- W. D. Gaster 在 [电路与电子学](https://github.com/HITSZ-OpenAuto/EE1013) 中提交了信息：修改错误 (#28) (16:32)
-
-- FangShuohan 在 [电路与电子学I](https://github.com/HITSZ-OpenAuto/EE1018) 中提交了信息：增加孙丽教师的信息及评价 (#11) (14:00)
+- IcyDesert 在 [动力学与控制](https://github.com/HITSZ-OpenAuto/MECH2021) 中提交了信息：新课程 动力学与控制 (17:07)
 
 ## 待解决的 Issues
 
