@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-05-22"
+date: "2026-05-25"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -24,6 +24,12 @@ draft: false
 - **标签**: help wanted
 
 ## 待合并的 Pull Requests
+
+### [新增26春两纸开卷资料参考](https://github.com/HITSZ-OpenAuto/AUTO1001/pull/37)
+
+- **仓库**: AUTO1001
+- **创建于**: 2026-05-25 10:05:05
+- **作者**: youyun0v0
 
 ### [Update course review](https://github.com/HITSZ-OpenAuto/COMP2030/pull/16)
 
