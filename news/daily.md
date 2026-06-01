@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-05-30"
+date: "2026-06-01"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -18,24 +18,9 @@ draft: false
 
 ## 待解决的 Issues
 
-### [Difficulty cloning this repository](https://github.com/HITSZ-OpenAuto/MATH1002/issues/13)
-
-- **仓库**: MATH1002
-- **创建于**: 2025-01-20 15:32:37
-- **作者**: MaxwellJay256
-- **标签**: help wanted
+暂无待解决的 Issues
 
 ## 待合并的 Pull Requests
 
-### [Update course review](https://github.com/HITSZ-OpenAuto/COMP2030/pull/16)
-
-- **仓库**: COMP2030
-- **创建于**: 2026-05-22 23:30:34
-- **作者**: LiPu-jpg
-
-### [Update course review](https://github.com/HITSZ-OpenAuto/COMP3059/pull/17)
-
-- **仓库**: COMP3059
-- **创建于**: 2026-04-04 21:46:57
-- **作者**: LiPu-jpg
+暂无待合并的 Pull Requests
 
