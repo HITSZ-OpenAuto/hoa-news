@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-06-05"
+date: "2026-06-06"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -12,21 +12,13 @@ draft: false
 
 ## 最近更新
 
-- Chenrui Zhao 在 [操作系统](https://github.com/HITSZ-OpenAuto/COMP3001) 中提交了信息：添加操作系统授课教师、实验描述；上传期末试题回忆版 (#14) (14:35)
-
-- W. D. Gaster 在 [工程训练（金工实习）](https://github.com/HITSZ-OpenAuto/ENGG1002) 中提交了信息：修改排版问题 (14:30)
+- baidu 在 [文理通识 - 线下课程](https://github.com/HITSZ-OpenAuto/GeneralKnowledge) 中提交了信息：增加了城市经济学课程的介绍和评价 (#29) (10:26)
 
 ## 待解决的 Issues
 
 暂无待解决的 Issues
 
 ## 待合并的 Pull Requests
-
-### [增加了城市经济学课程的介绍和评价](https://github.com/HITSZ-OpenAuto/GeneralKnowledge/pull/29)
-
-- **仓库**: GeneralKnowledge
-- **创建于**: 2026-06-06 00:59:15
-- **作者**: IceFerryLing
 
 ### [增加了 2025 年秋普通天文学课程内容和考试信息](https://github.com/HITSZ-OpenAuto/Cross-SPST/pull/2)
 
