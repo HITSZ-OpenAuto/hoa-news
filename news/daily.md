@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-06-06"
+date: "2026-06-07"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -19,6 +19,12 @@ draft: false
 暂无待解决的 Issues
 
 ## 待合并的 Pull Requests
+
+### [增加文理通识：碳中和与生活的评价](https://github.com/HITSZ-OpenAuto/GeneralKnowledge/pull/30)
+
+- **仓库**: GeneralKnowledge
+- **创建于**: 2026-06-07 17:11:35
+- **作者**: Star1950625
 
 ### [增加了 2025 年秋普通天文学课程内容和考试信息](https://github.com/HITSZ-OpenAuto/Cross-SPST/pull/2)
 
