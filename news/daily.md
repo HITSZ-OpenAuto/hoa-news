@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-06-10"
+date: "2026-06-11"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -15,8 +15,6 @@ draft: false
 - W. D. Gaster 在 [操作系统](https://github.com/HITSZ-OpenAuto/COMP3001) 中提交了信息：修改排版 (#15) (00:37)
 
 - 城北徐公 在 [空天科技类跨专业课程](https://github.com/HITSZ-OpenAuto/Cross-SPST) 中提交了信息：增加了 2025 年秋普通天文学课程内容和考试信息 (#2) (00:37)
-
-- Yushang Lu 在 [文理通识 - 线下课程](https://github.com/HITSZ-OpenAuto/GeneralKnowledge) 中提交了信息：增加《碳达峰碳中和的中国之道》课程评价，并修改一个日期错误 (#31) (11:14)
 
 ## 待解决的 Issues
 
