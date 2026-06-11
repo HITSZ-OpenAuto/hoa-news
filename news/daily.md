@@ -12,6 +12,14 @@ draft: false
 
 ## 最近更新
 
+- Mingjia Zhou 在 [理学类跨专业课程](https://github.com/HITSZ-OpenAuto/Cross-Science) 中提交了信息：新增一门课程描述 (#2) (17:51)
+
+- Star1950625 在 [空天科技类跨专业课程](https://github.com/HITSZ-OpenAuto/Cross-SPST) 中提交了信息：增加空间天气学课程评价 (#3) (14:12)
+
+- Star1950625 在 [土木环境类跨专业课程](https://github.com/HITSZ-OpenAuto/Cross-CEEV) 中提交了信息：添加了特种水处理及资源化的评价 (#2) (14:11)
+
+- Star1950625 在 [电子信息类跨专业课程](https://github.com/HITSZ-OpenAuto/Cross-EIE) 中提交了信息：增加氢能与燃料电池课程评价 (#1) (14:11)
+
 - W. D. Gaster 在 [操作系统](https://github.com/HITSZ-OpenAuto/COMP3001) 中提交了信息：修改排版 (#15) (00:37)
 
 - 城北徐公 在 [空天科技类跨专业课程](https://github.com/HITSZ-OpenAuto/Cross-SPST) 中提交了信息：增加了 2025 年秋普通天文学课程内容和考试信息 (#2) (00:37)
@@ -22,21 +30,5 @@ draft: false
 
 ## 待合并的 Pull Requests
 
-### [增加氢能与燃料电池课程评价](https://github.com/HITSZ-OpenAuto/Cross-EIE/pull/1)
-
-- **仓库**: Cross-EIE
-- **创建于**: 2026-06-11 01:08:24
-- **作者**: Star1950625
-
-### [添加了特种水处理及资源化的评价](https://github.com/HITSZ-OpenAuto/Cross-CEEV/pull/2)
-
-- **仓库**: Cross-CEEV
-- **创建于**: 2026-06-11 00:58:13
-- **作者**: Star1950625
-
-### [增加空间天气学课程评价](https://github.com/HITSZ-OpenAuto/Cross-SPST/pull/3)
-
-- **仓库**: Cross-SPST
-- **创建于**: 2026-06-11 00:50:12
-- **作者**: Star1950625
+暂无待合并的 Pull Requests
 
