@@ -20,10 +20,6 @@ draft: false
 
 - Star1950625 在 [电子信息类跨专业课程](https://github.com/HITSZ-OpenAuto/Cross-EIE) 中提交了信息：增加氢能与燃料电池课程评价 (#1) (14:11)
 
-- W. D. Gaster 在 [操作系统](https://github.com/HITSZ-OpenAuto/COMP3001) 中提交了信息：修改排版 (#15) (00:37)
-
-- 城北徐公 在 [空天科技类跨专业课程](https://github.com/HITSZ-OpenAuto/Cross-SPST) 中提交了信息：增加了 2025 年秋普通天文学课程内容和考试信息 (#2) (00:37)
-
 ## 待解决的 Issues
 
 暂无待解决的 Issues
