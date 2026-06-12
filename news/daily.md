@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-06-11"
+date: "2026-06-12"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -26,5 +26,9 @@ draft: false
 
 ## 待合并的 Pull Requests
 
-暂无待合并的 Pull Requests
+### [补充新课注意事项](https://github.com/HITSZ-OpenAuto/Cross-Science/pull/3)
+
+- **仓库**: Cross-Science
+- **创建于**: 2026-06-12 21:03:35
+- **作者**: SpeechlessPanda
 
