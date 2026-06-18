@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-06-17"
+date: "2026-06-18"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -19,6 +19,12 @@ draft: false
 暂无待解决的 Issues
 
 ## 待合并的 Pull Requests
+
+### [Add files via upload](https://github.com/HITSZ-OpenAuto/Cross-Science/pull/4)
+
+- **仓库**: Cross-Science
+- **创建于**: 2026-06-18 12:28:19
+- **作者**: chenc100
 
 ### [上传2026春操作系统回忆版期末题和实验验收问题](https://github.com/HITSZ-OpenAuto/COMP3001/pull/16)
 
