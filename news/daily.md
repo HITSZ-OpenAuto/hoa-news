@@ -28,9 +28,3 @@ draft: false
 - **创建于**: 2026-06-12 23:32:08
 - **作者**: awaw-a
 
-### [补充新课注意事项](https://github.com/HITSZ-OpenAuto/Cross-Science/pull/3)
-
-- **仓库**: Cross-Science
-- **创建于**: 2026-06-12 21:03:35
-- **作者**: SpeechlessPanda
-
