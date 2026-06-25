@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-06-20"
+date: "2026-06-25"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -22,9 +22,5 @@ draft: false
 
 ## 待合并的 Pull Requests
 
-### [我发现中外合办独有的课都是请输入文本，所以来写写](https://github.com/HITSZ-OpenAuto/ELEC2101K/pull/1)
-
-- **仓库**: ELEC2101K
-- **创建于**: 2026-06-12 23:32:08
-- **作者**: awaw-a
+暂无待合并的 Pull Requests
 
