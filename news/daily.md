@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-06-25"
+date: "2026-06-29"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -22,5 +22,9 @@ draft: false
 
 ## 待合并的 Pull Requests
 
-暂无待合并的 Pull Requests
+### [添加了当代中国环境治理（英）和数字素养课程信息](https://github.com/HITSZ-OpenAuto/GeneralKnowledge/pull/33)
+
+- **仓库**: GeneralKnowledge
+- **创建于**: 2026-06-29 16:15:00
+- **作者**: IceFerryLing
 
