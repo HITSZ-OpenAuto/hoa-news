@@ -12,9 +12,7 @@ draft: false
 
 ## 最近更新
 
-- ChenChen 在 [理学类跨专业课程](https://github.com/HITSZ-OpenAuto/Cross-Science) 中提交了信息：添加电动力学个人笔记 (#4) (09:32)
-
-- Chenrui Zhao 在 [操作系统](https://github.com/HITSZ-OpenAuto/COMP3001) 中提交了信息：上传2026春操作系统回忆版期末题和实验验收问题 (#16) (09:31)
+- baidu 在 [文理通识 - 线下课程](https://github.com/HITSZ-OpenAuto/GeneralKnowledge) 中提交了信息：添加了当代中国环境治理（英）和数字素养课程信息 (#33) (23:32)
 
 ## 待解决的 Issues
 
@@ -22,9 +20,9 @@ draft: false
 
 ## 待合并的 Pull Requests
 
-### [添加了当代中国环境治理（英）和数字素养课程信息](https://github.com/HITSZ-OpenAuto/GeneralKnowledge/pull/33)
+### [补充2026春的体育基础班课改信息](https://github.com/HITSZ-OpenAuto/PE100X/pull/40)
 
-- **仓库**: GeneralKnowledge
-- **创建于**: 2026-06-29 16:15:00
-- **作者**: IceFerryLing
+- **仓库**: PE100X
+- **创建于**: 2026-06-29 19:20:58
+- **作者**: lin3939
 
