@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-06-29"
+date: "2026-06-30"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -19,6 +19,18 @@ draft: false
 暂无待解决的 Issues
 
 ## 待合并的 Pull Requests
+
+### [增加《低空飞行器原理、设计与应用》课程评价](https://github.com/HITSZ-OpenAuto/GeneralKnowledge/pull/35)
+
+- **仓库**: GeneralKnowledge
+- **创建于**: 2026-06-30 19:53:50
+- **作者**: Yushang-Lu
+
+### [添加了桥梁结构鉴赏的课程信息](https://github.com/HITSZ-OpenAuto/GeneralKnowledge/pull/34)
+
+- **仓库**: GeneralKnowledge
+- **创建于**: 2026-06-30 19:19:51
+- **作者**: just1cez
 
 ### [补充2026春的体育基础班课改信息](https://github.com/HITSZ-OpenAuto/PE100X/pull/40)
 
