@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-06-30"
+date: "2026-07-01"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -19,6 +19,12 @@ draft: false
 暂无待解决的 Issues
 
 ## 待合并的 Pull Requests
+
+### [add 2026 spring final review PDFs](https://github.com/HITSZ-OpenAuto/COMP2052/pull/14)
+
+- **仓库**: COMP2052
+- **创建于**: 2026-07-01 11:47:27
+- **作者**: Wzy-wm
 
 ### [增加《低空飞行器原理、设计与应用》课程评价](https://github.com/HITSZ-OpenAuto/GeneralKnowledge/pull/35)
 
