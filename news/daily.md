@@ -20,6 +20,12 @@ draft: false
 
 ## 待合并的 Pull Requests
 
+### [新增笔记：一份用typst完成的简要讲义，略去了不要求考查的证明](https://github.com/HITSZ-OpenAuto/AISZ2004/pull/1)
+
+- **仓库**: AISZ2004
+- **创建于**: 2026-07-01 15:38:03
+- **作者**: guanfuqi
+
 ### [add 2026 spring final review PDFs](https://github.com/HITSZ-OpenAuto/COMP2052/pull/14)
 
 - **仓库**: COMP2052
