@@ -22,6 +22,12 @@ draft: false
 
 ## 待合并的 Pull Requests
 
+### [Add review section for 高瑜](https://github.com/HITSZ-OpenAuto/MATH1015B/pull/30)
+
+- **仓库**: MATH1015B
+- **创建于**: 2026-07-02 23:18:47
+- **作者**: 070622X
+
 ### [添加《生活中的社会学》课程情况](https://github.com/HITSZ-OpenAuto/CrossSpecialty/pull/33)
 
 - **仓库**: CrossSpecialty
