@@ -22,12 +22,6 @@ draft: false
 
 ## 待合并的 Pull Requests
 
-### [2023年春大学物理ⅠA期末考试试题latex答案-太一](https://github.com/HITSZ-OpenAuto/PHYS1001/pull/45)
-
-- **仓库**: PHYS1001
-- **创建于**: 2026-07-05 20:48:37
-- **作者**: Tilr-TAIYI
-
 ### [Add review section for 高瑜](https://github.com/HITSZ-OpenAuto/MATH1015B/pull/30)
 
 - **仓库**: MATH1015B
