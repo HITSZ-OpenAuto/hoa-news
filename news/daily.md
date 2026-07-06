@@ -12,21 +12,13 @@ draft: false
 
 ## 最近更新
 
-- Yushang Lu 在 [文理通识 - 线下课程](https://github.com/HITSZ-OpenAuto/GeneralKnowledge) 中提交了信息：增加《低空飞行器原理、设计与应用》课程评价 (#35) (14:21)
-
-- justice 在 [文理通识 - 线下课程](https://github.com/HITSZ-OpenAuto/GeneralKnowledge) 中提交了信息：添加了桥梁结构鉴赏的课程信息 (#34) (14:18)
+- baidu 在 [人工智能](https://github.com/HITSZ-OpenAuto/COMP3005) 中提交了信息：提交2026年春人工智能期末考试回忆版和作业答案修改版 (#15) (22:20)
 
 ## 待解决的 Issues
 
 暂无待解决的 Issues
 
 ## 待合并的 Pull Requests
-
-### [提交2026年春人工智能期末考试回忆版和作业答案修改版](https://github.com/HITSZ-OpenAuto/COMP3005/pull/15)
-
-- **仓库**: COMP3005
-- **创建于**: 2026-07-06 17:32:24
-- **作者**: IceFerryLing
 
 ### [Add review section for 高瑜](https://github.com/HITSZ-OpenAuto/MATH1015B/pull/30)
 
