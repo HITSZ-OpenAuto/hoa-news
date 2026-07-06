@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-07-05"
+date: "2026-07-06"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -21,6 +21,12 @@ draft: false
 暂无待解决的 Issues
 
 ## 待合并的 Pull Requests
+
+### [提交2026年春人工智能期末考试回忆版和作业答案修改版](https://github.com/HITSZ-OpenAuto/COMP3005/pull/15)
+
+- **仓库**: COMP3005
+- **创建于**: 2026-07-06 17:32:24
+- **作者**: IceFerryLing
 
 ### [Add review section for 高瑜](https://github.com/HITSZ-OpenAuto/MATH1015B/pull/30)
 
