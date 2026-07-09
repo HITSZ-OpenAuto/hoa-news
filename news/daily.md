@@ -14,10 +14,6 @@ draft: false
 
 - Wu Qinhong 在 [课程中文名称](https://github.com/HITSZ-OpenAuto/AISZ2004) 中提交了信息：新增笔记 (#1) (13:02)
 
-- Wzy 在 [跨专业选修课程体系](https://github.com/HITSZ-OpenAuto/CrossSpecialty) 中提交了信息：添加生活中的社会学课程情况 (#33) (01:58)
-
-- lin3939 在 [体育](https://github.com/HITSZ-OpenAuto/PE100X) 中提交了信息：补充2026春的体育基础班课改信息 (#40) (01:57)
-
 ## 待解决的 Issues
 
 暂无待解决的 Issues
