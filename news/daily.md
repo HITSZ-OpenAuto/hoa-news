@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-07-08"
+date: "2026-07-09"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -11,6 +11,8 @@ draft: false
 ---
 
 ## 最近更新
+
+- Wu Qinhong 在 [课程中文名称](https://github.com/HITSZ-OpenAuto/AISZ2004) 中提交了信息：新增笔记 (#1) (13:02)
 
 - Wzy 在 [跨专业选修课程体系](https://github.com/HITSZ-OpenAuto/CrossSpecialty) 中提交了信息：添加生活中的社会学课程情况 (#33) (01:58)
 
@@ -27,10 +29,4 @@ draft: false
 - **仓库**: GEIP1018
 - **创建于**: 2026-07-08 13:20:57
 - **作者**: Fun10165
-
-### [新增笔记：一份用typst完成的简要讲义，略去了不要求考查的证明](https://github.com/HITSZ-OpenAuto/AISZ2004/pull/1)
-
-- **仓库**: AISZ2004
-- **创建于**: 2026-07-01 15:38:03
-- **作者**: guanfuqi
 
