@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-07-09"
+date: "2026-07-10"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -12,7 +12,7 @@ draft: false
 
 ## 最近更新
 
-- Wu Qinhong 在 [课程中文名称](https://github.com/HITSZ-OpenAuto/AISZ2004) 中提交了信息：新增笔记 (#1) (13:02)
+- Jiao Ziang 在 [博弈论](https://github.com/HITSZ-OpenAuto/ECON3001) 中提交了信息：初始化 (23:27)
 
 ## 待解决的 Issues
 
