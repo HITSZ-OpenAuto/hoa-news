@@ -34,8 +34,6 @@ draft: false
 
 - IceFerryLing 在 [体育](https://github.com/HITSZ-OpenAuto/PE100X) 中提交了信息：修改了26春跆拳道/空手道的考试内容 (10:57)
 
-- Jiao Ziang 在 [博弈论](https://github.com/HITSZ-OpenAuto/ECON3001) 中提交了信息：初始化 (23:27)
-
 ## 待解决的 Issues
 
 ### [是否需要开设单独仓库](https://github.com/HITSZ-OpenAuto/ECON3001/issues/1)
