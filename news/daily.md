@@ -12,6 +12,12 @@ draft: false
 
 ## 最近更新
 
+- W. D. Gaster 在 [文理通识 - 线下课程](https://github.com/HITSZ-OpenAuto/GeneralKnowledge) 中提交了信息：重构内容 (21:06)
+
+- W. D. Gaster 在 [跨专业选修课程体系](https://github.com/HITSZ-OpenAuto/CrossSpecialty) 中提交了信息：删除文件夹下内容，修改错误排版 (20:21)
+
+- W. D. Gaster 在 [跨专业选修课程体系](https://github.com/HITSZ-OpenAuto/CrossSpecialty) 中提交了信息：重构课程仓库内容 (18:50)
+
 - Fun10165 在 [毛泽东思想和中国特色社会主义理论体系概论](https://github.com/HITSZ-OpenAuto/GEIP1018) 中提交了信息：添加26春毛概期末试卷 (17:56)
 
 - W. D. Gaster 在 [社会实践](https://github.com/HITSZ-OpenAuto/SocialPractice) 中提交了信息：补充学分相关情况 (17:29)
