@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-07-11"
+date: "2026-07-12"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -31,8 +31,6 @@ draft: false
 - IceFerryLing 在 [文理通识 - 线下课程](https://github.com/HITSZ-OpenAuto/GeneralKnowledge) 中提交了信息：上传信息素养与实践课程的相关信息 (12:58)
 
 - IceFerryLing 在 [微积分B](https://github.com/HITSZ-OpenAuto/MATH1015B) 中提交了信息：更新课程评价 (12:16)
-
-- IceFerryLing 在 [体育](https://github.com/HITSZ-OpenAuto/PE100X) 中提交了信息：修改了26春跆拳道/空手道的考试内容 (10:57)
 
 ## 待解决的 Issues
 
