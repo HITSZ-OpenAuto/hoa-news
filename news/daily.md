@@ -12,11 +12,7 @@ draft: false
 
 ## 最近更新
 
-- W. D. Gaster 在 [文理通识 - 线下课程](https://github.com/HITSZ-OpenAuto/GeneralKnowledge) 中提交了信息：重构内容 (21:06)
-
-- W. D. Gaster 在 [跨专业选修课程体系](https://github.com/HITSZ-OpenAuto/CrossSpecialty) 中提交了信息：删除文件夹下内容，修改错误排版 (20:21)
-
-- W. D. Gaster 在 [跨专业选修课程体系](https://github.com/HITSZ-OpenAuto/CrossSpecialty) 中提交了信息：重构课程仓库内容 (18:50)
+- lumen183 在 [经管类跨专业课程](https://github.com/HITSZ-OpenAuto/Cross-ECON) 中提交了信息：添加课程:生活中的社会学 (20:25)
 
 ## 待解决的 Issues
 
