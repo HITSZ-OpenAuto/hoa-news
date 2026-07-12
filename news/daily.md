@@ -28,10 +28,6 @@ draft: false
 
 - W. D. Gaster 在 [社会实践](https://github.com/HITSZ-OpenAuto/SocialPractice) 中提交了信息：添加社会实践学分相关说明 (16:27)
 
-- IceFerryLing 在 [文理通识 - 线下课程](https://github.com/HITSZ-OpenAuto/GeneralKnowledge) 中提交了信息：上传信息素养与实践课程的相关信息 (12:58)
-
-- IceFerryLing 在 [微积分B](https://github.com/HITSZ-OpenAuto/MATH1015B) 中提交了信息：更新课程评价 (12:16)
-
 ## 待解决的 Issues
 
 ### [是否需要开设单独仓库](https://github.com/HITSZ-OpenAuto/ECON3001/issues/1)
