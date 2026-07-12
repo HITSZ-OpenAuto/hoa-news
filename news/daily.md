@@ -24,6 +24,12 @@ draft: false
 
 ## 待合并的 Pull Requests
 
+### [添加了实验课老师；更新了课程考核方式；增加了个人实验仓库；稍微修改了前人的文字，以符合中文文案排版指北；将前人电子书的分类由 slides 移动到 books。](https://github.com/HITSZ-OpenAuto/ELEC2101K/pull/2)
+
+- **仓库**: ELEC2101K
+- **创建于**: 2026-07-12 22:48:51
+- **作者**: 61mo
+
 ### [针对通信工程（中外合作办学）第一年开办的课程 ELEC2102K 概率和数理统计的信息补充](https://github.com/HITSZ-OpenAuto/ELEC2102K/pull/1)
 
 - **仓库**: ELEC2102K
