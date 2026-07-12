@@ -18,16 +18,6 @@ draft: false
 
 - W. D. Gaster 在 [跨专业选修课程体系](https://github.com/HITSZ-OpenAuto/CrossSpecialty) 中提交了信息：重构课程仓库内容 (18:50)
 
-- Fun10165 在 [毛泽东思想和中国特色社会主义理论体系概论](https://github.com/HITSZ-OpenAuto/GEIP1018) 中提交了信息：添加26春毛概期末试卷 (17:56)
-
-- W. D. Gaster 在 [社会实践](https://github.com/HITSZ-OpenAuto/SocialPractice) 中提交了信息：补充学分相关情况 (17:29)
-
-- W. D. Gaster 在 [创新创业](https://github.com/HITSZ-OpenAuto/Innovation) 中提交了信息：添加创新学分相关说明，迁移OpenHarmony课程到本仓库 (17:29)
-
-- W. D. Gaster 在 [社会实践](https://github.com/HITSZ-OpenAuto/SocialPractice) 中提交了信息：添加标题以正确被toml转换识别 (16:31)
-
-- W. D. Gaster 在 [社会实践](https://github.com/HITSZ-OpenAuto/SocialPractice) 中提交了信息：添加社会实践学分相关说明 (16:27)
-
 ## 待解决的 Issues
 
 ### [是否需要开设单独仓库](https://github.com/HITSZ-OpenAuto/ECON3001/issues/1)
