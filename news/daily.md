@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-07-12"
+date: "2026-07-13"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -23,6 +23,12 @@ draft: false
 - **作者**: WDGaster703
 
 ## 待合并的 Pull Requests
+
+### [加入了有关和军平老师和梁高琪老师的评价](https://github.com/HITSZ-OpenAuto/EE1018/pull/13)
+
+- **仓库**: EE1018
+- **创建于**: 2026-07-13 17:33:24
+- **作者**: 070622X
 
 ### [添加了实验课老师；更新了课程考核方式；增加了个人实验仓库；稍微修改了前人的文字，以符合中文文案排版指北；将前人电子书的分类由 slides 移动到 books。](https://github.com/HITSZ-OpenAuto/ELEC2101K/pull/2)
 
