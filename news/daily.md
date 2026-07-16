@@ -14,8 +14,6 @@ draft: false
 
 - cecilia 在 [土木环境类跨专业课程](https://github.com/HITSZ-OpenAuto/Cross-CEEV) 中提交了信息：增加水文明跨专业课程的相关信息 (09:21)
 
-- Mingjia Zhou 在 [土木环境类跨专业课程](https://github.com/HITSZ-OpenAuto/Cross-CEEV) 中提交了信息：增加一门跨专业课程的相关信息 (21:00)
-
 ## 待解决的 Issues
 
 ### [是否需要开设单独仓库](https://github.com/HITSZ-OpenAuto/ECON3001/issues/1)
