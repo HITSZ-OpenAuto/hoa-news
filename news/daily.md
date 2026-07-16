@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-07-15"
+date: "2026-07-16"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -12,7 +12,9 @@ draft: false
 
 ## 最近更新
 
-- IceFerryLing 在 [计算机编程](https://github.com/HITSZ-OpenAuto/ELEC2101K) 中提交了信息：去掉了重复提交的教材 (09:30)
+- cecilia 在 [土木环境类跨专业课程](https://github.com/HITSZ-OpenAuto/Cross-CEEV) 中提交了信息：增加水文明跨专业课程的相关信息 (09:21)
+
+- Mingjia Zhou 在 [土木环境类跨专业课程](https://github.com/HITSZ-OpenAuto/Cross-CEEV) 中提交了信息：增加一门跨专业课程的相关信息 (21:00)
 
 ## 待解决的 Issues
 
@@ -24,9 +26,5 @@ draft: false
 
 ## 待合并的 Pull Requests
 
-### [增加一门跨专业课程的相关信息](https://github.com/HITSZ-OpenAuto/Cross-CEEV/pull/3)
-
-- **仓库**: Cross-CEEV
-- **创建于**: 2026-07-15 21:01:12
-- **作者**: SpeechlessPanda
+暂无待合并的 Pull Requests
 
