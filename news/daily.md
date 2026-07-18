@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-07-16"
+date: "2026-07-18"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -12,7 +12,9 @@ draft: false
 
 ## 最近更新
 
-- cecilia 在 [土木环境类跨专业课程](https://github.com/HITSZ-OpenAuto/Cross-CEEV) 中提交了信息：增加水文明跨专业课程的相关信息 (09:21)
+- ll3me 在 [文理通识 - 线下课程](https://github.com/HITSZ-OpenAuto/GeneralKnowledge) 中提交了信息：添加现代化课程介绍 (14:46)
+
+- ll3me 在 [文理通识 - 线下课程](https://github.com/HITSZ-OpenAuto/GeneralKnowledge) 中提交了信息：添加超快光学课程介绍 (14:37)
 
 ## 待解决的 Issues
 
