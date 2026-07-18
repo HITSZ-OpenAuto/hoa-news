@@ -26,5 +26,15 @@ draft: false
 
 ## 待合并的 Pull Requests
 
-暂无待合并的 Pull Requests
+### [完善课程文档并新增笔记、习题集与期末回忆卷](https://github.com/HITSZ-OpenAuto/AISZ2004/pull/2)
+
+- **仓库**: AISZ2004
+- **创建于**: 2026-07-18 22:51:52
+- **作者**: marine-aqua
+
+### [完善课程文档并新增笔记、习题精编与考试资料](https://github.com/HITSZ-OpenAuto/ELEC2018/pull/1)
+
+- **仓库**: ELEC2018
+- **创建于**: 2026-07-18 22:51:49
+- **作者**: marine-aqua
 
