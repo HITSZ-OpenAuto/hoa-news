@@ -20,8 +20,6 @@ draft: false
 
 - root 在 [信号与系统](https://github.com/HITSZ-OpenAuto/ELEC2018) 中提交了信息：完善课程文档并新增笔记、习题精编与考试资料 (22:45)
 
-- root 在 [信息论](https://github.com/HITSZ-OpenAuto/AISZ2004) 中提交了信息：完善课程文档并新增笔记、习题集与期末回忆卷 (19:20)
-
 ## 待解决的 Issues
 
 ### [是否需要开设单独仓库](https://github.com/HITSZ-OpenAuto/ECON3001/issues/1)
