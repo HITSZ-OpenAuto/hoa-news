@@ -30,6 +30,12 @@ draft: false
 
 ## 待合并的 Pull Requests
 
+### [添加了25秋跨专业课程相对论物理及其应用的描述](https://github.com/HITSZ-OpenAuto/Cross-Science/pull/5)
+
+- **仓库**: Cross-Science
+- **创建于**: 2026-07-19 22:54:22
+- **作者**: JZWXZ9
+
 ### [补充了26春何嘉勇体基（体育D）的分数构成/部分评分标准](https://github.com/HITSZ-OpenAuto/PE100X/pull/42)
 
 - **仓库**: PE100X
