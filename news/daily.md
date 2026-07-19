@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-07-18"
+date: "2026-07-19"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -21,10 +21,6 @@ draft: false
 - root 在 [信号与系统](https://github.com/HITSZ-OpenAuto/ELEC2018) 中提交了信息：完善课程文档并新增笔记、习题精编与考试资料 (22:45)
 
 - root 在 [信息论](https://github.com/HITSZ-OpenAuto/AISZ2004) 中提交了信息：完善课程文档并新增笔记、习题集与期末回忆卷 (19:20)
-
-- ll3me 在 [文理通识 - 线下课程](https://github.com/HITSZ-OpenAuto/GeneralKnowledge) 中提交了信息：添加现代化课程介绍 (14:46)
-
-- ll3me 在 [文理通识 - 线下课程](https://github.com/HITSZ-OpenAuto/GeneralKnowledge) 中提交了信息：添加超快光学课程介绍 (14:37)
 
 ## 待解决的 Issues
 
