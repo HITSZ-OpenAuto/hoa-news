@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-07-19"
+date: "2026-07-20"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -12,13 +12,7 @@ draft: false
 
 ## 最近更新
 
-- root 在 [信号与系统](https://github.com/HITSZ-OpenAuto/ELEC2018) 中提交了信息：移除 tag.txt 以与上游一致 (23:08)
-
-- root 在 [信息论](https://github.com/HITSZ-OpenAuto/AISZ2004) 中提交了信息：修正习题集水填充容量与三状态链转移矩阵 (23:06)
-
-- root 在 [信号与系统](https://github.com/HITSZ-OpenAuto/ELEC2018) 中提交了信息：修正习题精编题17/19与期末回忆卷选择题选项 (23:02)
-
-- root 在 [信号与系统](https://github.com/HITSZ-OpenAuto/ELEC2018) 中提交了信息：完善课程文档并新增笔记、习题精编与考试资料 (22:45)
+- W. D. Gaster 在 [电气专业选修课](https://github.com/HITSZ-OpenAuto/EE30XX) 中提交了信息：补充了电拖、开关电源、CAD三门课程23级的情况 (18:16)
 
 ## 待解决的 Issues
 
@@ -29,6 +23,12 @@ draft: false
 - **作者**: WDGaster703
 
 ## 待合并的 Pull Requests
+
+### [修改子标题](https://github.com/HITSZ-OpenAuto/GEIP1017/pull/22)
+
+- **仓库**: GEIP1017
+- **创建于**: 2026-07-20 18:54:45
+- **作者**: IceFerryLing
 
 ### [添加了25秋跨专业课程相对论物理及其应用的描述](https://github.com/HITSZ-OpenAuto/Cross-Science/pull/5)
 
