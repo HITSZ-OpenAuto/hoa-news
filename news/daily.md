@@ -26,6 +26,18 @@ draft: false
 
 ## 待合并的 Pull Requests
 
+### [完善课程信息](https://github.com/HITSZ-OpenAuto/COMP2052/pull/15)
+
+- **仓库**: COMP2052
+- **创建于**: 2026-07-22 22:54:03
+- **作者**: wpj9362
+
+### [更新课程信息](https://github.com/HITSZ-OpenAuto/COMP2008/pull/14)
+
+- **仓库**: COMP2008
+- **创建于**: 2026-07-22 22:03:53
+- **作者**: wpj9362
+
 ### [完善课程信息](https://github.com/HITSZ-OpenAuto/COMP3004/pull/25)
 
 - **仓库**: COMP3004
