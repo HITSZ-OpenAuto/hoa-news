@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-07-21"
+date: "2026-07-22"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -25,6 +25,48 @@ draft: false
 - **作者**: WDGaster703
 
 ## 待合并的 Pull Requests
+
+### [完善课程信息](https://github.com/HITSZ-OpenAuto/COMP3004/pull/25)
+
+- **仓库**: COMP3004
+- **创建于**: 2026-07-22 21:26:16
+- **作者**: wpj9362
+
+### [对机器学习课程信息进行补充](https://github.com/HITSZ-OpenAuto/COMP3006/pull/13)
+
+- **仓库**: COMP3006
+- **创建于**: 2026-07-22 20:51:58
+- **作者**: wpj9362
+
+### [更新了电动力学课程信息](https://github.com/HITSZ-OpenAuto/Cross-Science/pull/6)
+
+- **仓库**: Cross-Science
+- **创建于**: 2026-07-22 20:09:32
+- **作者**: wpj9362
+
+### [填充 PHYS1009 量子物理课程信息并生成 README.md](https://github.com/HITSZ-OpenAuto/PHYS1009/pull/1)
+
+- **仓库**: PHYS1009
+- **创建于**: 2026-07-22 19:32:45
+- **作者**: marine-aqua
+
+### [填充 AISZ3002 基础项目实践课程信息与课程建议](https://github.com/HITSZ-OpenAuto/AISZ3002/pull/1)
+
+- **仓库**: AISZ3002
+- **创建于**: 2026-07-22 19:32:43
+- **作者**: marine-aqua
+
+### [新增 AISZ2001 机器学习课程资料](https://github.com/HITSZ-OpenAuto/AISZ2001/pull/1)
+
+- **仓库**: AISZ2001
+- **创建于**: 2026-07-22 19:32:42
+- **作者**: marine-aqua
+
+### [补充 COMP3052 课程文档与 CSAPP 复习资料](https://github.com/HITSZ-OpenAuto/COMP3052/pull/16)
+
+- **仓库**: COMP3052
+- **创建于**: 2026-07-22 19:32:40
+- **作者**: marine-aqua
 
 ### [更新体基班的评分及课程内容](https://github.com/HITSZ-OpenAuto/PE100X/pull/43)
 
