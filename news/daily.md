@@ -12,6 +12,8 @@ draft: false
 
 ## 最近更新
 
+- cecilia 在 [体育](https://github.com/HITSZ-OpenAuto/PE100X) 中提交了信息：更新体基班的评分及课程内容 (#43) (11:31)
+
 - Pengjie Wang 在 [机器学习](https://github.com/HITSZ-OpenAuto/COMP3006) 中提交了信息：对机器学习课程信息进行补充 (#13) (10:58)
 
 - Pengjie Wang 在 [形式语言与自动机](https://github.com/HITSZ-OpenAuto/COMP3004) 中提交了信息：完善课程信息 (#25) (10:55)
@@ -40,17 +42,29 @@ draft: false
 
 ## 待合并的 Pull Requests
 
+### [添加一份CSAPP笔记_youyun](https://github.com/HITSZ-OpenAuto/COMP3052/pull/17)
+
+- **仓库**: COMP3052
+- **创建于**: 2026-07-23 13:01:00
+- **作者**: youyun0v0
+
+### [添加一份个人控代笔记_youyun](https://github.com/HITSZ-OpenAuto/AUTO2006/pull/28)
+
+- **仓库**: AUTO2006
+- **创建于**: 2026-07-23 12:45:23
+- **作者**: youyun0v0
+
+### [添加一份个人信号笔记_youyun](https://github.com/HITSZ-OpenAuto/AUTO2005/pull/46)
+
+- **仓库**: AUTO2005
+- **创建于**: 2026-07-23 12:41:05
+- **作者**: youyun0v0
+
 ### [更新了电动力学课程信息](https://github.com/HITSZ-OpenAuto/Cross-Science/pull/6)
 
 - **仓库**: Cross-Science
 - **创建于**: 2026-07-22 20:09:32
 - **作者**: wpj9362
-
-### [更新体基班的评分及课程内容](https://github.com/HITSZ-OpenAuto/PE100X/pull/43)
-
-- **仓库**: PE100X
-- **创建于**: 2026-07-21 18:01:38
-- **作者**: mircecilia
 
 ### [添加了25秋跨专业课程相对论物理及其应用的描述](https://github.com/HITSZ-OpenAuto/Cross-Science/pull/5)
 
