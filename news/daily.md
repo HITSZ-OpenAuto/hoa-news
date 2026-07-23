@@ -42,6 +42,24 @@ draft: false
 
 ## 待合并的 Pull Requests
 
+### [Add 23AISZ Review Materials for latecomers](https://github.com/HITSZ-OpenAuto/AISZ2004/pull/3)
+
+- **仓库**: AISZ2004
+- **创建于**: 2026-07-23 16:43:28
+- **作者**: MukioXun
+
+### [Add 23AISZ Review Materials for latecomers](https://github.com/HITSZ-OpenAuto/COMP3003/pull/16)
+
+- **仓库**: COMP3003
+- **创建于**: 2026-07-23 16:42:56
+- **作者**: MukioXun
+
+### [Add 23AISZ Review Materials for latecomers](https://github.com/HITSZ-OpenAuto/COMP3001/pull/17)
+
+- **仓库**: COMP3001
+- **创建于**: 2026-07-23 16:41:04
+- **作者**: MukioXun
+
 ### [添加一份CSAPP笔记_youyun](https://github.com/HITSZ-OpenAuto/COMP3052/pull/17)
 
 - **仓库**: COMP3052
