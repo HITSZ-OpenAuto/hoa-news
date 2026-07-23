@@ -42,6 +42,12 @@ draft: false
 
 ## 待合并的 Pull Requests
 
+### [docs\(README\): 更新 AISZ2006 课程介绍](https://github.com/HITSZ-OpenAuto/AISZ2006/pull/1)
+
+- **仓库**: AISZ2006
+- **创建于**: 2026-07-23 19:18:43
+- **作者**: LeafDot37
+
 ### [Add 23AISZ Review Materials for latecomers](https://github.com/HITSZ-OpenAuto/AISZ2004/pull/3)
 
 - **仓库**: AISZ2004
