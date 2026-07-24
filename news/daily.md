@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-07-23"
+date: "2026-07-24"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -17,20 +17,6 @@ draft: false
 - Pengjie Wang 在 [机器学习](https://github.com/HITSZ-OpenAuto/COMP3006) 中提交了信息：对机器学习课程信息进行补充 (#13) (10:58)
 
 - Pengjie Wang 在 [形式语言与自动机](https://github.com/HITSZ-OpenAuto/COMP3004) 中提交了信息：完善课程信息 (#25) (10:55)
-
-- McFlurry 在 [量子物理](https://github.com/HITSZ-OpenAuto/PHYS1009) 中提交了信息：填充 PHYS1009 量子物理课程信息并生成 README.md (#1) (10:51)
-
-- Pengjie Wang 在 [计算机组成原理](https://github.com/HITSZ-OpenAuto/COMP2008) 中提交了信息：更新课程信息 (#14) (10:44)
-
-- McFlurry 在 [基础项目实践](https://github.com/HITSZ-OpenAuto/AISZ3002) 中提交了信息：填充 AISZ3002 基础项目实践课程信息并生成 README.md (#1) (10:41)
-
-- McFlurry 在 [机器学习](https://github.com/HITSZ-OpenAuto/AISZ2001) 中提交了信息：新增 AISZ2001 机器学习课程资料 (#1) (10:40)
-
-- McFlurry 在 [计算机系统](https://github.com/HITSZ-OpenAuto/COMP3052) 中提交了信息：补充 COMP3052 课程文档与 CSAPP 复习资料 (#16) (10:40)
-
-- baidu 在 [习近平新时代中国特色社会主义思想概论](https://github.com/HITSZ-OpenAuto/GEIP1017) 中提交了信息：修改子标题 (#22) (10:40)
-
-- Pengjie Wang 在 [数据结构与算法](https://github.com/HITSZ-OpenAuto/COMP2052) 中提交了信息：完善课程信息 (#15) (09:50)
 
 ## 待解决的 Issues
 
