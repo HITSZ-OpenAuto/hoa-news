@@ -14,8 +14,6 @@ draft: false
 
 - awaw-a 在 [计算机编程](https://github.com/HITSZ-OpenAuto/ELEC2101K) 中提交了信息：添加期末考试描述 (#4) (13:50)
 
-- McFlurry 在 [基础项目实践](https://github.com/HITSZ-OpenAuto/AISZ3002) 中提交了信息：补充课程建议：新增工作量与回报、通过率、费用说明，细化马帅通信课题劝退理由 (#2) (21:46)
-
 ## 待解决的 Issues
 
 ### [是否需要开设单独仓库](https://github.com/HITSZ-OpenAuto/ECON3001/issues/1)
