@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-07-24"
+date: "2026-07-25"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -11,6 +11,8 @@ draft: false
 ---
 
 ## 最近更新
+
+- awaw-a 在 [计算机编程](https://github.com/HITSZ-OpenAuto/ELEC2101K) 中提交了信息：添加期末考试描述 (#4) (13:50)
 
 - McFlurry 在 [基础项目实践](https://github.com/HITSZ-OpenAuto/AISZ3002) 中提交了信息：补充课程建议：新增工作量与回报、通过率、费用说明，细化马帅通信课题劝退理由 (#2) (21:46)
 
@@ -27,12 +29,6 @@ draft: false
 - **作者**: WDGaster703
 
 ## 待合并的 Pull Requests
-
-### [添加期末考试描述](https://github.com/HITSZ-OpenAuto/ELEC2101K/pull/4)
-
-- **仓库**: ELEC2101K
-- **创建于**: 2026-07-24 18:23:13
-- **作者**: awaw-a
 
 ### [Add 23AISZ Review Materials for latecomers](https://github.com/HITSZ-OpenAuto/AISZ2004/pull/3)
 
