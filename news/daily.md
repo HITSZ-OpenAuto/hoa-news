@@ -12,7 +12,7 @@ draft: false
 
 ## 最近更新
 
-- awaw-a 在 [计算机编程](https://github.com/HITSZ-OpenAuto/ELEC2101K) 中提交了信息：添加期末考试描述 (#4) (13:50)
+- Pengjie Wang 在 [软件构造](https://github.com/HITSZ-OpenAuto/COMP3059) 中提交了信息：完善课程信息 (#18) (01:35)
 
 ## 待解决的 Issues
 
@@ -23,12 +23,6 @@ draft: false
 - **作者**: WDGaster703
 
 ## 待合并的 Pull Requests
-
-### [完善课程信息](https://github.com/HITSZ-OpenAuto/COMP3059/pull/18)
-
-- **仓库**: COMP3059
-- **创建于**: 2026-07-27 23:42:45
-- **作者**: wpj9362
 
 ### [Add 23AISZ Review Materials for latecomers](https://github.com/HITSZ-OpenAuto/AISZ2004/pull/3)
 
