@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-07-27"
+date: "2026-07-29"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -12,7 +12,7 @@ draft: false
 
 ## 最近更新
 
-- Pengjie Wang 在 [软件构造](https://github.com/HITSZ-OpenAuto/COMP3059) 中提交了信息：完善课程信息 (#18) (01:35)
+- justice 在 [文理通识 - 线下课程](https://github.com/HITSZ-OpenAuto/GeneralKnowledge) 中提交了信息：增加了创意思维导论（英） (#38) (18:54)
 
 ## 待解决的 Issues
 
