@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-07-29"
+date: "2026-07-30"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -12,7 +12,9 @@ draft: false
 
 ## 最近更新
 
-- justice 在 [文理通识 - 线下课程](https://github.com/HITSZ-OpenAuto/GeneralKnowledge) 中提交了信息：增加了创意思维导论（英） (#38) (18:54)
+- Jiao Ziang 在 [文理通识 - 线下课程](https://github.com/HITSZ-OpenAuto/GeneralKnowledge) 中提交了信息：增加Satellite对演讲与口才的评价 (03:32)
+
+- Jiao Ziang 在 [体育](https://github.com/HITSZ-OpenAuto/PE100X) 中提交了信息：增加Satellite对定向越野信息的补充 (03:27)
 
 ## 待解决的 Issues
 
