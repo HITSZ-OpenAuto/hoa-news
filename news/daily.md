@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-07-30"
+date: "2026-07-31"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -25,6 +25,12 @@ draft: false
 - **作者**: WDGaster703
 
 ## 待合并的 Pull Requests
+
+### [添加学习建议](https://github.com/HITSZ-OpenAuto/COMP2052/pull/16)
+
+- **仓库**: COMP2052
+- **创建于**: 2026-07-31 21:17:45
+- **作者**: Star1950625
 
 ### [Add 23AISZ Review Materials for latecomers](https://github.com/HITSZ-OpenAuto/AISZ2004/pull/3)
 
