@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-07-31"
+date: "2026-08-01"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -12,9 +12,7 @@ draft: false
 
 ## 最近更新
 
-- Jiao Ziang 在 [文理通识 - 线下课程](https://github.com/HITSZ-OpenAuto/GeneralKnowledge) 中提交了信息：增加Satellite对演讲与口才的评价 (03:32)
-
-- Jiao Ziang 在 [体育](https://github.com/HITSZ-OpenAuto/PE100X) 中提交了信息：增加Satellite对定向越野信息的补充 (03:27)
+- Star1950625 在 [数据结构与算法](https://github.com/HITSZ-OpenAuto/COMP2052) 中提交了信息：添加学习建议 (#16) (08:37)
 
 ## 待解决的 Issues
 
@@ -25,12 +23,6 @@ draft: false
 - **作者**: WDGaster703
 
 ## 待合并的 Pull Requests
-
-### [添加学习建议](https://github.com/HITSZ-OpenAuto/COMP2052/pull/16)
-
-- **仓库**: COMP2052
-- **创建于**: 2026-07-31 21:17:45
-- **作者**: Star1950625
 
 ### [Add 23AISZ Review Materials for latecomers](https://github.com/HITSZ-OpenAuto/AISZ2004/pull/3)
 
