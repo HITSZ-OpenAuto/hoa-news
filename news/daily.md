@@ -12,7 +12,7 @@ draft: false
 
 ## 最近更新
 
-- Star1950625 在 [数据结构与算法](https://github.com/HITSZ-OpenAuto/COMP2052) 中提交了信息：添加学习建议 (#16) (08:37)
+- Wu Qinhong 在 [信息论](https://github.com/HITSZ-OpenAuto/AISZ2004) 中提交了信息：订正笔记：更改了笔记中的一些错误 (#4) (12:20)
 
 ## 待解决的 Issues
 
@@ -23,12 +23,6 @@ draft: false
 - **作者**: WDGaster703
 
 ## 待合并的 Pull Requests
-
-### [订正笔记：更改了笔记中的一些错误](https://github.com/HITSZ-OpenAuto/AISZ2004/pull/4)
-
-- **仓库**: AISZ2004
-- **创建于**: 2026-08-02 10:39:40
-- **作者**: guanfuqi
 
 ### [Add 23AISZ Review Materials for latecomers](https://github.com/HITSZ-OpenAuto/AISZ2004/pull/3)
 
