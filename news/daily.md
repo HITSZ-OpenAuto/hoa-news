@@ -12,6 +12,8 @@ draft: false
 
 ## 最近更新
 
+- Wleaf 在 [体育](https://github.com/HITSZ-OpenAuto/PE100X) 中提交了信息：增加了26年网球分数组成变化 (#44) (22:24)
+
 - Wu Qinhong 在 [信息论](https://github.com/HITSZ-OpenAuto/AISZ2004) 中提交了信息：订正笔记：更改了笔记中的一些错误 (#4) (12:20)
 
 ## 待解决的 Issues
