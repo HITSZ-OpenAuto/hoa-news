@@ -24,6 +24,18 @@ draft: false
 
 ## 待合并的 Pull Requests
 
+### [新增光计算概论的课程信息及教师评价](https://github.com/HITSZ-OpenAuto/Cross-EIE/pull/2)
+
+- **仓库**: Cross-EIE
+- **创建于**: 2026-08-02 20:56:37
+- **作者**: dicnYue
+
+### [新增相对论物理及其应用的课程信息及教师评价](https://github.com/HITSZ-OpenAuto/Cross-Science/pull/8)
+
+- **仓库**: Cross-Science
+- **创建于**: 2026-08-02 20:48:27
+- **作者**: dicnYue
+
 ### [Add 23AISZ Review Materials for latecomers](https://github.com/HITSZ-OpenAuto/AISZ2004/pull/3)
 
 - **仓库**: AISZ2004
