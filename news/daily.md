@@ -12,6 +12,10 @@ draft: false
 
 ## 最近更新
 
+- Kyn 在 [电子信息类跨专业课程](https://github.com/HITSZ-OpenAuto/Cross-EIE) 中提交了信息：新增光计算概论的课程信息及教师评价 (#2) (03:36)
+
+- Kyn 在 [理学类跨专业课程](https://github.com/HITSZ-OpenAuto/Cross-Science) 中提交了信息：新增相对论物理及其应用的课程信息及教师评价 (#8) (03:36)
+
 - Wleaf 在 [体育](https://github.com/HITSZ-OpenAuto/PE100X) 中提交了信息：增加了26年网球分数组成变化 (#44) (22:24)
 
 - Wu Qinhong 在 [信息论](https://github.com/HITSZ-OpenAuto/AISZ2004) 中提交了信息：订正笔记：更改了笔记中的一些错误 (#4) (12:20)
@@ -25,18 +29,6 @@ draft: false
 - **作者**: WDGaster703
 
 ## 待合并的 Pull Requests
-
-### [新增光计算概论的课程信息及教师评价](https://github.com/HITSZ-OpenAuto/Cross-EIE/pull/2)
-
-- **仓库**: Cross-EIE
-- **创建于**: 2026-08-02 20:56:37
-- **作者**: dicnYue
-
-### [新增相对论物理及其应用的课程信息及教师评价](https://github.com/HITSZ-OpenAuto/Cross-Science/pull/8)
-
-- **仓库**: Cross-Science
-- **创建于**: 2026-08-02 20:48:27
-- **作者**: dicnYue
 
 ### [Add 23AISZ Review Materials for latecomers](https://github.com/HITSZ-OpenAuto/AISZ2004/pull/3)
 
