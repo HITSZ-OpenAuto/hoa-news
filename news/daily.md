@@ -16,8 +16,6 @@ draft: false
 
 - Kyn 在 [理学类跨专业课程](https://github.com/HITSZ-OpenAuto/Cross-Science) 中提交了信息：新增相对论物理及其应用的课程信息及教师评价 (#8) (03:36)
 
-- Wleaf 在 [体育](https://github.com/HITSZ-OpenAuto/PE100X) 中提交了信息：增加了26年网球分数组成变化 (#44) (22:24)
-
 ## 待解决的 Issues
 
 ### [是否需要开设单独仓库](https://github.com/HITSZ-OpenAuto/ECON3001/issues/1)
