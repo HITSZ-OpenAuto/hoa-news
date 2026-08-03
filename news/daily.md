@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-08-02"
+date: "2026-08-03"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -17,8 +17,6 @@ draft: false
 - Kyn 在 [理学类跨专业课程](https://github.com/HITSZ-OpenAuto/Cross-Science) 中提交了信息：新增相对论物理及其应用的课程信息及教师评价 (#8) (03:36)
 
 - Wleaf 在 [体育](https://github.com/HITSZ-OpenAuto/PE100X) 中提交了信息：增加了26年网球分数组成变化 (#44) (22:24)
-
-- Wu Qinhong 在 [信息论](https://github.com/HITSZ-OpenAuto/AISZ2004) 中提交了信息：订正笔记：更改了笔记中的一些错误 (#4) (12:20)
 
 ## 待解决的 Issues
 
