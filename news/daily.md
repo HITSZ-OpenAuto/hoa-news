@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-08-03"
+date: "2026-08-15"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -12,9 +12,11 @@ draft: false
 
 ## 最近更新
 
-- Kyn 在 [电子信息类跨专业课程](https://github.com/HITSZ-OpenAuto/Cross-EIE) 中提交了信息：新增光计算概论的课程信息及教师评价 (#2) (03:36)
+- cecilia 在 [文理通识 - 线下课程](https://github.com/HITSZ-OpenAuto/GeneralKnowledge) 中提交了信息：增加大学生心理健康的课程描述 (#40) (05:08)
 
-- Kyn 在 [理学类跨专业课程](https://github.com/HITSZ-OpenAuto/Cross-Science) 中提交了信息：新增相对论物理及其应用的课程信息及教师评价 (#8) (03:36)
+- JZWXZ9 在 [理学类跨专业课程](https://github.com/HITSZ-OpenAuto/Cross-Science) 中提交了信息：添加了25秋跨专业课程相对论物理及其应用的描述 (#5) (04:06)
+
+- Pengjie Wang 在 [理学类跨专业课程](https://github.com/HITSZ-OpenAuto/Cross-Science) 中提交了信息：更新了电动力学课程信息 (#6) (03:52)
 
 ## 待解决的 Issues
 
@@ -26,33 +28,9 @@ draft: false
 
 ## 待合并的 Pull Requests
 
-### [Add 23AISZ Review Materials for latecomers](https://github.com/HITSZ-OpenAuto/AISZ2004/pull/3)
-
-- **仓库**: AISZ2004
-- **创建于**: 2026-07-23 16:43:28
-- **作者**: MukioXun
-
 ### [Add 23AISZ Review Materials for latecomers](https://github.com/HITSZ-OpenAuto/COMP3003/pull/16)
 
 - **仓库**: COMP3003
 - **创建于**: 2026-07-23 16:42:56
 - **作者**: MukioXun
-
-### [Add 23AISZ Review Materials for latecomers](https://github.com/HITSZ-OpenAuto/COMP3001/pull/17)
-
-- **仓库**: COMP3001
-- **创建于**: 2026-07-23 16:41:04
-- **作者**: MukioXun
-
-### [更新了电动力学课程信息](https://github.com/HITSZ-OpenAuto/Cross-Science/pull/6)
-
-- **仓库**: Cross-Science
-- **创建于**: 2026-07-22 20:09:32
-- **作者**: wpj9362
-
-### [添加了25秋跨专业课程相对论物理及其应用的描述](https://github.com/HITSZ-OpenAuto/Cross-Science/pull/5)
-
-- **仓库**: Cross-Science
-- **创建于**: 2026-07-19 22:54:22
-- **作者**: JZWXZ9
 
