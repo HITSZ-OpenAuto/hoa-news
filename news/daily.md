@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-08-15"
+date: "2026-08-16"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -28,9 +28,5 @@ draft: false
 
 ## 待合并的 Pull Requests
 
-### [Add 23AISZ Review Materials for latecomers](https://github.com/HITSZ-OpenAuto/COMP3003/pull/16)
-
-- **仓库**: COMP3003
-- **创建于**: 2026-07-23 16:42:56
-- **作者**: MukioXun
+暂无待合并的 Pull Requests
 
