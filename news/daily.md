@@ -28,5 +28,9 @@ draft: false
 
 ## 待合并的 Pull Requests
 
-暂无待合并的 Pull Requests
+### [添加毛概笔记](https://github.com/HITSZ-OpenAuto/GEIP1018/pull/28)
+
+- **仓库**: GEIP1018
+- **创建于**: 2026-08-25 21:54:38
+- **作者**: prj159
 
