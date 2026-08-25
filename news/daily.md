@@ -28,9 +28,5 @@ draft: false
 
 ## 待合并的 Pull Requests
 
-### [Add note](https://github.com/HITSZ-OpenAuto/AUTO2005/pull/47)
-
-- **仓库**: AUTO2005
-- **创建于**: 2026-08-25 09:06:18
-- **作者**: prj159
+暂无待合并的 Pull Requests
 
