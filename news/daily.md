@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-08-16"
+date: "2026-08-25"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -28,5 +28,9 @@ draft: false
 
 ## 待合并的 Pull Requests
 
-暂无待合并的 Pull Requests
+### [Add note](https://github.com/HITSZ-OpenAuto/AUTO2005/pull/47)
+
+- **仓库**: AUTO2005
+- **创建于**: 2026-08-25 09:06:18
+- **作者**: prj159
 
