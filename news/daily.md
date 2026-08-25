@@ -12,11 +12,7 @@ draft: false
 
 ## 最近更新
 
-- cecilia 在 [文理通识 - 线下课程](https://github.com/HITSZ-OpenAuto/GeneralKnowledge) 中提交了信息：增加大学生心理健康的课程描述 (#40) (05:08)
-
-- JZWXZ9 在 [理学类跨专业课程](https://github.com/HITSZ-OpenAuto/Cross-Science) 中提交了信息：添加了25秋跨专业课程相对论物理及其应用的描述 (#5) (04:06)
-
-- Pengjie Wang 在 [理学类跨专业课程](https://github.com/HITSZ-OpenAuto/Cross-Science) 中提交了信息：更新了电动力学课程信息 (#6) (03:52)
+- Waky 在 [毛泽东思想和中国特色社会主义理论体系概论](https://github.com/HITSZ-OpenAuto/GEIP1018) 中提交了信息：添加毛概笔记 (#28) (01:03)
 
 ## 待解决的 Issues
 
@@ -28,9 +24,5 @@ draft: false
 
 ## 待合并的 Pull Requests
 
-### [添加毛概笔记](https://github.com/HITSZ-OpenAuto/GEIP1018/pull/28)
-
-- **仓库**: GEIP1018
-- **创建于**: 2026-08-25 21:54:38
-- **作者**: prj159
+暂无待合并的 Pull Requests
 
