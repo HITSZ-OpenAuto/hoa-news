@@ -12,7 +12,7 @@ draft: false
 
 ## 最近更新
 
-- 吹向无叶 | Leaflessward 在 [电路与电子学I](https://github.com/HITSZ-OpenAuto/EE1018) 中提交了信息：添加26二合一回忆卷 (#15) (22:11)
+- W. D. Gaster 在 [写作与沟通](https://github.com/HITSZ-OpenAuto/WRIT0001) 中提交了信息：更新格式 (#24) (22:12)
 
 ## 待解决的 Issues
 
