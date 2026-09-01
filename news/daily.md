@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-08-31"
+date: "2026-09-01"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -13,12 +13,6 @@ draft: false
 ## 最近更新
 
 - 吹向无叶 | Leaflessward 在 [电路与电子学I](https://github.com/HITSZ-OpenAuto/EE1018) 中提交了信息：添加26二合一回忆卷 (#15) (22:11)
-
-- Hye 在 [研究生专业选修](https://github.com/HITSZ-OpenAuto/PostgradElectives) 中提交了信息：更新选修模块链接 (11:30)
-
-- Hye 在 [计算机科学与技术学科选修课程](https://github.com/HITSZ-OpenAuto/Postgrad-ComputerScience) 中提交了信息：初始化选修模块README (11:11)
-
-- Hye 在 [控制科学与工程学科选修课程](https://github.com/HITSZ-OpenAuto/Postgrad-Control) 中提交了信息：初始化选修模块README (11:08)
 
 ## 待解决的 Issues
 
