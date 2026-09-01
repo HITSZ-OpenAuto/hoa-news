@@ -24,5 +24,9 @@ draft: false
 
 ## 待合并的 Pull Requests
 
-暂无待合并的 Pull Requests
+### [添加26春试题与考试资料](https://github.com/HITSZ-OpenAuto/WRCO4024/pull/1)
+
+- **仓库**: WRCO4024
+- **创建于**: 2026-09-01 19:14:09
+- **作者**: 345ljh
 
