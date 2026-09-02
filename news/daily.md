@@ -24,6 +24,18 @@ draft: false
 
 ## 待合并的 Pull Requests
 
+### [Update course review](https://github.com/HITSZ-OpenAuto/LANG100X/pull/27)
+
+- **仓库**: LANG100X
+- **创建于**: 2026-09-02 14:44:02
+- **作者**: LiPu-jpg
+
+### [Update course review](https://github.com/HITSZ-OpenAuto/GEIP1017/pull/23)
+
+- **仓库**: GEIP1017
+- **创建于**: 2026-09-02 14:41:57
+- **作者**: LiPu-jpg
+
 ### [Feature/初步填充仓库](https://github.com/HITSZ-OpenAuto/AUTO2009/pull/1)
 
 - **仓库**: AUTO2009
