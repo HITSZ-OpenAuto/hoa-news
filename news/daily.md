@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-09-01"
+date: "2026-09-02"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -23,6 +23,12 @@ draft: false
 - **作者**: WDGaster703
 
 ## 待合并的 Pull Requests
+
+### [Feature/初步填充仓库](https://github.com/HITSZ-OpenAuto/AUTO2009/pull/1)
+
+- **仓库**: AUTO2009
+- **创建于**: 2026-09-02 11:16:13
+- **作者**: shiftcarl
 
 ### [添加26春试题与考试资料](https://github.com/HITSZ-OpenAuto/WRCO4024/pull/1)
 
