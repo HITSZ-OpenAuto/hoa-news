@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-09-02"
+date: "2026-09-03"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -23,6 +23,12 @@ draft: false
 - **作者**: WDGaster703
 
 ## 待合并的 Pull Requests
+
+### [Update README.md](https://github.com/HITSZ-OpenAuto/Cross-EIE/pull/3)
+
+- **仓库**: Cross-EIE
+- **创建于**: 2026-09-03 15:46:47
+- **作者**: jiayan2333
 
 ### [上传《多模态感知与理解》资料与课程描述](https://github.com/HITSZ-OpenAuto/Postgrad-Control/pull/1)
 
