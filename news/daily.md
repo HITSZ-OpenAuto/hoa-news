@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-09-03"
+date: "2026-09-04"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -12,7 +12,7 @@ draft: false
 
 ## 最近更新
 
-- 345ljh 在 [学术规范与论文写作](https://github.com/HITSZ-OpenAuto/WRCO4024) 中提交了信息：添加课程说明、26春试题与考试资料 (#1) (21:49)
+- Oliver Wu 在 [非线性与自适应控制](https://github.com/HITSZ-OpenAuto/AUTO5005) 中提交了信息：更新 2025 秋试题 (17:32)
 
 ## 待解决的 Issues
 
@@ -23,6 +23,12 @@ draft: false
 - **作者**: WDGaster703
 
 ## 待合并的 Pull Requests
+
+### [更新 2026 春作业及试题](https://github.com/HITSZ-OpenAuto/AUTO2006/pull/29)
+
+- **仓库**: AUTO2006
+- **创建于**: 2026-09-04 17:15:28
+- **作者**: OliverWu515
 
 ### [Update README.md](https://github.com/HITSZ-OpenAuto/Cross-EIE/pull/3)
 
