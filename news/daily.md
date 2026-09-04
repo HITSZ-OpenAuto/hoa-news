@@ -12,6 +12,10 @@ draft: false
 
 ## 最近更新
 
+- Hye 在 [控制科学与工程学科选修课程](https://github.com/HITSZ-OpenAuto/Postgrad-Control) 中提交了信息：上传《多模态感知与理解》资料与课程描述 (#1) (23:10)
+
+- 345ljh 在 [计算机科学与技术学科选修课程](https://github.com/HITSZ-OpenAuto/Postgrad-ComputerScience) 中提交了信息：添加《人工智能安全》与《社交网络分析》课程描述、资料与试题 (#1) (23:09)
+
 - Oliver Wu 在 [非线性与自适应控制](https://github.com/HITSZ-OpenAuto/AUTO5005) 中提交了信息：更新 2025 秋试题 (17:32)
 
 ## 待解决的 Issues
@@ -35,18 +39,6 @@ draft: false
 - **仓库**: Cross-EIE
 - **创建于**: 2026-09-03 15:46:47
 - **作者**: jiayan2333
-
-### [上传《多模态感知与理解》资料与课程描述](https://github.com/HITSZ-OpenAuto/Postgrad-Control/pull/1)
-
-- **仓库**: Postgrad-Control
-- **创建于**: 2026-09-02 19:50:00
-- **作者**: 345ljh
-
-### [添加《人工智能安全》与《社交网络分析》资料与试题](https://github.com/HITSZ-OpenAuto/Postgrad-ComputerScience/pull/1)
-
-- **仓库**: Postgrad-ComputerScience
-- **创建于**: 2026-09-02 19:41:18
-- **作者**: 345ljh
 
 ### [Update course review](https://github.com/HITSZ-OpenAuto/LANG100X/pull/27)
 
