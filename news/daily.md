@@ -14,10 +14,6 @@ draft: false
 
 - Junda Wu 在 [控制理论中的代数基础](https://github.com/HITSZ-OpenAuto/AUTO2006) 中提交了信息：更新 2026 春作业及试题 (#29) (06:17)
 
-- Hye 在 [控制科学与工程学科选修课程](https://github.com/HITSZ-OpenAuto/Postgrad-Control) 中提交了信息：上传《多模态感知与理解》资料与课程描述 (#1) (23:10)
-
-- 345ljh 在 [计算机科学与技术学科选修课程](https://github.com/HITSZ-OpenAuto/Postgrad-ComputerScience) 中提交了信息：添加《人工智能安全》与《社交网络分析》课程描述、资料与试题 (#1) (23:09)
-
 ## 待解决的 Issues
 
 ### [是否需要开设单独仓库](https://github.com/HITSZ-OpenAuto/ECON3001/issues/1)
