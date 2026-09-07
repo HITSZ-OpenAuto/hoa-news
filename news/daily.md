@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-09-05"
+date: "2026-09-07"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -12,7 +12,7 @@ draft: false
 
 ## 最近更新
 
-- Junda Wu 在 [控制理论中的代数基础](https://github.com/HITSZ-OpenAuto/AUTO2006) 中提交了信息：更新 2026 春作业及试题 (#29) (06:17)
+- awaw-a 在 [产业实践](https://github.com/HITSZ-OpenAuto/ELEC1102) 中提交了信息：完善产业实践课程介绍、考核要求及参访单位 (23:51)
 
 ## 待解决的 Issues
 
