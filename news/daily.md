@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-09-07"
+date: "2026-09-11"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -23,6 +23,30 @@ draft: false
 - **作者**: WDGaster703
 
 ## 待合并的 Pull Requests
+
+### [向新建立的空仓库添加了assignments、labs、materials、notes、slides](https://github.com/HITSZ-OpenAuto/ELEC3061/pull/1)
+
+- **仓库**: ELEC3061
+- **创建于**: 2026-09-11 23:46:31
+- **作者**: tsunemori111
+
+### [向新建立的空仓库添加了assignments、labs、materials、notes、slides](https://github.com/HITSZ-OpenAuto/ELEC2013/pull/1)
+
+- **仓库**: ELEC2013
+- **创建于**: 2026-09-11 23:35:54
+- **作者**: tsunemori111
+
+### [向新建立的空仓库添加了assignments、labs、materials、notes、slides](https://github.com/HITSZ-OpenAuto/ELEC3045/pull/1)
+
+- **仓库**: ELEC3045
+- **创建于**: 2026-09-11 22:09:51
+- **作者**: tsunemori111
+
+### [向新建立的空仓库添加了assignments、labs、materials、notes、slides](https://github.com/HITSZ-OpenAuto/ELEC3046/pull/1)
+
+- **仓库**: ELEC3046
+- **创建于**: 2026-09-11 21:54:12
+- **作者**: tsunemori111
 
 ### [Update README.md](https://github.com/HITSZ-OpenAuto/Cross-EIE/pull/3)
 
