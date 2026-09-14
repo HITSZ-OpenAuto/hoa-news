@@ -24,6 +24,12 @@ draft: false
 
 ## 待合并的 Pull Requests
 
+### [Update course review](https://github.com/HITSZ-OpenAuto/MATH1015A/pull/33)
+
+- **仓库**: MATH1015A
+- **创建于**: 2026-09-15 07:27:39
+- **作者**: LiPu-jpg
+
 ### [向新建立的空仓库添加了assignments、labs、materials、notes、slides](https://github.com/HITSZ-OpenAuto/ELEC3061/pull/1)
 
 - **仓库**: ELEC3061
