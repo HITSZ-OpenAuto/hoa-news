@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-09-11"
+date: "2026-09-14"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -12,7 +12,7 @@ draft: false
 
 ## 最近更新
 
-- awaw-a 在 [产业实践](https://github.com/HITSZ-OpenAuto/ELEC1102) 中提交了信息：完善产业实践课程介绍、考核要求及参访单位 (23:51)
+- QLang 在 [大学物理实验](https://github.com/HITSZ-OpenAuto/PHYS1002) 中提交了信息：添加 Exp29 电子荷质比的测定：实验报告与实验说明 (#82) (21:59)
 
 ## 待解决的 Issues
 
