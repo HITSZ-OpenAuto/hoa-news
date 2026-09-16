@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-09-14"
+date: "2026-09-16"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -23,6 +23,12 @@ draft: false
 - **作者**: WDGaster703
 
 ## 待合并的 Pull Requests
+
+### [docs: 添加 Exp26 自组光栅光谱仪的实验描述和实验报告](https://github.com/HITSZ-OpenAuto/PHYS1002/pull/83)
+
+- **仓库**: PHYS1002
+- **创建于**: 2026-09-17 01:52:53
+- **作者**: lin3939
 
 ### [Update course review](https://github.com/HITSZ-OpenAuto/MATH1015A/pull/33)
 
