@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-09-16"
+date: "2026-09-18"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -12,7 +12,9 @@ draft: false
 
 ## 最近更新
 
-- QLang 在 [大学物理实验](https://github.com/HITSZ-OpenAuto/PHYS1002) 中提交了信息：添加 Exp29 电子荷质比的测定：实验报告与实验说明 (#82) (21:59)
+- QESingularity 在 [文理通识 - 线下课程](https://github.com/HITSZ-OpenAuto/GeneralKnowledge) 中提交了信息：更新西方流行音乐鉴赏相关内容 (#41) (18:14)
+
+- QESingularity 在 [大学物理实验](https://github.com/HITSZ-OpenAuto/PHYS1002) 中提交了信息：按照25级同学的反映上调了难度（2➡3），并添加双光栅实验描述 (#84) (17:44)
 
 ## 待解决的 Issues
 
@@ -23,12 +25,6 @@ draft: false
 - **作者**: WDGaster703
 
 ## 待合并的 Pull Requests
-
-### [docs: 添加 Exp26 自组光栅光谱仪的实验描述和实验报告](https://github.com/HITSZ-OpenAuto/PHYS1002/pull/83)
-
-- **仓库**: PHYS1002
-- **创建于**: 2026-09-17 01:52:53
-- **作者**: lin3939
 
 ### [Update course review](https://github.com/HITSZ-OpenAuto/MATH1015A/pull/33)
 
