@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-09-18"
+date: "2026-09-21"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -25,6 +25,12 @@ draft: false
 - **作者**: WDGaster703
 
 ## 待合并的 Pull Requests
+
+### [上传了关于电子荷质比实验的报告](https://github.com/HITSZ-OpenAuto/PHYS1002/pull/85)
+
+- **仓库**: PHYS1002
+- **创建于**: 2026-09-22 00:01:04
+- **作者**: frredomerror91-netizen
 
 ### [Update course review](https://github.com/HITSZ-OpenAuto/MATH1015A/pull/33)
 
