@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-09-21"
+date: "2026-09-22"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -12,9 +12,7 @@ draft: false
 
 ## 最近更新
 
-- QESingularity 在 [文理通识 - 线下课程](https://github.com/HITSZ-OpenAuto/GeneralKnowledge) 中提交了信息：更新西方流行音乐鉴赏相关内容 (#41) (18:14)
-
-- QESingularity 在 [大学物理实验](https://github.com/HITSZ-OpenAuto/PHYS1002) 中提交了信息：按照25级同学的反映上调了难度（2➡3），并添加双光栅实验描述 (#84) (17:44)
+- Lessar_93m 在 [大学物理实验](https://github.com/HITSZ-OpenAuto/PHYS1002) 中提交了信息：上传了关于电子荷质比实验的报告 (#85) (10:52)
 
 ## 待解决的 Issues
 
@@ -26,41 +24,11 @@ draft: false
 
 ## 待合并的 Pull Requests
 
-### [上传了关于电子荷质比实验的报告](https://github.com/HITSZ-OpenAuto/PHYS1002/pull/85)
-
-- **仓库**: PHYS1002
-- **创建于**: 2026-09-22 00:01:04
-- **作者**: frredomerror91-netizen
-
 ### [Update course review](https://github.com/HITSZ-OpenAuto/MATH1015A/pull/33)
 
 - **仓库**: MATH1015A
 - **创建于**: 2026-09-15 07:27:39
 - **作者**: LiPu-jpg
-
-### [向新建立的空仓库添加了assignments、labs、materials、notes、slides](https://github.com/HITSZ-OpenAuto/ELEC3061/pull/1)
-
-- **仓库**: ELEC3061
-- **创建于**: 2026-09-11 23:46:31
-- **作者**: tsunemori111
-
-### [向新建立的空仓库添加了assignments、labs、materials、notes、slides](https://github.com/HITSZ-OpenAuto/ELEC2013/pull/1)
-
-- **仓库**: ELEC2013
-- **创建于**: 2026-09-11 23:35:54
-- **作者**: tsunemori111
-
-### [向新建立的空仓库添加了assignments、labs、materials、notes、slides](https://github.com/HITSZ-OpenAuto/ELEC3045/pull/1)
-
-- **仓库**: ELEC3045
-- **创建于**: 2026-09-11 22:09:51
-- **作者**: tsunemori111
-
-### [向新建立的空仓库添加了assignments、labs、materials、notes、slides](https://github.com/HITSZ-OpenAuto/ELEC3046/pull/1)
-
-- **仓库**: ELEC3046
-- **创建于**: 2026-09-11 21:54:12
-- **作者**: tsunemori111
 
 ### [Update README.md](https://github.com/HITSZ-OpenAuto/Cross-EIE/pull/3)
 
