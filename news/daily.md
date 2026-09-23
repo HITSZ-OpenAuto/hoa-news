@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-09-22"
+date: "2026-09-23"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -13,8 +13,6 @@ draft: false
 ## 最近更新
 
 - rana608 在 [大学物理实验](https://github.com/HITSZ-OpenAuto/PHYS1002) 中提交了信息：补充大物实验报告制作 Skill (#86) (18:18)
-
-- Lessar_93m 在 [大学物理实验](https://github.com/HITSZ-OpenAuto/PHYS1002) 中提交了信息：上传了关于电子荷质比实验的报告 (#85) (10:52)
 
 ## 待解决的 Issues
 
