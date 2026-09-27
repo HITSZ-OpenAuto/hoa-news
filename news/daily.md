@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-09-26"
+date: "2026-09-27"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -12,7 +12,7 @@ draft: false
 
 ## 最近更新
 
-- justice 在 [大学物理实验](https://github.com/HITSZ-OpenAuto/PHYS1002) 中提交了信息：增加了新的实验：半导体禁带宽度和载流子迁移率测量 (#87) (14:49)
+- baidu 在 [大学物理实验](https://github.com/HITSZ-OpenAuto/PHYS1002) 中提交了信息：提交25级Georgome大物上实验报告 (#88) (20:24)
 
 ## 待解决的 Issues
 
