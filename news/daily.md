@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-10-01"
+date: "2026-10-09"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -30,12 +30,6 @@ draft: false
 - **创建于**: 2026-09-15 07:27:39
 - **作者**: LiPu-jpg
 
-### [Update README.md](https://github.com/HITSZ-OpenAuto/Cross-EIE/pull/3)
-
-- **仓库**: Cross-EIE
-- **创建于**: 2026-09-03 15:46:47
-- **作者**: jiayan2333
-
 ### [Update course review](https://github.com/HITSZ-OpenAuto/LANG100X/pull/27)
 
 - **仓库**: LANG100X
@@ -47,10 +41,4 @@ draft: false
 - **仓库**: GEIP1017
 - **创建于**: 2026-09-02 14:41:57
 - **作者**: LiPu-jpg
-
-### [Feature/初步填充仓库](https://github.com/HITSZ-OpenAuto/AUTO2009/pull/1)
-
-- **仓库**: AUTO2009
-- **创建于**: 2026-09-02 11:16:13
-- **作者**: shiftcarl
 
