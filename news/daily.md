@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-10-09"
+date: "2026-10-10"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -12,7 +12,13 @@ draft: false
 
 ## 最近更新
 
-- Hye 在 [控制科学与工程学科选修课程](https://github.com/HITSZ-OpenAuto/Postgrad-Control) 中提交了信息：添加3门本研通选课（最优估计、运动控制和模式识别）链接 (21:53)
+- Huang Zifeng 在 [机器人力学分析](https://github.com/HITSZ-OpenAuto/AUTO2009) 中提交了信息：fix: correct course name to 机器人力学分析 (#3) (09:48)
+
+- Huang Zifeng 在 [机器人力学分析](https://github.com/HITSZ-OpenAuto/AUTO2009) 中提交了信息：fix: use link markdown for Underactuated Robotics URLs (#2) (01:10)
+
+- shiftcarl 在 [机器人力学分析](https://github.com/HITSZ-OpenAuto/AUTO2009) 中提交了信息：feat: seed course materials and reviews (#1) (01:06)
+
+- 杨敏嘉 在 [电子信息类跨专业课程](https://github.com/HITSZ-OpenAuto/Cross-EIE) 中提交了信息：feat: add gas turbine course notes to README (#3) (01:06)
 
 ## 待解决的 Issues
 
