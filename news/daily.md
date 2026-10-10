@@ -16,10 +16,6 @@ draft: false
 
 - Huang Zifeng 在 [机器人力学分析](https://github.com/HITSZ-OpenAuto/AUTO2009) 中提交了信息：fix: use link markdown for Underactuated Robotics URLs (#2) (01:10)
 
-- shiftcarl 在 [机器人力学分析](https://github.com/HITSZ-OpenAuto/AUTO2009) 中提交了信息：feat: seed course materials and reviews (#1) (01:06)
-
-- 杨敏嘉 在 [电子信息类跨专业课程](https://github.com/HITSZ-OpenAuto/Cross-EIE) 中提交了信息：feat: add gas turbine course notes to README (#3) (01:06)
-
 ## 待解决的 Issues
 
 ### [是否需要开设单独仓库](https://github.com/HITSZ-OpenAuto/ECON3001/issues/1)
