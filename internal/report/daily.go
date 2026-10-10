@@ -81,8 +81,8 @@ func UpdateDailyReport(path string, orgName string, publicRepos map[string]struc
 				if utils.IsBot(authorName, authorLogin) {
 					continue // 过滤掉 bot 提交，比如 actions 自动生成的就不需要计数
 				}
-				if !utils.IsChineseCommit(commit.Commit.Message) {
-					continue // 只保留中文提交，过滤代码提交等非中文信息
+				if !utils.IncludeInDailyRecentUpdates(commit.Commit.Message) {
+					continue // 过滤 CI 等自动化提交信息
 				}
 
 				date, err := time.Parse(time.RFC3339, commit.Commit.Author.Date)

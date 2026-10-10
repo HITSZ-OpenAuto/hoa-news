@@ -6,6 +6,33 @@ import (
 	"time"
 )
 
+func TestIncludeInDailyRecentUpdates(t *testing.T) {
+	tests := []struct {
+		name     string
+		message  string
+		expected bool
+	}{
+		{"Chinese message", "更新考试信息", true},
+		{"English feat", "feat: add parser", true},
+		{"English fix", "fix: typo", true},
+		{"ci colon", "ci: bump workflow", false},
+		{"ci space", "ci update deps", false},
+		{"CI uppercase", "CI: deploy", false},
+		{"leading whitespace before ci", "  ci: lint", false},
+		{"empty", "", false},
+		{"whitespace only", "   ", false},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			result := IncludeInDailyRecentUpdates(tt.message)
+			if result != tt.expected {
+				t.Errorf("IncludeInDailyRecentUpdates(%q) = %v, expected %v", tt.message, result, tt.expected)
+			}
+		})
+	}
+}
+
 func TestIsBot(t *testing.T) {
 	tests := []struct {
 		name        string

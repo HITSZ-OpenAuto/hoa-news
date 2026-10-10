@@ -31,6 +31,16 @@ func IsChineseCommit(message string) bool {
 	return false
 }
 
+// IncludeInDailyRecentUpdates reports whether a non-bot commit message should appear
+// in the daily report 「最近更新」 section. CI automation commits are excluded.
+func IncludeInDailyRecentUpdates(message string) bool {
+	msg := strings.TrimSpace(message)
+	if msg == "" {
+		return false
+	}
+	return !strings.HasPrefix(strings.ToLower(msg), "ci")
+}
+
 // IsBot checks if a commit author is a bot
 func IsBot(authorName, authorLogin string) bool {
 	name := strings.ToLower(strings.TrimSpace(authorName))
