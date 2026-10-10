@@ -14,8 +14,6 @@ draft: false
 
 - Huang Zifeng 在 [机器人力学分析](https://github.com/HITSZ-OpenAuto/AUTO2009) 中提交了信息：fix: correct course name to 机器人力学分析 (#3) (09:48)
 
-- Huang Zifeng 在 [机器人力学分析](https://github.com/HITSZ-OpenAuto/AUTO2009) 中提交了信息：fix: use link markdown for Underactuated Robotics URLs (#2) (01:10)
-
 ## 待解决的 Issues
 
 ### [是否需要开设单独仓库](https://github.com/HITSZ-OpenAuto/ECON3001/issues/1)
