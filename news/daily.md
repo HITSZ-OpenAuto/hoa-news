@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-10-10"
+date: "2026-10-14"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -12,7 +12,9 @@ draft: false
 
 ## 最近更新
 
-- Huang Zifeng 在 [机器人力学分析](https://github.com/HITSZ-OpenAuto/AUTO2009) 中提交了信息：fix: correct course name to 机器人力学分析 (#3) (09:48)
+- Jiao Ziang 在 [习近平新时代中国特色社会主义思想概论](https://github.com/HITSZ-OpenAuto/GEIP1017) 中提交了信息：新增刘元胜老师课程评价 (#23) (14:12)
+
+- Jiao Ziang 在 [大学英语](https://github.com/HITSZ-OpenAuto/LANG100X) 中提交了信息：新增陈曦老师课程评价 (#27) (14:12)
 
 ## 待解决的 Issues
 
@@ -24,21 +26,5 @@ draft: false
 
 ## 待合并的 Pull Requests
 
-### [Update course review](https://github.com/HITSZ-OpenAuto/MATH1015A/pull/33)
-
-- **仓库**: MATH1015A
-- **创建于**: 2026-09-15 07:27:39
-- **作者**: LiPu-jpg
-
-### [Update course review](https://github.com/HITSZ-OpenAuto/LANG100X/pull/27)
-
-- **仓库**: LANG100X
-- **创建于**: 2026-09-02 14:44:02
-- **作者**: LiPu-jpg
-
-### [Update course review](https://github.com/HITSZ-OpenAuto/GEIP1017/pull/23)
-
-- **仓库**: GEIP1017
-- **创建于**: 2026-09-02 14:41:57
-- **作者**: LiPu-jpg
+暂无待合并的 Pull Requests
 
