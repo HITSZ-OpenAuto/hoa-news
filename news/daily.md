@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-10-22"
+date: "2026-10-31"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -26,5 +26,9 @@ draft: false
 
 ## 待合并的 Pull Requests
 
-暂无待合并的 Pull Requests
+### [增加 2026 秋《汇编语言与接口技术》期末试卷回忆版，补充实验建议](https://github.com/HITSZ-OpenAuto/COMP3053/pull/12)
+
+- **仓库**: COMP3053
+- **创建于**: 2026-10-31 19:33:49
+- **作者**: kajimi16
 
