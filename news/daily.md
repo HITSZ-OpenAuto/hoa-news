@@ -12,9 +12,7 @@ draft: false
 
 ## 最近更新
 
-- Jiao Ziang 在 [习近平新时代中国特色社会主义思想概论](https://github.com/HITSZ-OpenAuto/GEIP1017) 中提交了信息：新增刘元胜老师课程评价 (#23) (14:12)
-
-- Jiao Ziang 在 [大学英语](https://github.com/HITSZ-OpenAuto/LANG100X) 中提交了信息：新增陈曦老师课程评价 (#27) (14:12)
+- Kajimi 在 [汇编语言与接口技术](https://github.com/HITSZ-OpenAuto/COMP3053) 中提交了信息：增加 2026 秋《汇编语言与接口技术》期末试卷回忆版，补充实验建议 (#12) (23:18)
 
 ## 待解决的 Issues
 
@@ -26,9 +24,5 @@ draft: false
 
 ## 待合并的 Pull Requests
 
-### [增加 2026 秋《汇编语言与接口技术》期末试卷回忆版，补充实验建议](https://github.com/HITSZ-OpenAuto/COMP3053/pull/12)
-
-- **仓库**: COMP3053
-- **创建于**: 2026-10-31 19:33:49
-- **作者**: kajimi16
+暂无待合并的 Pull Requests
 
