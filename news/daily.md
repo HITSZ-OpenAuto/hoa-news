@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-10-31"
+date: "2026-11-04"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -12,7 +12,7 @@ draft: false
 
 ## 最近更新
 
-- Kajimi 在 [汇编语言与接口技术](https://github.com/HITSZ-OpenAuto/COMP3053) 中提交了信息：增加 2026 秋《汇编语言与接口技术》期末试卷回忆版，补充实验建议 (#12) (23:18)
+- Oliver Wu 在 [凸优化与最优控制](https://github.com/HITSZ-OpenAuto/AUTO5023) 中提交了信息：更新2024秋试题回忆 (23:10)
 
 ## 待解决的 Issues
 
