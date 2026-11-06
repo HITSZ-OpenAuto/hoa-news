@@ -1,6 +1,6 @@
 ---
 title: AUTO 更新速递
-date: "2026-11-04"
+date: "2026-11-06"
 authors:
     - name: github-actions[bot]
       link: https://github.com/features/actions
@@ -24,5 +24,9 @@ draft: false
 
 ## 待合并的 Pull Requests
 
-暂无待合并的 Pull Requests
+### [增加 2026 春机器人学导论课程资料](https://github.com/HITSZ-OpenAuto/AUTO3005/pull/33)
+
+- **仓库**: AUTO3005
+- **创建于**: 2026-11-06 22:50:29
+- **作者**: BCCHIT
 
