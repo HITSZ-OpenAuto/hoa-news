@@ -12,6 +12,14 @@ draft: false
 
 ## 最近更新
 
+- baidu 在 [工程数学](https://github.com/HITSZ-OpenAuto/ELEC2108K) 中提交了信息：Merge pull request #2 from 61mo/main (23:42)
+
+- 61m 在 [工程数学](https://github.com/HITSZ-OpenAuto/ELEC2108K) 中提交了信息：重写readme中数学公式格式 (15:50)
+
+- 61m 在 [工程数学](https://github.com/HITSZ-OpenAuto/ELEC2108K) 中提交了信息：拓荒新专业新课程，补充课程文档，上传资料 (15:39)
+
+- 61m 在 [工程数学](https://github.com/HITSZ-OpenAuto/ELEC2108K) 中提交了信息：拓荒新专业新课程，补充课程文档，上传资料 (15:37)
+
 - BCC 在 [机器视觉](https://github.com/HITSZ-OpenAuto/AUTO3006) 中提交了信息：增加 2026 春机器视觉课程资料与修读体验 (08:22)
 
 - BCC 在 [数据结构与算法](https://github.com/HITSZ-OpenAuto/COMP2050) 中提交了信息：增加数据结构与算法自动化类课程评价 (08:22)
@@ -40,17 +48,9 @@ draft: false
 
 ## 待解决的 Issues
 
-### [拓荒新专业新课程，补充课程文档，上传资料](https://github.com/HITSZ-OpenAuto/ELEC2108K/pull/2)
-
-- **仓库**: ELEC2108K
-- **创建于**: 2026-11-23 15:53:07
-- **作者**: 61mo
+暂无待解决的 Issues
 
 ## 待合并的 Pull Requests
 
-### [拓荒新专业新课程，补充课程文档，上传资料](https://github.com/HITSZ-OpenAuto/ELEC2108K/pull/2)
-
-- **仓库**: ELEC2108K
-- **创建于**: 2026-11-23 15:53:07
-- **作者**: 61mo
+暂无待合并的 Pull Requests
 
