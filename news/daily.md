@@ -40,9 +40,17 @@ draft: false
 
 ## 待解决的 Issues
 
-暂无待解决的 Issues
+### [拓荒新专业新课程，补充课程文档，上传资料](https://github.com/HITSZ-OpenAuto/ELEC2108K/pull/2)
+
+- **仓库**: ELEC2108K
+- **创建于**: 2026-11-23 15:53:07
+- **作者**: 61mo
 
 ## 待合并的 Pull Requests
 
-暂无待合并的 Pull Requests
+### [拓荒新专业新课程，补充课程文档，上传资料](https://github.com/HITSZ-OpenAuto/ELEC2108K/pull/2)
+
+- **仓库**: ELEC2108K
+- **创建于**: 2026-11-23 15:53:07
+- **作者**: 61mo
 
